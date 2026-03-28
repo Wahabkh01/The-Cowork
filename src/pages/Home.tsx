@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, Wifi, Shield, Coffee, Users, MapPin, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Wifi, Shield, Users, CheckCircle2 } from "lucide-react";
 import { Section } from "@/components/Section";
-import { InquiryForm } from "@/components/InquiryForm";
 
 export default function Home() {
   return (
