@@ -1,0 +1,166 @@
+/* ================================
+   GOOGLE FONTS
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;700&display=swap');
+
+/* ================================
+   TAILWIND DIRECTIVES
+================================ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================
+   ROOT DESIGN TOKENS
+   PURE BLACK LUXURY THEME
+================================ */
+:root {
+  /* Base */
+  --background: 0 0% 0%;
+  /* #000000 */
+  --foreground: 0 0% 98%;
+  /* #FAFAFA */
+
+  /* Gold Accent */
+  --primary: 46 65% 52%;
+  /* #D4AF37 */
+  --primary-foreground: 0 0% 5%;
+
+  /* Secondary / UI */
+  --secondary: 0 0% 10%;
+  --secondary-foreground: 0 0% 98%;
+
+  /* Muted */
+  --muted: 0 0% 14%;
+  --muted-foreground: 0 0% 65%;
+
+  /* Cards & Popovers */
+  --card: 0 0% 6%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 6%;
+  --popover-foreground: 0 0% 98%;
+
+  /* Borders & Inputs */
+  --border: 0 0% 15%;
+  --input: 0 0% 15%;
+  --ring: 46 65% 52%;
+
+  /* Glassmorphism */
+  --glass-bg: 0 0% 100% / 0.4;
+  --glass-border: 0 0% 100% / 0.08;
+  --glass-highlight: 46 65% 52% / 0.12;
+  --glass-blur: 50px;
+
+  /* Radius */
+  --radius: 0.75rem;
+
+  /* Fonts */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* ================================
+   BASE STYLES
+================================ */
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    background-color: #000000;
+  }
+
+  ::selection {
+    background: hsla(46, 65%, 52%, 0.3);
+    color: #000;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans);
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl lg:text-8xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl;
+  }
+}
+
+/* ================================
+   UTILITIES
+================================ */
+@layer utilities {
+
+  /* Glass Cards */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.035);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.85);
+    border-radius: var(--radius);
+  }
+
+  /* Glass Navbar */
+  .glass-nav {
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Glass Button */
+  .glass-button {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.3s ease;
+  }
+
+  .glass-button:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(212, 175, 55, 0.5);
+  }
+
+  /* Gold Helpers */
+  .text-gold {
+    color: hsl(var(--primary));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--primary));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--primary));
+  }
+
+  /* Gold Gradients */
+  .gold-gradient {
+    background: linear-gradient(135deg,
+        #D4AF37 0%,
+        #F3E5AB 50%,
+        #C5A028 100%);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg,
+        #D4AF37 0%,
+        #F3E5AB 50%,
+        #C5A028 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
