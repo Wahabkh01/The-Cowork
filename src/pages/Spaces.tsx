@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Section } from "@/components/Section";
 import { Link } from "wouter";
 import { Check } from "lucide-react";
+import ImageGallery from "@/components/ImageGallery";
 
 export default function Spaces() {
   const plans = [
@@ -16,6 +17,11 @@ export default function Spaces() {
         "Unlimited coffee & tea",
         "2 hours meeting room credits",
         "Business address"
+      ],
+      images: [
+        "/Images/HotDesk1.webp",
+        "/Images/HostDesk4.webp",
+        "/Images/HotDesk3.webp",
       ]
     },
     {
@@ -31,6 +37,11 @@ export default function Spaces() {
         "5 hours meeting room credits",
         "Mail handling service",
         "Free printing (100 pages)"
+      ],
+      images: [
+        "/Images/DedicatedDesk1.webp",
+        "/Images/Worker1.webp",
+        "/Images/DedicatedDesk3.webp",
       ]
     },
     {
@@ -45,6 +56,11 @@ export default function Spaces() {
         "Unlimited meeting room access",
         "Guest reception service",
         "Daily cleaning service"
+      ],
+      images: [
+        "/Images/PrivateOffice1.webp",
+        "/Images/PrivateOffice2.webp",
+        "/Images/PrivateOffice3.webp",
       ]
     }
   ];
@@ -88,6 +104,8 @@ export default function Spaces() {
               <h3 className="text-white mb-3 text-3xl font-bold">{plan.name}</h3>
               <p className="text-white/40 text-sm mb-10 h-10 font-light leading-relaxed">{plan.desc}</p>
               
+              <ImageGallery images={plan.images} />
+
               <div className="mb-12">
                 <span className="text-5xl font-bold text-gradient-gold">PKR {plan.price}</span>
                 <span className="text-white/30 text-sm ml-2">{plan.period}</span>

@@ -19,9 +19,9 @@ export default function Contact() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {[
-                { icon: <MapPin />, title: "Visit", val: "123 MM Alam Road, Gulberg III" },
-                { icon: <Phone />, title: "Call", val: "+92 300 123 4567" },
-                { icon: <Mail />, title: "Email", val: "hello@thecowork.pk" },
+                { icon: <MapPin />, title: "Visit", val: "95 College Road, near Johar Town, Block D Block E PCSIR Staff Colony, Lahore, 54770 Map of The Cowork - Coworking Space Johar Town Lahore" },
+                { icon: <Phone />, title: "Call", val: "+92 333 4835258" },
+                { icon: <Mail />, title: "Email", val: "thecoworkpk@gmail.com" },
                 { icon: <Clock />, title: "Hours", val: "Reception: 9AM - 8PM" },
               ].map((item, i) => (
                 <div key={i} className="glass-card p-6 rounded-3xl group">
@@ -47,12 +47,19 @@ export default function Contact() {
         </div>
       </Section>
 
-      {/* Map Placeholder */}
-      <div className="h-[400px] w-full bg-zinc-900 flex items-center justify-center border-t border-white/10">
-        <p className="text-muted-foreground flex items-center gap-2">
-          <MapPin /> Google Maps Embed Would Go Here
-        </p>
-      </div>
+      <Section>
+        <div className="w-full h-[500px] rounded-3xl overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.821511256834!2d74.29001987469599!3d31.47352974875151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919016d3447cae7%3A0x95c9732879ecbe61!2sThe%20Cowork%20-%20Coworking%20Space%20Johar%20Town%20Lahore!5e0!3m2!1sen!2s!4v1713293323817!5m2!1sen!2s"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </Section>
     </div>
   );
 }

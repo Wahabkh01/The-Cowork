@@ -12,7 +12,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" 
+            src="/Images/LandingPageImage.webp" 
             alt="Luxury Coworking Space" 
             className="w-full h-full object-cover"
           />
@@ -30,7 +30,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl md:text-2xl text-white/70 max-w-2xl mx-auto mb-10 font-light tracking-wide">
-              Where ambition meets luxury in the heart of Gulberg.
+              Where ambition meets luxury in the heart of Johar Town.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -154,9 +154,9 @@ export default function Home() {
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop" 
+                src="Images/WomanWorking.webp" 
                 alt="Workspace Detail" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
               />
             </div>
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-[100px] -z-10" />

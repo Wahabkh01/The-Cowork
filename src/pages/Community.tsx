@@ -39,7 +39,7 @@ export default function Community() {
           >
             <div className="aspect-square rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=2070&auto=format&fit=crop" 
+                src="/Images/Community1.webp" 
                 alt="Community Event" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
               />

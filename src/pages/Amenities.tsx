@@ -89,9 +89,9 @@ export default function Amenities() {
         <div className="absolute inset-0 bg-black/40 z-10" />
         {/* Unsplash: Coffee shop or lounge area in office */}
         <img 
-          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop" 
+          src="/Images/DedicatedOffice1.webp" 
           alt="Office Lounge" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
           <h2 className="text-white text-3xl md:text-5xl font-serif italic">Work. Lounge. Create.</h2>

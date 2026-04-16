@@ -49,15 +49,15 @@ export function Footer() {
             <ul className="space-y-6 text-sm text-white/40 font-light">
               <li className="flex items-start gap-4">
                 <MapPin className="text-primary shrink-0" size={18} />
-                <span>123 MM Alam Road, Gulberg III, Lahore</span>
+                <span>95 College Road, near Johar Town, Block D Block E PCSIR Staff Colony, Lahore, 54770 Map of The Cowork - Coworking Space Johar Town Lahore</span>
               </li>
               <li className="flex items-center gap-4">
                 <Phone className="text-primary shrink-0" size={18} />
-                <span>+92 300 123 4567</span>
+                <span>+92 333 4835258</span>
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="text-primary shrink-0" size={18} />
-                <span>hello@thecowork.pk</span>
+                <span>thecoworkpk@gmail.com</span>
               </li>
             </ul>
           </div>
