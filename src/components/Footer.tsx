@@ -9,9 +9,12 @@ export function Footer() {
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24 relative z-10">
           <div className="space-y-8">
-            <div className="text-2xl font-black tracking-tighter">
-              <span className="text-primary">THE</span>
-              <span className="text-white">COWORK</span>
+            <div className="flex items-center gap-3">
+              <img src="/Images/Logo.png" alt="The Cowork Hub Logo" className="h-10 w-auto" />
+              <div className="text-2xl font-black tracking-tighter">
+                <span className="text-primary">THE</span>
+                <span className="text-white">COWORK</span>
+              </div>
             </div>
             <p className="text-white/40 text-sm leading-relaxed font-light">
               Premium workspace solutions for the modern professional in Lahore. 
