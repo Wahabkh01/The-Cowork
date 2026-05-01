@@ -78,7 +78,7 @@ export function Footer() {
         href="https://wa.me/923334835258"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
+        className="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50"
       >
         <MessageCircle size={24} />
       </a>

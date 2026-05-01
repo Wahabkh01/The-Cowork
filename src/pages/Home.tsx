@@ -33,7 +33,7 @@ export default function Home() {
               Where ambition meets luxury in the heart of Johar Town.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-24 sm:mb-0">
               <Link href="/contact">
                 <button className="px-10 py-4 bg-primary text-black font-bold rounded-full hover:scale-105 transition-all duration-500 shadow-xl shadow-primary/20" data-testid="button-book-tour">
                   Book a Tour
@@ -67,7 +67,7 @@ export default function Home() {
       </section>
 
       {/* Target Audience */}
-      <Section className="py-32">
+      <Section className="pt-48 md:pt-32">
         <div className="text-center mb-20">
           <h2 className="text-white mb-4">Curated for Excellence</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto opacity-50" />
