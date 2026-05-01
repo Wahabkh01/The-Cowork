@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Facebook, Instagram, Linkedin, MapPin, Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, Linkedin, MapPin, Mail, Phone, MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
@@ -13,7 +13,7 @@ export function Footer() {
               <img src="/Images/Logo.png" alt="The Cowork Hub Logo" className="h-10 w-auto" />
               <div className="text-2xl font-black tracking-tighter">
                 <span className="text-primary">THE</span>
-                <span className="text-white">COWORK</span>
+                <span className="text-white ml-2">COWORK</span>
               </div>
             </div>
             <p className="text-white/40 text-sm leading-relaxed font-light">
@@ -74,6 +74,14 @@ export function Footer() {
           </div>
         </div>
       </div>
+      <a
+        href="https://wa.me/923334835258"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
+      >
+        <MessageCircle size={24} />
+      </a>
     </footer>
   );
 }
