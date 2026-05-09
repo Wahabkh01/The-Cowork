@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
 import { Section } from "@/components/Section";
 import { Calendar, Users, Heart } from "lucide-react";
+import { Seo } from "@/components/Seo";
 
 export default function Community() {
   return (
     <div className="pt-32 min-h-screen">
+      <Seo
+        title="Coworking Community and Events"
+        description="Connect with founders, freelancers, and teams through events, wellness sessions, and networking at The Cowork Hub."
+      />
       <Section className="py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <motion.div

@@ -1,10 +1,16 @@
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
+import { Seo } from "@/components/Seo";
 
 export default function NotFound() {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-black p-4">
+      <Seo
+        title="Page Not Found"
+        description="The requested page could not be found. Return to The Cowork Hub homepage."
+        noIndex
+      />
       <Card className="w-full max-w-md bg-zinc-900 border-white/10">
         <CardContent className="pt-6">
           <div className="flex mb-4 gap-2">

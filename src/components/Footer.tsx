@@ -42,8 +42,6 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-white/40 font-light">
               <li><Link href="/about"><span className="hover:text-primary cursor-pointer transition-colors">About Us</span></Link></li>
               <li><Link href="/contact"><span className="hover:text-primary cursor-pointer transition-colors">Contact</span></Link></li>
-              <li><Link href="/contact"><span className="hover:text-primary cursor-pointer transition-colors">Careers</span></Link></li>
-              <li><Link href="/contact"><span className="hover:text-primary cursor-pointer transition-colors">Privacy</span></Link></li>
             </ul>
           </div>
 
@@ -68,10 +66,6 @@ export function Footer() {
 
         <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10 text-[10px] font-bold uppercase tracking-widest text-white/20">
           <p>&copy; {new Date().getFullYear()} The Cowork. Built for Excellence.</p>
-          <div className="flex gap-8">
-            <span className="hover:text-white transition-colors cursor-pointer">Terms</span>
-            <span className="hover:text-white transition-colors cursor-pointer">Cookies</span>
-          </div>
         </div>
       </div>
       <a

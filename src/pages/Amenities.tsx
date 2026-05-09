@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Section } from "@/components/Section";
 import { Wifi, Zap, Coffee, Shield, Printer, MonitorPlay, Sofa, Key } from "lucide-react";
+import { Seo } from "@/components/Seo";
 
 export default function Amenities() {
   const amenities = [
@@ -48,6 +49,10 @@ export default function Amenities() {
 
   return (
     <div className="pt-24 min-h-screen">
+      <Seo
+        title="Workspace Amenities"
+        description="Discover gigabit internet, backup power, premium café service, secure access, and ergonomic workspaces."
+      />
       <Section className="text-center pt-20">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}

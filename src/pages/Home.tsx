@@ -2,10 +2,15 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Wifi, Shield, Users, CheckCircle2 } from "lucide-react";
 import { Section } from "@/components/Section";
+import { Seo } from "@/components/Seo";
 
 export default function Home() {
   return (
     <>
+      <Seo
+        title="Coworking Space in Johar Town Lahore"
+        description="The Cowork offers premium coworking space in Johar Town Lahore with private offices, meeting rooms, fast WiFi, and shared workspaces."
+      />
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Wash */}

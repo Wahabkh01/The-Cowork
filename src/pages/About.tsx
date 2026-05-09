@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
 import { Section } from "@/components/Section";
 import { Link } from "wouter";
+import { Seo } from "@/components/Seo";
 
 export default function About() {
   return (
     <div className="pt-32 min-h-screen">
+      <Seo
+        title="About The Cowork Hub"
+        description="Learn how The Cowork Hub is elevating coworking culture in Lahore with premium spaces and a high-performance atmosphere."
+      />
       <Section className="py-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

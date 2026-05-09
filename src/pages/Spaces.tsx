@@ -3,6 +3,7 @@ import { Section } from "@/components/Section";
 import { Link } from "wouter";
 import { Check } from "lucide-react";
 import ImageGallery from "@/components/ImageGallery";
+import { Seo } from "@/components/Seo";
 
 export default function Spaces() {
   const plans = [
@@ -67,6 +68,10 @@ export default function Spaces() {
 
   return (
     <div className="pt-24 min-h-screen">
+      <Seo
+        title="Coworking Plans and Private Offices"
+        description="Explore hot desks, dedicated desks, and private offices with flexible monthly coworking plans in Lahore."
+      />
       <Section className="pb-10 pt-20">
         <div className="text-center max-w-3xl mx-auto">
           <motion.h1 

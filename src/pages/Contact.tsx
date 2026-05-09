@@ -2,10 +2,15 @@ import { motion } from "framer-motion";
 import { Section } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Seo } from "@/components/Seo";
 
 export default function Contact() {
   return (
     <div className="pt-24 min-h-screen">
+      <Seo
+        title="Contact The Cowork Hub"
+        description="Book a tour, request pricing, or contact The Cowork Hub in Lahore for coworking memberships and private offices."
+      />
       <Section className="pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <motion.div
