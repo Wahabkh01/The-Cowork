@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# AI and answer-engine crawlers are explicitly welcome — they increasingly drive discovery.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://thecowork.pk/sitemap.xml

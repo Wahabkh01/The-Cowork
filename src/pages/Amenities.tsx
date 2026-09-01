@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { Section } from "@/components/Section";
 import { Wifi, Zap, Coffee, Shield, Printer, MonitorPlay, Sofa, Key } from "lucide-react";
 import { Seo } from "@/components/Seo";
+import { Img } from "@/components/Img";
+import { Link } from "wouter";
+import { Disclosure, DetailPanel } from "@/components/Details";
 
 export default function Amenities() {
   const amenities = [
@@ -49,10 +52,7 @@ export default function Amenities() {
 
   return (
     <div className="pt-24 min-h-screen">
-      <Seo
-        title="Workspace Amenities"
-        description="Discover gigabit internet, backup power, premium café service, secure access, and ergonomic workspaces."
-      />
+      <Seo path="/amenities" />
       <Section className="text-center pt-20">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
@@ -92,15 +92,83 @@ export default function Amenities() {
       {/* Visual Break - Image */}
       <div className="h-[400px] w-full relative overflow-hidden">
         <div className="absolute inset-0 bg-black/40 z-10" />
-        <img 
-          src="/Images/AmenitiesOfficeBanner.jpg" 
-          alt="The Cowork amenities area with desks, lounge seating, and coffee station" 
+        <Img
+          name="AmenitiesOfficeBanner"
+          sizes="100vw"
+          alt="The Cowork amenities area in Lahore with desks, lounge seating and a coffee station"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 z-20 flex items-center justify-center px-6 text-center">
           <h2 className="text-white text-3xl md:text-5xl font-serif italic">Work. Lounge. Create.</h2>
         </div>
       </div>
+
+      <DetailPanel title="What's actually included">
+        <Disclosure summary="The two amenities that actually decide it: power and internet" level="h2">
+          <p>
+            Coworking spaces in Lahore all advertise roughly the same list. In practice two items on it
+            determine whether a workspace is usable, and both are invisible on a tour unless you ask
+            pointed questions.
+          </p>
+          <h4>Power</h4>
+          <p>
+            "Power backup" can mean anything from a generator that takes ninety seconds to start —
+            during which your machine reboots and your call drops — to a UPS layer that bridges the gap
+            so seamlessly you never notice the grid went down. We run the second kind: UPS on the desks
+            and the network hardware, generators behind it. Ask any workspace you are considering what
+            happens in the first sixty seconds of an outage. The answer is revealing.
+          </p>
+          <h4>Internet</h4>
+          <p>
+            The number that matters is not the headline speed, it is what the connection does when
+            everyone is on a call at once, and what happens when the line itself fails. We run dedicated
+            fibre with a second line on automatic failover. On a tour, ask to run a speed test yourself,
+            at a busy hour, at the desk you would actually sit at. We will hand you the WiFi password
+            and let you.
+          </p>
+        </Disclosure>
+
+        <Disclosure summary="The things nobody lists but everybody notices" level="h2">
+          <ul>
+            <li>
+              <strong>Air conditioning sized for the room</strong>, behind the same generator capacity
+              as everything else. A hot office in June is not a workspace.
+            </li>
+            <li>
+              <strong>Lounge seating away from the desks.</strong> A break is only a break if you change
+              your position.
+            </li>
+            <li>
+              <strong>Daily cleaning, including the kitchen and washrooms.</strong> The least glamorous
+              line here and the one members mention most often.
+            </li>
+            <li>
+              <strong>Reception that knows your name and takes your parcels</strong>, staffed 9:00 AM to
+              8:00 PM.
+            </li>
+            <li>
+              <strong>Quiet enforced by layout rather than rules.</strong> Calls happen in rooms and
+              phone areas because the rooms are close enough that using them is easier than not.
+            </li>
+          </ul>
+        </Disclosure>
+
+        <Disclosure summary="Included with every plan, and available around the clock" level="h2">
+          <p>
+            Everything on this page comes with a <Link href="/hot-desk-lahore">hot desk</Link>, a{" "}
+            <Link href="/dedicated-desk-lahore">dedicated desk</Link> and a{" "}
+            <Link href="/private-office-lahore">private office</Link> alike. What changes between plans
+            is the permanence of your seat, your storage, your printing allowance and how many{" "}
+            <Link href="/meeting-rooms-lahore">meeting room</Link> hours you get. Rates are on the{" "}
+            <Link href="/pricing">pricing page</Link>.
+          </p>
+          <p>
+            None of it switches off in the evening. The internet, the power backup, the security and the
+            café run through the <Link href="/night-shift-coworking-lahore">night shift</Link> exactly as
+            they do at midday. Reception is the one thing with fixed hours: 9:00 AM to 8:00 PM daily.
+          </p>
+        </Disclosure>
+      </DetailPanel>
     </div>
   );
 }

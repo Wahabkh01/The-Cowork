@@ -1,30 +1,18 @@
 import { useEffect } from "react";
+import { getMeta, buildJsonLd, fullTitle, canonicalFor, absoluteUrl } from "@/data/meta";
 
-type SeoProps = {
-  title: string;
-  description: string;
-  path?: string;
-  image?: string;
-  noIndex?: boolean;
-};
-
-const SITE_NAME = "The Cowork Hub";
 const DEFAULT_IMAGE = "/Images/LandingPageImage.webp";
+const JSON_LD_ID = "site-jsonld";
 
-function upsertMeta(
-  selector: string,
-  key: string,
-  value: string,
-  attribute: "name" | "property" = "name",
-) {
-  let tag = document.head.querySelector(selector) as HTMLMetaElement | null;
+function upsertMeta(key: string, value: string, attribute: "name" | "property" = "name") {
+  let tag = document.head.querySelector(`meta[${attribute}="${key}"]`) as HTMLMetaElement | null;
 
   if (!tag) {
     tag = document.createElement("meta");
+    tag.setAttribute(attribute, key);
     document.head.appendChild(tag);
   }
 
-  tag.setAttribute(attribute, key);
   tag.setAttribute("content", value);
 }
 
@@ -40,26 +28,43 @@ function upsertLink(rel: string, href: string) {
   tag.setAttribute("href", href);
 }
 
-export function Seo({ title, description, path, image = DEFAULT_IMAGE, noIndex = false }: SeoProps) {
+/**
+ * Keeps the document head in sync during client-side navigation. The same
+ * metadata is baked into the prerendered HTML at build time (scripts/prerender.mjs),
+ * so crawlers that never run JavaScript see all of this too.
+ */
+export function Seo({ path }: { path: string }) {
   useEffect(() => {
-    const canonicalPath = path ?? window.location.pathname;
-    const canonicalUrl = new URL(canonicalPath, window.location.origin).toString();
-    const fullTitle = `${title} | ${SITE_NAME}`;
+    const meta = getMeta(path);
+    const title = fullTitle(meta.title);
+    const canonical = canonicalFor(meta.path);
+    const image = absoluteUrl(meta.image ?? DEFAULT_IMAGE);
 
-    document.title = fullTitle;
-    upsertMeta('meta[name="description"]', "description", description);
-    upsertMeta('meta[name="robots"]', "robots", noIndex ? "noindex,nofollow" : "index,follow");
-    upsertMeta('meta[property="og:title"]', "og:title", fullTitle, "property");
-    upsertMeta('meta[property="og:description"]', "og:description", description, "property");
-    upsertMeta('meta[property="og:type"]', "og:type", "website", "property");
-    upsertMeta('meta[property="og:url"]', "og:url", canonicalUrl, "property");
-    upsertMeta('meta[property="og:image"]', "og:image", image, "property");
-    upsertMeta('meta[name="twitter:card"]', "twitter:card", "summary_large_image");
-    upsertMeta('meta[name="twitter:title"]', "twitter:title", fullTitle);
-    upsertMeta('meta[name="twitter:description"]', "twitter:description", description);
-    upsertMeta('meta[name="twitter:image"]', "twitter:image", image);
-    upsertLink("canonical", canonicalUrl);
-  }, [description, image, noIndex, path, title]);
+    document.title = title;
+    upsertMeta("description", meta.description);
+    upsertMeta("robots", meta.noIndex ? "noindex,nofollow" : "index,follow");
+    upsertMeta("og:title", title, "property");
+    upsertMeta("og:description", meta.description, "property");
+    upsertMeta("og:type", "website", "property");
+    upsertMeta("og:url", canonical, "property");
+    upsertMeta("og:image", image, "property");
+    upsertMeta("og:site_name", "The Cowork", "property");
+    upsertMeta("og:locale", "en_PK", "property");
+    upsertMeta("twitter:card", "summary_large_image");
+    upsertMeta("twitter:title", title);
+    upsertMeta("twitter:description", meta.description);
+    upsertMeta("twitter:image", image);
+    upsertLink("canonical", canonical);
+
+    let ld = document.getElementById(JSON_LD_ID) as HTMLScriptElement | null;
+    if (!ld) {
+      ld = document.createElement("script");
+      ld.id = JSON_LD_ID;
+      ld.type = "application/ld+json";
+      document.head.appendChild(ld);
+    }
+    ld.textContent = JSON.stringify(buildJsonLd(meta));
+  }, [path]);
 
   return null;
 }

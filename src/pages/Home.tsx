@@ -3,22 +3,25 @@ import { Link } from "wouter";
 import { ArrowRight, Wifi, Shield, Users, CheckCircle2 } from "lucide-react";
 import { Section } from "@/components/Section";
 import { Seo } from "@/components/Seo";
+import { Img } from "@/components/Img";
+import { Disclosure, DetailPanel } from "@/components/Details";
+import { FaqSection } from "@/components/FaqSection";
+import { GENERAL_FAQS } from "@/data/faqs";
 
 export default function Home() {
   return (
     <>
-      <Seo
-        title="Coworking Space in Johar Town Lahore"
-        description="The Cowork offers premium coworking space in Johar Town Lahore with private offices, meeting rooms, fast WiFi, and shared workspaces."
-      />
+      <Seo path="/" />
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Wash */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
-          <img 
-            src="/Images/LandingPageImage.webp" 
-            alt="Luxury Coworking Space" 
+          <Img
+            name="LandingPageImage"
+            sizes="100vw"
+            alt="Luxury coworking space in Johar Town, Lahore"
+            priority
             className="w-full h-full object-cover"
           />
         </div>
@@ -30,14 +33,14 @@ export default function Home() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="text-white mb-6 leading-tight">
-              Premium Coworking <br/>
-              <span className="text-gradient-gold">in Lahore</span>
+              Coworking Space in <br/>
+              <span className="text-gradient-gold">Johar Town, Lahore</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-white/70 max-w-2xl mx-auto mb-10 font-light tracking-wide">
               Where ambition meets luxury in the heart of Johar Town.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-24 sm:mb-0">
               <Link href="/contact">
                 <button className="px-10 py-4 bg-primary text-black font-bold rounded-full hover:scale-105 transition-all duration-500 shadow-xl shadow-primary/20" data-testid="button-book-tour">
@@ -158,9 +161,10 @@ export default function Home() {
             className="relative"
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img 
-                src="Images/WomanWorking.webp" 
-                alt="Workspace Detail" 
+              <Img
+                name="WomanWorking"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                alt="A member working at a dedicated desk at The Cowork, Lahore"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
               />
             </div>
@@ -168,6 +172,97 @@ export default function Home() {
           </motion.div>
         </div>
       </Section>
+
+      {/* Indexable depth, collapsed by default so the page stays visually quiet. */}
+      <DetailPanel title="About The Cowork, Johar Town">
+        <Disclosure summary="A coworking space in Lahore built for people who work late" level="h2">
+          <p>
+            The Cowork is a shared workspace at 95 College Road, in PCSIR Staff Colony on the edge of
+            Johar Town. We sit deliberately just off the main boulevard: close enough that Johar Town,
+            Wapda Town, Canal Road and UET are all a short drive away, far enough that you are not
+            queuing in traffic every morning and paying for it in rent.
+          </p>
+          <p>
+            We rent three things and we publish what each one costs. A <strong>hot desk</strong> is any
+            free seat in the open workspace at <strong>PKR 15,000 a month</strong>. A{" "}
+            <strong>dedicated desk</strong> is a permanent seat with a locker that stays yours at{" "}
+            <strong>PKR 25,000 a month</strong>. A <strong>private office</strong> is a furnished,
+            lockable cabin for a team, from <strong>PKR 60,000 a month</strong>. Internet, electricity,
+            power backup, cleaning, coffee and your meeting room credits are inside those numbers.
+            There is no joining fee and no maintenance charge added later. See the full{" "}
+            <Link href="/pricing">rate card</Link>.
+          </p>
+        </Disclosure>
+
+        <Disclosure summary="Open 24 hours, with reception staffed 9 AM to 8 PM" level="h2">
+          <p>
+            Members hold biometric access <strong>24 hours a day, seven days a week</strong>, including
+            weekends and public holidays. Our reception desk is staffed{" "}
+            <strong>9:00 AM to 8:00 PM</strong>, and that is the window in which a call, a WhatsApp
+            message or an email gets the quickest answer. Outside it, the building keeps running —
+            security, power, internet and your desk do not clock off.
+          </p>
+          <p>
+            That distinction matters more here than it does in most cities. A large share of Lahore's
+            freelancers and agency teams work American or British hours, which means starting at six in
+            the evening and finishing at two or three in the morning. Almost no coworking space in the
+            city is genuinely built for that. We are — read about the{" "}
+            <Link href="/night-shift-coworking-lahore">night shift</Link>.
+          </p>
+        </Disclosure>
+
+        <Disclosure summary="Who works here — freelancers, startups and established teams" level="h2">
+          <p>
+            Around half our members are individuals and half are small teams, and the mix is deliberate.
+            Too many freelancers and the space is silent; too many teams and it is a set of private
+            companies that happen to share a car park.
+          </p>
+          <ul>
+            <li>
+              <strong>Freelancers and remote workers.</strong> Designers, developers, writers and
+              consultants who have hit the ceiling of working from home — the load shedding, the
+              household noise, the lack of anyone to think out loud with. A{" "}
+              <Link href="/hot-desk-lahore">hot desk</Link> at PKR 15,000 solves all three.
+            </li>
+            <li>
+              <strong>Startups and small agencies.</strong> Two to ten people who need a proper office
+              but not a five-year lease. Take a block of{" "}
+              <Link href="/dedicated-desk-lahore">dedicated desks</Link> and add seats as you hire.
+            </li>
+            <li>
+              <strong>Established teams and branches.</strong> Companies opening a Lahore presence, or a
+              delivery team needing a lockable, branded room with sound insulation for client calls.{" "}
+              <Link href="/private-office-lahore">Private offices</Link> take teams from 2 up to 50.
+            </li>
+          </ul>
+        </Disclosure>
+
+        <Disclosure summary="Engineered for uptime: fibre internet and full power backup" level="h2">
+          <p>
+            A workspace in Lahore is only as good as its worst hour. Ours is engineered around the two
+            things that reliably ruin a working day here: the power and the internet.
+          </p>
+          <p>
+            We run <strong>dedicated fibre with a second line that fails over automatically</strong>, and{" "}
+            <strong>industrial generators plus UPS on every desk and every network device</strong>. When
+            the grid drops, the lights, the air conditioning, the router and your machine stay on. You
+            usually will not notice it happened. For members on client calls at two in the morning, that
+            is not a nice-to-have. See the full <Link href="/amenities">list of amenities</Link>.
+          </p>
+        </Disclosure>
+
+        <Disclosure summary="Where we are — Johar Town, Wapda Town, PCSIR and College Road" level="h2">
+          <p>
+            95 College Road, PCSIR Staff Colony, Lahore 54770. We are on the western edge of Johar Town,
+            a straight run from <Link href="/coworking-space-wapda-town">Wapda Town</Link> along College
+            Road, inside <Link href="/coworking-space-pcsir">PCSIR Staff Colony</Link> itself, and a
+            short drive from UET and the university corridor. Parking is inside the property rather than
+            on the road.
+          </p>
+        </Disclosure>
+      </DetailPanel>
+
+      <FaqSection faqs={GENERAL_FAQS.slice(0, 6)} heading="Questions people ask before they visit" />
     </>
   );
 }

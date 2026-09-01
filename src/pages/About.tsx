@@ -2,14 +2,13 @@ import { motion } from "framer-motion";
 import { Section } from "@/components/Section";
 import { Link } from "wouter";
 import { Seo } from "@/components/Seo";
+import { Disclosure, DetailPanel } from "@/components/Details";
+import { NAP } from "@/data/site";
 
 export default function About() {
   return (
     <div className="pt-32 min-h-screen">
-      <Seo
-        title="About The Cowork Hub"
-        description="Learn how The Cowork Hub is elevating coworking culture in Lahore with premium spaces and a high-performance atmosphere."
-      />
+      <Seo path="/about" />
       <Section className="py-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -36,9 +35,13 @@ export default function About() {
             className="relative"
           >
             <div className="aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
-                alt="Building Architecture" 
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+                alt="The building housing The Cowork on College Road, Lahore"
+                width={2070}
+                height={2588}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
               />
             </div>
@@ -83,6 +86,63 @@ export default function About() {
           </Link>
         </div>
       </Section>
+
+      <DetailPanel title="More about us">
+        <Disclosure summary="Why we opened on College Road rather than the Johar Town boulevard" level="h2">
+          <p>
+            The Cowork opened in 2023 at {NAP.full}. We chose PCSIR Staff Colony rather than the Johar
+            Town boulevard on purpose. The boulevard is where every commercial building in the area put
+            its front door, which means it is also where the traffic, the rent and the parking problem
+            live. A few hundred metres off it, we could give members better space for less money and a
+            car park they can actually get into.
+          </p>
+          <p>
+            The second decision was about hours. A large share of Lahore's freelance and outsourced work
+            runs on American and British time, and those people were working through the night from their
+            bedrooms because nothing was open. So we run a genuine{" "}
+            <Link href="/night-shift-coworking-lahore">night shift</Link>, 6 PM to 3 AM, staffed and
+            fully powered, with 24-hour access on top of it.
+          </p>
+        </Disclosure>
+
+        <Disclosure summary="What we optimise for: uptime, and honesty about money" level="h2">
+          <p>
+            <strong>Uptime.</strong> Dedicated fibre with an automatic failover line, and industrial
+            generators plus UPS on every desk and every piece of network hardware. When the grid drops
+            you should not notice. For a member on a client call at two in the morning, that is not a
+            luxury feature — it is the entire product.
+          </p>
+          <p>
+            <strong>Honesty about money.</strong> Our rate card is on the website: PKR 15,000 for a hot
+            desk, PKR 25,000 for a dedicated desk, PKR 60,000 for a private office, all inclusive. Most
+            spaces in this market make you sit through a tour before they will give you a number. We
+            think that wastes your time and filters for the wrong people. See{" "}
+            <Link href="/pricing">pricing</Link>.
+          </p>
+        </Disclosure>
+
+        <Disclosure summary="What we are not" level="h2">
+          <p>
+            Worth being clear about the edges. We are a single location, not a chain, so we cannot offer
+            you a desk in Karachi next week. We are not the cheapest workspace in Lahore — there are
+            spaces running desks around PKR 11,000, and if price is the only variable that matters, take
+            one of them with our blessing. And we are not a business incubator: we do not take equity,
+            run an accelerator or promise introductions to investors. We rent good desks in a building
+            that works, and we run the community around them properly.
+          </p>
+        </Disclosure>
+
+        <Disclosure summary="Our name, address and hours, for the record" level="h2">
+          <p>
+            We trade as <strong>The Cowork</strong>. The address is <strong>{NAP.full}</strong>, the
+            phone number is <strong>{NAP.phone}</strong>, and the email is{" "}
+            <strong>{NAP.email}</strong>. The space is open <strong>24 hours a day, seven days a
+            week</strong> for members, and reception is staffed <strong>9:00 AM to 8:00 PM daily</strong>.
+            If you find us listed anywhere under a different name, address or number, that listing is out
+            of date — this is the reference.
+          </p>
+        </Disclosure>
+      </DetailPanel>
     </div>
   );
 }

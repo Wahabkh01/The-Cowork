@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { Section } from "@/components/Section";
 import { Calendar, Users, Heart } from "lucide-react";
 import { Seo } from "@/components/Seo";
+import { Img } from "@/components/Img";
+import { Link } from "wouter";
+import { Disclosure, DetailPanel } from "@/components/Details";
 
 export default function Community() {
   return (
     <div className="pt-32 min-h-screen">
-      <Seo
-        title="Coworking Community and Events"
-        description="Connect with founders, freelancers, and teams through events, wellness sessions, and networking at The Cowork Hub."
-      />
+      <Seo path="/community" />
       <Section className="py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <motion.div
@@ -43,9 +43,10 @@ export default function Community() {
             className="relative"
           >
             <div className="aspect-square rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
-              <img 
-                src="/Images/Community1.webp" 
-                alt="Community Event" 
+              <Img
+                name="Community1"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                alt="Members at a community event at The Cowork, Lahore"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
               />
             </div>
@@ -95,6 +96,65 @@ export default function Community() {
           ))}
         </div>
       </Section>
+
+      <DetailPanel title="Inside the community">
+        <Disclosure summary="Who you would actually be sitting next to" level="h2">
+          <p>
+            The mix here is roughly half individuals and half small teams, and it is deliberate. Too many
+            freelancers and the space is silent; too many teams and it is a set of private companies that
+            happen to share a car park.
+          </p>
+          <p>
+            In practice that means software developers and designers working for foreign clients, small
+            agencies running social and performance marketing, a handful of product startups, consultants
+            and accountants, and researchers from the UET corridor down{" "}
+            <Link href="/coworking-space-pcsir">College Road</Link>. A significant share work the{" "}
+            <Link href="/night-shift-coworking-lahore">night shift</Link> on American and British hours,
+            which gives the place two distinct characters depending on when you walk in.
+          </p>
+        </Disclosure>
+
+        <Disclosure summary="The two shifts have two different atmospheres" level="h2">
+          <p>
+            Walk in at eleven in the morning and it is a normal busy office: calls in the meeting rooms,
+            people moving between desks, the café working hard. Walk in at eleven at night and it is
+            noticeably quieter and more focused — a floor of people on client calls to America,
+            headphones on. Both are good rooms to be in. They are not the same room.
+          </p>
+          <p>
+            If what you want from coworking is people to talk to, the day shift gives you more of them.
+            If what you want is uninterrupted hours, the night is hard to beat — and it is not a
+            compromise here, because the power, internet, security and café all run through it.
+          </p>
+        </Disclosure>
+
+        <Disclosure summary="Introductions, not networking" level="h2">
+          <p>
+            We do not run a members' directory app or a Slack nobody posts in. What we do is simpler:
+            reception knows what most members do for a living, and if you say "I need someone who can
+            build a Shopify integration by Friday", they will point you at a desk. That has produced more
+            actual work for members than any event we have run.
+          </p>
+          <p>
+            Members also run their own sessions in our{" "}
+            <Link href="/meeting-rooms-lahore">meeting rooms</Link> — study groups, workshops, portfolio
+            reviews, small meetups. If you organise something for the Lahore freelance or startup
+            community and need a room with reliable power, talk to reception. We would rather the space
+            was used.
+          </p>
+        </Disclosure>
+
+        <Disclosure summary="Joining" level="h2">
+          <p>
+            Every plan includes access to everything on this page — there is no separate community fee
+            and no tier that excludes you from events. Rates are on the{" "}
+            <Link href="/pricing">pricing page</Link>: PKR 15,000 for a{" "}
+            <Link href="/hot-desk-lahore">hot desk</Link>, PKR 25,000 for a{" "}
+            <Link href="/dedicated-desk-lahore">dedicated desk</Link>, from PKR 60,000 for a{" "}
+            <Link href="/private-office-lahore">private office</Link>.
+          </p>
+        </Disclosure>
+      </DetailPanel>
     </div>
   );
 }

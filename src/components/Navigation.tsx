@@ -37,7 +37,7 @@ export function Navigation() {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-3">
-              <img src="/Images/Logo.png" alt="The Cowork Hub Logo" className="h-14 w-auto" />
+              <img src="/Images/Logo.png" alt="The Cowork logo" width={56} height={56} className="h-14 w-auto" />
               <div className="text-xl font-black tracking-tighter cursor-pointer flex items-center gap-2 group">
                 <span className="text-primary group-hover:scale-110 transition-transform">THE</span>
                 <span className="text-white">COWORK</span>
