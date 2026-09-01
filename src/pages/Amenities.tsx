@@ -92,13 +92,12 @@ export default function Amenities() {
       {/* Visual Break - Image */}
       <div className="h-[400px] w-full relative overflow-hidden">
         <div className="absolute inset-0 bg-black/40 z-10" />
-        {/* Unsplash: Coffee shop or lounge area in office */}
         <img 
-          src="/Images/DedicatedOffice1.webp" 
-          alt="Office Lounge" 
+          src="/Images/AmenitiesOfficeBanner.jpg" 
+          alt="The Cowork amenities area with desks, lounge seating, and coffee station" 
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 z-20 flex items-center justify-center">
+        <div className="absolute inset-0 z-20 flex items-center justify-center px-6 text-center">
           <h2 className="text-white text-3xl md:text-5xl font-serif italic">Work. Lounge. Create.</h2>
         </div>
       </div>
