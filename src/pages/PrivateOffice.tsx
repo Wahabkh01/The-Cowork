@@ -20,7 +20,7 @@ export default function PrivateOffice() {
         <p>
           The rooms are fully furnished and sound-insulated, so client calls and internal arguments both
           stay inside them. You can brand the door and the interior. You get guest reception for
-          visitors, daily cleaning, and unlimited use of the meeting rooms rather than a monthly credit.
+          visitors, daily cleaning, and full access to meeting rooms rather than a monthly credit.
         </p>
       </Disclosure>
 
@@ -29,7 +29,7 @@ export default function PrivateOffice() {
           <li><strong>A fully furnished private room</strong> with a lockable door, sized to your team.</li>
           <li><strong>Sound-insulated walls</strong> — usable for client calls, interviews and anything confidential.</li>
           <li><strong>Custom branding</strong> on the door and inside the office.</li>
-          <li><strong>Unlimited meeting room access</strong>, with screens, conference audio and whiteboards.</li>
+          <li><strong>Inclusive meeting room access</strong>, with screens, conference audio and whiteboards.</li>
           <li><strong>Guest reception and visitor management</strong> during staffed hours.</li>
           <li><strong>Daily cleaning service.</strong></li>
           <li><strong>Fibre internet with failover and full generator plus UPS backup</strong>, included — no separate electricity or diesel bill.</li>

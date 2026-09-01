@@ -138,7 +138,7 @@ export default function Home() {
               {[
                 "24/7 Secure Access",
                 "Hi-Speed Fiber",
-                "Unlimited Coffee",
+                "Complimentary Coffee",
                 "Concierge Service"
               ].map((feature, i) => (
                 <div key={i} className="flex items-center gap-4 text-white/80 glass-button p-4 rounded-2xl">

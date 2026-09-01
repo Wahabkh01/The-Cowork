@@ -10,7 +10,7 @@ export default function Amenities() {
   const amenities = [
     {
       icon: <Wifi className="w-8 h-8" />,
-      title: "Gigabit Internet",
+      title: "High-Speed Fibre Internet",
       desc: "Dedicated fiber optic lines with redundant backups ensuring you never disconnect."
     },
     {
@@ -21,7 +21,7 @@ export default function Amenities() {
     {
       icon: <Coffee className="w-8 h-8" />,
       title: "Premium Café",
-      desc: "Unlimited artisan roasted coffee, tea, and fruit water. Snacks available at the bar."
+      desc: "Complimentary artisan coffee, tea, and filtered water. Snacks available at the bar."
     },
     {
       icon: <Shield className="w-8 h-8" />,

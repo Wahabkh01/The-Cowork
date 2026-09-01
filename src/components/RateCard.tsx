@@ -34,7 +34,7 @@ export function RateTable() {
               <td className="px-6 py-5 text-white/50 text-sm font-light">
                 {plan.slug === "hot-desk-lahore" && "2 hours / month"}
                 {plan.slug === "dedicated-desk-lahore" && "5 hours / month"}
-                {plan.slug === "private-office-lahore" && "Unlimited"}
+                {plan.slug === "private-office-lahore" && "Inclusive"}
               </td>
             </tr>
           ))}

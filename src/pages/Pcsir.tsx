@@ -55,8 +55,8 @@ export default function Pcsir() {
             every desk and network device, so load shedding is not an interruption. Biometric entry, CCTV
             and on-site security. Ergonomic chairs and desks. Sound-insulated{" "}
             <Link href="/meeting-rooms-lahore">meeting rooms</Link> with screens, conference audio and
-            whiteboards. Printing and mail handling. Daily cleaning. Parking inside the property. An
-            unlimited café. Full list on the <Link href="/amenities">amenities page</Link>.
+            whiteboards. Printing and mail handling. Daily cleaning. Parking inside the property. A
+            complimentary café. Full list on the <Link href="/amenities">amenities page</Link>.
           </p>
           <p>
             And it is open 24 hours a day, with a staffed{" "}

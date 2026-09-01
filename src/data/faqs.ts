@@ -15,7 +15,7 @@ export const GENERAL_FAQS: Faq[] = [
   },
   {
     q: "How much does a coworking space in Lahore cost at The Cowork?",
-    a: "A Hot Desk is PKR 15,000 per month, a Dedicated Desk is PKR 25,000 per month, and a Private Office starts at PKR 60,000 per month. Every rate includes internet, full power backup, unlimited coffee and tea, meeting room credits and 24/7 access. There are no hidden setup or maintenance charges.",
+    a: "A Hot Desk is PKR 15,000 per month, a Dedicated Desk is PKR 25,000 per month, and a Private Office starts at PKR 60,000 per month. Every rate includes internet, full power backup, complimentary coffee and tea, meeting room credits and 24/7 access. There are no hidden setup or maintenance charges.",
   },
   {
     q: "Do you offer a night shift?",
@@ -62,7 +62,7 @@ export const PRICING_FAQS: Faq[] = [
   },
   {
     q: "Are meeting rooms charged separately?",
-    a: "Every plan includes meeting room credits: 2 hours a month on a Hot Desk, 5 hours on a Dedicated Desk, and unlimited access on a Private Office. Additional hours, and bookings for non-members, are quoted per hour on request.",
+    a: "Every plan includes meeting room credits: 2 hours a month on a Hot Desk, 5 hours on a Dedicated Desk, and inclusive access on a Private Office. Additional hours, and bookings for non-members, are quoted per hour on request.",
   },
 ];
 
@@ -96,7 +96,7 @@ export const MEETING_ROOM_FAQS: Faq[] = [
   },
   {
     q: "How many meeting room hours are included?",
-    a: "2 hours a month with a Hot Desk, 5 hours with a Dedicated Desk, and unlimited use with a Private Office. Extra hours are available on request.",
+    a: "2 hours a month with a Hot Desk, 5 hours with a Dedicated Desk, and inclusive use with a Private Office. Extra hours are available on request.",
   },
   {
     q: "Can non-members book a room?",

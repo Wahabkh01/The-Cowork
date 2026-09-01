@@ -101,11 +101,11 @@ export const localBusinessSchema = {
     { "@type": "Place", name: "Lahore" },
   ],
   amenityFeature: [
-    "Gigabit fibre internet",
+    "High-speed fibre internet",
     "24/7 power backup",
     "Night shift access",
     "Meeting rooms",
-    "Unlimited coffee and tea",
+    "Complimentary coffee and tea",
     "Biometric access and CCTV",
     "On-site parking",
     "Printing and mail handling",
@@ -232,7 +232,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/hot-desk-lahore",
     title: "Hot Desk in Lahore — PKR 15,000 per Month",
     description:
-      "A flexible hot desk in Lahore at PKR 15,000 per month: open workspace seating, fibre internet, unlimited coffee, meeting room credits, a business address and 24/7 access.",
+      "A flexible hot desk in Lahore at PKR 15,000 per month: open workspace seating, fibre internet, complimentary coffee and tea, meeting room credits, a business address and 24/7 access.",
     trail: [
       { name: "Spaces & Plans", path: "/spaces" },
       { name: "Hot Desk", path: "/hot-desk-lahore" },
@@ -254,7 +254,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/private-office-lahore",
     title: "Private Office for Rent in Lahore — from PKR 60,000",
     description:
-      "Furnished, lockable private offices for rent in Lahore from PKR 60,000 per month. Teams of 2 to 50, sound-insulated walls, custom branding, unlimited meeting rooms and daily cleaning.",
+      "Furnished, lockable private offices for rent in Lahore from PKR 60,000 per month. Teams of 2 to 50, sound-insulated walls, custom branding, inclusive meeting room access and daily cleaning.",
     trail: [
       { name: "Spaces & Plans", path: "/spaces" },
       { name: "Private Office", path: "/private-office-lahore" },
@@ -289,7 +289,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/amenities",
     title: "Amenities — Internet, Power Backup, Café & Meeting Rooms",
     description:
-      "What is included at The Cowork, Lahore: gigabit fibre with a backup line, industrial power backup, biometric security, ergonomic furniture, printing, a stocked café and tech-equipped meeting rooms.",
+      "What is included at The Cowork, Lahore: high-speed fibre with a backup line, industrial power backup, biometric security, ergonomic furniture, printing, a stocked café and tech-equipped meeting rooms.",
     trail: [{ name: "Amenities", path: "/amenities" }],
   },
   "/community": {

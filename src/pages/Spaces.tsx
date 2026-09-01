@@ -145,10 +145,10 @@ export default function Spaces() {
         <Disclosure summary="What every plan includes regardless" level="h2">
           <p>
             Dedicated fibre internet with an automatic backup line. Industrial generators plus UPS, so
-            load shedding does not interrupt anything. Unlimited coffee, tea and water. Daily cleaning.
+            load shedding does not interrupt anything. Complimentary coffee, tea and water. Daily cleaning.
             Biometric access, CCTV and on-site security. Parking inside the property. Reception and mail
             handling between 9:00 AM and 8:00 PM. And meeting room credits, which scale with the plan —
-            2 hours on a hot desk, 5 on a dedicated desk, unlimited with a private office. The full list
+            2 hours on a hot desk, 5 on a dedicated desk, inclusive access with a private office. The full list
             is on the <Link href="/amenities">amenities page</Link>, and{" "}
             <Link href="/meeting-rooms-lahore">meeting rooms</Link> have their own page.
           </p>

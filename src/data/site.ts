@@ -104,7 +104,7 @@ export const PLANS: Plan[] = [
     features: [
       "Access to the open workspace",
       "High-speed fibre internet with backup line",
-      "Unlimited coffee, tea and filtered water",
+      "Complimentary coffee, tea and filtered water",
       "2 hours of meeting room credits each month",
       "Use of our address as your business address",
       "Full power backup — no load shedding downtime",
@@ -144,7 +144,7 @@ export const PLANS: Plan[] = [
       "Fully furnished private room with lockable door",
       "Sound-insulated walls for calls and client meetings",
       "Custom branding on the door and inside the office",
-      "Unlimited meeting room access",
+      "Inclusive meeting room access",
       "Guest reception and visitor management",
       "Daily cleaning service",
     ],

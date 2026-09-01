@@ -15,7 +15,7 @@ import { SHIFTS } from "@/data/site";
 const INCLUDED = [
   "Fibre internet with automatic backup line",
   "Electricity and industrial power backup",
-  "Unlimited coffee, tea and filtered water",
+  "Complimentary coffee, tea and filtered water",
   "Daily cleaning and maintenance",
   "Meeting room credits on every plan",
   "Biometric access, CCTV and security",
@@ -135,7 +135,7 @@ export default function Pricing() {
           <p>
             Meeting room credits come with every plan — two hours a month on a{" "}
             <Link href="/hot-desk-lahore">hot desk</Link>, five on a{" "}
-            <Link href="/dedicated-desk-lahore">dedicated desk</Link>, and unlimited use with a{" "}
+            <Link href="/dedicated-desk-lahore">dedicated desk</Link>, and inclusive access with a{" "}
             <Link href="/private-office-lahore">private office</Link>. Additional hours, and bookings
             from people who are not members, are quoted per hour — message reception and we will confirm
             the rate and the slot. More on the{" "}
