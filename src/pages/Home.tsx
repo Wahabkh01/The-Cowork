@@ -6,6 +6,7 @@ import { Seo } from "@/components/Seo";
 import { Img } from "@/components/Img";
 import { Disclosure, DetailPanel } from "@/components/Details";
 import { FaqSection } from "@/components/FaqSection";
+import { ReviewsSection } from "@/components/ReviewsSection";
 import { GENERAL_FAQS } from "@/data/faqs";
 
 export default function Home() {
@@ -172,6 +173,9 @@ export default function Home() {
           </motion.div>
         </div>
       </Section>
+
+      {/* Social proof — Trustindex widget, with the prerendered carousel as fallback. */}
+      <ReviewsSection />
 
       {/* Indexable depth, collapsed by default so the page stays visually quiet. */}
       <DetailPanel title="About The Cowork, Johar Town">

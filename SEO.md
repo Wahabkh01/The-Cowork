@@ -146,7 +146,57 @@ heavy, close more rows or move copy to a different page — do not hide it.
 
 ---
 
-## 7. Rules for keeping the site half healthy
+## 7. Google reviews on the homepage
+
+The homepage carries a Google-reviews carousel after the "Designed for Focus" section, driven by
+**Trustindex** — the same service workpod.pk uses (`cdn.trustindex.io`).
+
+### Turning it on
+
+1. Sign up at [trustindex.io](https://trustindex.io) and connect the Google Business Profile.
+2. Create a widget. Set the layout to **slider / carousel, 3 per row** — the theme CSS assumes that.
+3. On "Get the code" you get an embed like
+   `<script src="https://cdn.trustindex.io/loader.js?abc123def">`. The part **after the `?`** is the
+   widget ID.
+4. Set it as `VITE_TRUSTINDEX_WIDGET_ID` in Vercel's environment variables (and in `.env` locally),
+   then redeploy. It is a build-time variable, so a redeploy is required — changing it in the Vercel
+   dashboard alone does nothing until the next build.
+
+Until that variable is set, the section does not render at all.
+
+### What it costs you
+
+Trustindex renders **client-side**, so the reviews are not in the prerendered HTML. They are
+invisible to non-JS crawlers, link scrapers and AI crawlers, and sit in Google's deferred render
+queue. They add social proof for human visitors but **no indexable content** — unlike the rest of
+the site. The rating summary above the widget ("Rated 5.0 on Google · 87 reviews") *is* prerendered,
+so that much is indexable.
+
+If you later want the reviews themselves indexable, paste real ones into `src/data/reviews.ts` and
+unset `VITE_TRUSTINDEX_WIDGET_ID`; the prerendered fallback carousel in
+`src/components/ReviewsCarousel.tsx` takes over. That fallback also kicks in automatically if an
+ad-blocker blocks the Trustindex script, so the section is never an empty frame.
+
+### Two hard rules
+
+- **Never invent a review, a name or a rating.** `src/data/reviews.ts` must contain only real
+  reviews copied verbatim from the profile. Fabricated social proof is deceptive, and on a business
+  whose main advantage is a genuine 5.0 it is the most damaging thing to be caught doing.
+- **Do not add `Review` or `aggregateRating` schema for these.** Google's guidelines prohibit
+  marking up review data collected on a third-party platform. Displaying them is fine; claiming them
+  as first-party structured data risks a manual action. This is why the schema graph has no
+  `aggregateRating` despite the 5.0.
+
+### Theming
+
+`src/index.css` carries `.trustindex-holder .ti-widget` overrides that pull the widget onto the
+dark/gold theme — glass cards, `#D4AF37` stars, gold-on-hover arrows, and the widget's own duplicate
+header/footer hidden. If Trustindex changes its class names in a future release the widget will
+revert to its default light styling; the fix is to update those selectors.
+
+---
+
+## 8. Rules for keeping the site half healthy
 
 - **Adding a page?** Add it to `src/data/routes.ts` *and* `src/data/meta.ts` *and* `src/App.tsx`.
   The sitemap and prerenderer both read `routes.ts`, so a page missing from it silently
@@ -164,7 +214,7 @@ heavy, close more rows or move copy to a different page — do not hide it.
 
 ---
 
-## 8. Keyword targets
+## 9. Keyword targets
 
 | Priority | Term | Page |
 |---|---|---|

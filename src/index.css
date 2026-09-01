@@ -161,3 +161,92 @@
     -webkit-text-fill-color: transparent;
   }
 }
+
+/* ================================
+   TRUSTINDEX GOOGLE REVIEWS WIDGET
+   The widget ships its own light-theme markup; these pull it onto the
+   dark/gold theme so it does not read as a bolted-on third-party block.
+   Layout (slider, 3 per row) is set in the Trustindex dashboard.
+================================ */
+.trustindex-holder .ti-widget {
+  --ti-bg: transparent;
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+}
+
+.trustindex-holder .ti-widget .ti-review-item,
+.trustindex-holder .ti-widget .ti-review-item > .ti-inner {
+  background: rgba(255, 255, 255, 0.035) !important;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.85) !important;
+  transition: border-color 0.5s ease;
+}
+
+.trustindex-holder .ti-widget .ti-review-item:hover > .ti-inner {
+  border-color: hsla(46, 65%, 52%, 0.3) !important;
+}
+
+/* Review body and reviewer name */
+.trustindex-holder .ti-widget .ti-review-text,
+.trustindex-holder .ti-widget .ti-review-content {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-weight: 300 !important;
+}
+
+.trustindex-holder .ti-widget .ti-name,
+.trustindex-holder .ti-widget .ti-profile-name {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.trustindex-holder .ti-widget .ti-date,
+.trustindex-holder .ti-widget .ti-review-header .ti-date {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Gold stars instead of Google's default amber */
+.trustindex-holder .ti-widget .ti-stars {
+  display: flex !important;
+  align-items: center;
+  gap: 2px;
+}
+
+.trustindex-holder .ti-widget .ti-stars .ti-star {
+  fill: hsl(var(--primary)) !important;
+  color: hsl(var(--primary)) !important;
+}
+
+/* "Read more" and any inline links */
+.trustindex-holder .ti-widget .ti-read-more,
+.trustindex-holder .ti-widget a {
+  color: hsl(var(--primary)) !important;
+}
+
+/* Slider arrows and dots */
+.trustindex-holder .ti-widget .ti-next,
+.trustindex-holder .ti-widget .ti-prev {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+}
+
+.trustindex-holder .ti-widget .ti-next:hover,
+.trustindex-holder .ti-widget .ti-prev:hover {
+  background: hsl(var(--primary)) !important;
+  color: #000000 !important;
+}
+
+.trustindex-holder .ti-widget .ti-dot.active,
+.trustindex-holder .ti-widget .ti-slider-dot.active {
+  background: hsl(var(--primary)) !important;
+}
+
+/* The header/footer duplicate the rating summary we already render above it. */
+.trustindex-holder .ti-widget .ti-widget-container > .ti-header,
+.trustindex-holder .ti-widget .source-Google.ti-footer {
+  display: none !important;
+}
