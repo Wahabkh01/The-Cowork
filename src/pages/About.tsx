@@ -7,7 +7,7 @@ import { NAP } from "@/data/site";
 
 export default function About() {
   return (
-    <div className="pt-32 min-h-screen">
+    <div className="pt-24 sm:pt-28 lg:pt-32 min-h-screen">
       <Seo path="/about" />
       <Section className="py-20 text-center">
         <motion.div
@@ -27,14 +27,14 @@ export default function About() {
       </Section>
 
       <Section className="py-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+            <div className="aspect-[4/5] rounded-3xl sm:rounded-[2rem] lg:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
                 alt="The building housing The Cowork on College Road, Lahore"
@@ -76,7 +76,7 @@ export default function About() {
       </Section>
 
       <Section className="py-32 border-t border-white/5">
-        <div className="glass-card rounded-[3rem] p-16 md:p-24 text-center relative overflow-hidden">
+        <div className="glass-card rounded-3xl sm:rounded-[2rem] lg:rounded-[3rem] p-8 sm:p-12 lg:p-16 xl:p-24 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10 opacity-30" />
           <h2 className="text-white mb-10 relative z-10">Ready to Upgrade?</h2>
           <Link href="/contact">

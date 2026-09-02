@@ -21,7 +21,7 @@ const KIT = [
 
 export default function MeetingRooms() {
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       <Seo path="/meeting-rooms-lahore" />
       <Breadcrumbs path="/meeting-rooms-lahore" />
 

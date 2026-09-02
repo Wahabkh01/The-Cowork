@@ -12,7 +12,7 @@ export function Section({ children, className = "", id, dark = false }: SectionP
   return (
     <section 
       id={id}
-      className={`py-20 md:py-32 relative overflow-hidden ${dark ? "bg-black" : "bg-zinc-900"} ${className}`}
+      className={`py-14 sm:py-20 lg:py-24 xl:py-28 relative overflow-hidden ${dark ? "bg-black" : "bg-zinc-900"} ${className}`}
     >
       <div className="container mx-auto px-4 relative z-10">
         <motion.div

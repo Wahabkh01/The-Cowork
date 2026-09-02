@@ -22,7 +22,7 @@ const NIGHT_FACTS = [
 
 export default function NightShift() {
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       <Seo path="/night-shift-coworking-lahore" />
       <Breadcrumbs path="/night-shift-coworking-lahore" />
 
@@ -55,7 +55,7 @@ export default function NightShift() {
       </Section>
 
       <Section dark>
-        <div className="text-center mb-14">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-14">
           <h2 className="text-white mb-4">Same Rate, Any Shift</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto opacity-50" />
         </div>

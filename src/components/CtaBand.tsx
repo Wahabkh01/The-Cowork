@@ -14,7 +14,7 @@ export function CtaBand({
 }) {
   return (
     <Section className="py-32 border-t border-white/5">
-      <div className="glass-card rounded-[3rem] p-16 md:p-24 text-center relative overflow-hidden">
+      <div className="glass-card rounded-3xl sm:rounded-[2rem] lg:rounded-[3rem] p-8 sm:p-12 lg:p-16 xl:p-24 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10 opacity-30" />
         <h2 className="text-white mb-10 relative z-10">{heading}</h2>
         <div className="flex flex-col sm:flex-row gap-5 justify-center relative z-10">

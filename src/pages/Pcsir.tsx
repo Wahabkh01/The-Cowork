@@ -9,7 +9,7 @@ import { CtaBand } from "@/components/CtaBand";
 
 export default function Pcsir() {
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       <Seo path="/coworking-space-pcsir" />
       <Breadcrumbs path="/coworking-space-pcsir" />
 

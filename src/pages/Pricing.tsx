@@ -32,7 +32,7 @@ const NOT_INCLUDED = [
 
 export default function Pricing() {
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       <Seo path="/pricing" />
       <Breadcrumbs path="/pricing" />
 
@@ -53,7 +53,7 @@ export default function Pricing() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card rounded-[2.5rem] p-10 md:p-12"
+            className="glass-card rounded-[2rem] lg:rounded-[2.5rem] p-7 sm:p-9 lg:p-12"
           >
             <h2 className="text-white text-2xl md:text-3xl font-bold mb-8">In the price</h2>
             <ul className="space-y-5">
@@ -73,7 +73,7 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             viewport={{ once: true }}
-            className="glass-card rounded-[2.5rem] p-10 md:p-12"
+            className="glass-card rounded-[2rem] lg:rounded-[2.5rem] p-7 sm:p-9 lg:p-12"
           >
             <h2 className="text-white text-2xl md:text-3xl font-bold mb-8">Not in the price</h2>
             <ul className="space-y-5">

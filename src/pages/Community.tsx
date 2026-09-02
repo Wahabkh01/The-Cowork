@@ -8,10 +8,10 @@ import { Disclosure, DetailPanel } from "@/components/Details";
 
 export default function Community() {
   return (
-    <div className="pt-32 min-h-screen">
+    <div className="pt-24 sm:pt-28 lg:pt-32 min-h-screen">
       <Seo path="/community" />
       <Section className="py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -42,7 +42,7 @@ export default function Community() {
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="aspect-square rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+            <div className="aspect-square rounded-3xl sm:rounded-[2rem] lg:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
               <Img
                 name="Community1"
                 sizes="(max-width: 1024px) 100vw, 45vw"

@@ -51,7 +51,7 @@ export default function Amenities() {
   ];
 
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       <Seo path="/amenities" />
       <Section className="text-center pt-20">
         <motion.h1 
@@ -90,7 +90,7 @@ export default function Amenities() {
       </Section>
 
       {/* Visual Break - Image */}
-      <div className="h-[400px] w-full relative overflow-hidden">
+      <div className="h-[260px] sm:h-[340px] lg:h-[420px] w-full relative overflow-hidden">
         <div className="absolute inset-0 bg-black/40 z-10" />
         <Img
           name="AmenitiesOfficeBanner"

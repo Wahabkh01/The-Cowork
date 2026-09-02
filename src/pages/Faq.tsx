@@ -8,7 +8,7 @@ import { GENERAL_FAQS, PRICING_FAQS, NIGHT_SHIFT_FAQS, MEETING_ROOM_FAQS } from 
 
 export default function Faq() {
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       <Seo path="/faq" />
       <Breadcrumbs path="/faq" />
 

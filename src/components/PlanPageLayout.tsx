@@ -41,7 +41,7 @@ export function PlanPageLayout({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="glass-card rounded-[2.5rem] p-10 md:p-14 max-w-4xl mx-auto"
+          className="glass-card rounded-[2rem] lg:rounded-[2.5rem] p-7 sm:p-9 lg:p-12 xl:p-14 max-w-4xl mx-auto"
         >
           <ImageGallery images={plan.images} alt={`${plan.name} at The Cowork, Lahore`} />
 
@@ -70,7 +70,7 @@ export function PlanPageLayout({
       </Section>
 
       <Section dark>
-        <div className="text-center mb-14">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-14">
           <h2 className="text-white mb-4">Other Plans</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto opacity-50" />
         </div>

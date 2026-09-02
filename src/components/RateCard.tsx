@@ -47,20 +47,20 @@ export function RateTable() {
 /** Three-up plan cards with full feature lists. */
 export function PlanCards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
       {PLANS.map((plan) => (
         <div
           key={plan.slug}
-          className={`relative p-8 md:p-10 rounded-[2rem] glass-card transition-transform duration-500 hover:-translate-y-1 ${
+          className={`relative p-7 sm:p-8 lg:p-10 rounded-[2rem] glass-card transition-transform duration-500 hover:-translate-y-1 ${
             plan.featured ? "border-primary/40 ring-1 ring-primary/20" : ""
-          }`}
+          } ${PLANS.indexOf(plan) === 2 ? "sm:col-span-2 lg:col-span-1" : ""}`}
         >
           {plan.featured && (
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-black px-5 py-1 text-[10px] font-black uppercase tracking-widest rounded-full">
               Most popular
             </div>
           )}
-          <h3 className="text-white text-2xl md:text-3xl font-bold mb-3">
+          <h3 className="text-white text-2xl lg:text-3xl font-bold mb-3">
             <Link href={`/${plan.slug}`}>
               <span className="hover:text-primary cursor-pointer transition-colors">{plan.name}</span>
             </Link>
@@ -68,7 +68,7 @@ export function PlanCards() {
           <p className="text-white/40 text-sm font-light leading-relaxed mb-8 min-h-[3.5rem]">{plan.short}</p>
 
           <div className="mb-8">
-            <span className="text-4xl font-bold text-gradient-gold">{plan.priceLabel}</span>
+            <span className="text-3xl sm:text-4xl font-bold text-gradient-gold">{plan.priceLabel}</span>
             <span className="text-white/30 text-sm ml-2">{plan.period}</span>
           </div>
 

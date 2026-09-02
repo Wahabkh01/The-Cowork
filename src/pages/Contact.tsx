@@ -9,10 +9,10 @@ import { NAP, HOURS } from "@/data/site";
 
 export default function Contact() {
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       <Seo path="/contact" />
       <Section className="pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -22,7 +22,7 @@ export default function Contact() {
               Interested in a tour or have questions? Fill out the form or visit us directly.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
               {[
                 { icon: <MapPin />, title: "Visit", val: NAP.full },
                 { 
@@ -42,15 +42,15 @@ export default function Contact() {
                   </div>
                   <h3 className="text-white text-lg mb-1 font-bold">{item.title}</h3>
                   {item.contacts ? (
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col">
                       {item.contacts.map((c, idx) => (
-                        <a key={idx} href={c.href} className="text-white/40 text-sm font-light hover:text-primary transition-colors break-words">
+                        <a key={idx} href={c.href} className="block py-1.5 text-white/40 text-sm font-light hover:text-primary transition-colors break-words">
                           {c.val}
                         </a>
                       ))}
                     </div>
                   ) : item.href ? (
-                    <a href={item.href} className="text-white/40 text-sm font-light hover:text-primary transition-colors break-words">{item.val}</a>
+                    <a href={item.href} className="block py-1.5 text-white/40 text-sm font-light hover:text-primary transition-colors break-words">{item.val}</a>
                   ) : (
                     <p className="text-white/40 text-sm font-light">{item.val}</p>
                   )}
@@ -62,7 +62,7 @@ export default function Contact() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="glass-card p-10 md:p-14 rounded-[3rem] shadow-2xl relative overflow-hidden"
+            className="glass-card p-7 sm:p-9 lg:p-12 xl:p-14 rounded-3xl sm:rounded-[2rem] lg:rounded-[3rem] shadow-2xl relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-[80px]" />
             <h3 className="text-white mb-8 text-3xl font-bold">Send an Inquiry</h3>
@@ -72,7 +72,7 @@ export default function Contact() {
       </Section>
 
       <Section>
-        <div className="w-full h-[500px] rounded-3xl overflow-hidden">
+        <div className="w-full h-[320px] sm:h-[420px] lg:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden">
           <iframe
             title="Map showing The Cowork at 95 College Road, PCSIR Staff Colony, Lahore"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.821511256834!2d74.29001987469599!3d31.47352974875151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919016d3447cae7%3A0x95c9732879ecbe61!2sThe%20Cowork%20-%20Coworking%20Space%20Johar%20Town%20Lahore!5e0!3m2!1sen!2s!4v1713293323817!5m2!1sen!2s"

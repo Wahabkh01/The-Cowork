@@ -8,11 +8,11 @@ export function Breadcrumbs({ path }: { path: string }) {
   if (!trail?.length) return null;
 
   return (
-    <nav aria-label="Breadcrumb" className="container mx-auto px-4 pt-32 pb-0">
+    <nav aria-label="Breadcrumb" className="container mx-auto px-4 pt-24 sm:pt-28 lg:pt-32 pb-0">
       <ol className="flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-white/25">
         <li>
           <Link href="/">
-            <span className="hover:text-primary cursor-pointer transition-colors">Home</span>
+            <span className="inline-block py-1.5 hover:text-primary cursor-pointer transition-colors">Home</span>
           </Link>
         </li>
         {trail.map((crumb, i) => (
@@ -22,7 +22,7 @@ export function Breadcrumbs({ path }: { path: string }) {
               <span className="text-white/70" aria-current="page">{crumb.name}</span>
             ) : (
               <Link href={crumb.path}>
-                <span className="hover:text-primary cursor-pointer transition-colors">{crumb.name}</span>
+                <span className="inline-block py-1.5 hover:text-primary cursor-pointer transition-colors">{crumb.name}</span>
               </Link>
             )}
           </li>

@@ -81,17 +81,37 @@
     @apply font-bold tracking-tight;
   }
 
+  /*
+    Fluid type. The old fixed steps (48 / 72 / 96px) meant every laptop from
+    1024px up got a 96px h1, and a 360px phone got 48px. clamp() scales
+    continuously between a phone-safe floor and a desktop ceiling, so there is
+    no width at which a heading is wrong. Components that set an explicit
+    text-* utility still win — utilities beat the base layer.
+  */
   h1 {
-    @apply text-5xl md:text-7xl lg:text-8xl;
+    font-size: clamp(2.125rem, 1.35rem + 3.4vw, 5rem);
+    line-height: 1.06;
   }
 
   h2 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
+    font-size: clamp(1.625rem, 1.15rem + 2.1vw, 3.5rem);
+    line-height: 1.12;
   }
 
   h3 {
-    @apply text-3xl md:text-4xl;
+    font-size: clamp(1.25rem, 1.05rem + 0.9vw, 2rem);
+    line-height: 1.25;
   }
+
+  /* Long unbroken strings (emails, URLs) must never force a horizontal scrollbar. */
+  h1, h2, h3, h4, p, li, dd, summary {
+    overflow-wrap: break-word;
+  }
+}
+
+/* The viewport is the hard limit; nothing may create a sideways scrollbar. */
+html {
+  overflow-x: hidden;
 }
 
 /* ================================
@@ -249,4 +269,84 @@
 .trustindex-holder .ti-widget .ti-widget-container > .ti-header,
 .trustindex-holder .ti-widget .source-Google.ti-footer {
   display: none !important;
+}
+
+/* ================================
+   TAP TARGETS
+   wouter's <Link> renders an inline <a>. When it wraps a block child — a
+   full-width button, or a padded span — the anchor's own box collapses to a
+   single text line, so the real tap target is ~19px even though the control
+   looks much larger. Promoting those anchors to block makes the hit area match
+   what the user sees.
+================================ */
+footer li a {
+  display: block;
+}
+
+/*
+  :has() is dropped whole-rule by browsers that lack it, so keep it isolated.
+  display only — setting width:100% here made every anchor-wrapped button a
+  full-width flex item, which blew the two hero CTAs apart to opposite ends of
+  the row. Buttons that need to fill their container say so themselves (w-full).
+*/
+a:has(> button) {
+  display: block;
+}
+
+/*
+  No width rule here on purpose. A block-level anchor already fills its
+  container in normal flow, which is what a full-width button needs. Matching
+  on .w-full also caught the hero CTAs (w-full sm:w-auto), turning them into
+  50%-wide flex items sitting at opposite ends of the row.
+*/
+
+/* ================================
+   VIEWPORT-HEIGHT HERO
+   Two Tailwind arbitrary classes for the same property (min-h-[100vh] and
+   min-h-[100svh]) clash — which one wins depends on stylesheet order, not class
+   order. A single rule with a real CSS fallback is deterministic: browsers that
+   don't know svh keep the vh line, the rest use svh (which excludes mobile
+   browser chrome, so the hero is never clipped on a phone).
+================================ */
+.min-h-screen-dvh {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* ================================
+   SHORT LAPTOP SCREENS
+   A 1366x768 panel gives roughly 650px of viewport once browser chrome is
+   accounted for — the single most common laptop there is. Width-based
+   breakpoints cannot see that, so the hero is tightened on height instead,
+   keeping the stats card above the fold without cramping tall screens.
+================================ */
+@media (min-width: 768px) and (max-height: 760px) {
+  .hero-shell {
+    padding-top: 6.5rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .hero-copy {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(1.875rem, 1rem + 2.6vw, 3.25rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-copy p {
+    margin-bottom: 1.5rem;
+    font-size: 1.0625rem;
+  }
+
+  .hero-stats {
+    margin-top: 1.25rem;
+  }
+
+  .hero-stats > div {
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+  }
 }

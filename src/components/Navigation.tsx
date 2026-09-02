@@ -28,17 +28,17 @@ export function Navigation() {
   }, [location]);
 
   return (
-    <div className="fixed top-6 w-full z-50 px-6">
+    <div className="fixed top-3 sm:top-6 w-full z-50 px-3 sm:px-6">
       <nav
         className={`mx-auto max-w-5xl rounded-full transition-all duration-500 border border-white/10 ${
-          scrolled ? "glass-nav py-2 shadow-2xl" : "bg-black/20 backdrop-blur-md py-4"
+          scrolled ? "glass-nav py-2 shadow-2xl" : "bg-black/20 backdrop-blur-md py-2.5 sm:py-4"
         }`}
       >
-        <div className="container mx-auto px-6 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between gap-3">
           <Link href="/">
             <div className="flex items-center gap-3">
-              <img src="/Images/Logo.png" alt="The Cowork logo" width={56} height={56} className="h-14 w-auto" />
-              <div className="text-xl font-black tracking-tighter cursor-pointer flex items-center gap-2 group">
+              <img src="/Images/Logo.png" alt="The Cowork logo" width={56} height={56} className="h-10 sm:h-12 lg:h-14 w-auto" />
+              <div className="text-base sm:text-lg lg:text-xl font-black tracking-tighter cursor-pointer flex items-center gap-1.5 sm:gap-2 group">
                 <span className="text-primary group-hover:scale-110 transition-transform">THE</span>
                 <span className="text-white">COWORK</span>
               </div>
@@ -46,7 +46,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             {links.map((link) => (
               <Link key={link.href} href={link.href}>
                 <div
@@ -64,7 +64,9 @@ export function Navigation() {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden text-white p-2"
+            className="lg:hidden text-white p-3 -mr-1"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -86,11 +88,11 @@ export function Navigation() {
                 boxShadow: "0 20px 60px rgba(0,0,0,0.9)",
               }}
             >
-              <div className="p-8 flex flex-col gap-6">
+              <div className="p-6 sm:p-8 flex flex-col gap-4 sm:gap-5 max-h-[70vh] overflow-y-auto">
                 {links.map((link) => (
                   <Link key={link.href} href={link.href}>
                     <div
-                      className={`text-2xl font-black uppercase tracking-tighter cursor-pointer ${
+                      className={`text-xl sm:text-2xl font-black uppercase tracking-tighter cursor-pointer py-1 ${
                         location === link.href ? "text-primary" : "text-white/80"
                       }`}
                     >

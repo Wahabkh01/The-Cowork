@@ -14,7 +14,14 @@ export default function Home() {
     <>
       <Seo path="/" />
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/*
+        Hero lays out as a flex column: nav spacer, centred copy, then the stats
+        card in normal flow. The stats used to be absolutely positioned at
+        bottom-12, which meant the centred copy grew into them on any viewport
+        under ~720px tall — i.e. 1366x768, the most common laptop there is.
+        100svh (with a vh fallback) keeps mobile browser chrome from clipping it.
+      */}
+      <section className="relative min-h-screen-dvh flex flex-col overflow-hidden">
         {/* Background Wash */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
@@ -27,57 +34,60 @@ export default function Home() {
           />
         </div>
 
-        <div className="container relative z-20 px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <h1 className="text-white mb-6 leading-tight">
-              Coworking Space in <br/>
-              <span className="text-gradient-gold">Johar Town, Lahore</span>
-            </h1>
+        <div className="hero-shell relative z-20 flex flex-col flex-1 justify-center w-full pt-24 pb-8 xs:pt-28 sm:pt-32 sm:pb-14">
+          <div className="container mx-auto px-4 text-center flex items-center justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              className="hero-copy w-full py-4 sm:py-8"
+            >
+              <h1 className="text-white mb-6">
+                Coworking Space in <br className="hidden xs:block" />
+                <span className="text-gradient-gold">Johar Town, Lahore</span>
+              </h1>
 
-            <p className="text-xl md:text-2xl text-white/70 max-w-2xl mx-auto mb-10 font-light tracking-wide">
-              Where ambition meets luxury in the heart of Johar Town.
-            </p>
+              <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-white/70 max-w-2xl mx-auto mb-6 xs:mb-8 sm:mb-10 font-light tracking-wide">
+                Where ambition meets luxury in the heart of Johar Town.
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-24 sm:mb-0">
-              <Link href="/contact">
-                <button className="px-10 py-4 bg-primary text-black font-bold rounded-full hover:scale-105 transition-all duration-500 shadow-xl shadow-primary/20" data-testid="button-book-tour">
-                  Book a Tour
-                </button>
-              </Link>
-              <Link href="/spaces">
-                <button className="px-10 py-4 glass-button text-white font-semibold rounded-full hover:scale-105 transition-all duration-500" data-testid="button-view-plans">
-                  View Plans
-                </button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Floating Stats */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-5xl px-4 z-20">
-          <div className="glass-card rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { label: "Members", value: "500+" },
-              { label: "Offices", value: "40" },
-              { label: "Events", value: "12+" },
-              { label: "Uptime", value: "99.9%" },
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-gradient-gold mb-1">{stat.value}</div>
-                <div className="text-[10px] font-bold text-white/40 uppercase tracking-[0.2em]">{stat.label}</div>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center [&>a]:w-full sm:[&>a]:w-auto">
+                <Link href="/contact">
+                  <button className="w-full sm:w-auto px-8 sm:px-10 py-4 bg-primary text-black font-bold rounded-full hover:scale-105 transition-all duration-500 shadow-xl shadow-primary/20" data-testid="button-book-tour">
+                    Book a Tour
+                  </button>
+                </Link>
+                <Link href="/spaces">
+                  <button className="w-full sm:w-auto px-8 sm:px-10 py-4 glass-button text-white font-semibold rounded-full hover:scale-105 transition-all duration-500" data-testid="button-view-plans">
+                    View Plans
+                  </button>
+                </Link>
               </div>
-            ))}
+            </motion.div>
+          </div>
+
+          {/* Stats — in flow, so they can never collide with the copy above. */}
+          <div className="hero-stats container mx-auto px-4 w-full max-w-5xl shrink-0 mt-10 sm:mt-12">
+            <div className="glass-card rounded-2xl p-5 sm:p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
+              {[
+                { label: "Members", value: "500+" },
+                { label: "Offices", value: "40" },
+                { label: "Events", value: "12+" },
+                { label: "Uptime", value: "99.9%" },
+              ].map((stat, i) => (
+                <div key={i} className="text-center">
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gradient-gold mb-1">{stat.value}</div>
+                  <div className="text-[9px] sm:text-[10px] font-bold text-white/40 uppercase tracking-[0.2em]">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Target Audience */}
-      <Section className="pt-48 md:pt-32">
-        <div className="text-center mb-20">
+      <Section>
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-white mb-4">Curated for Excellence</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto opacity-50" />
         </div>
@@ -122,7 +132,7 @@ export default function Home() {
 
       {/* Workspace Preview */}
       <Section className="pb-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}

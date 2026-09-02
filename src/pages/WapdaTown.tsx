@@ -10,7 +10,7 @@ import { NAP } from "@/data/site";
 
 export default function WapdaTown() {
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       <Seo path="/coworking-space-wapda-town" />
       <Breadcrumbs path="/coworking-space-wapda-town" />
 

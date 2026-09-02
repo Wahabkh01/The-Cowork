@@ -13,7 +13,7 @@ export default function Spaces() {
   const plans = PLANS;
 
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 sm:pt-24 min-h-screen">
       <Seo path="/spaces" />
       <Section className="pb-10 pt-20">
         <div className="text-center max-w-3xl mx-auto">
@@ -31,7 +31,7 @@ export default function Spaces() {
       </Section>
 
       <Section>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {plans.map((plan, i) => (
             <motion.div
               key={i}
@@ -39,9 +39,9 @@ export default function Spaces() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, ease: [0.16, 1, 0.3, 1], duration: 1 }}
               viewport={{ once: true }}
-              className={`relative p-10 rounded-[2.5rem] glass-card transition-all duration-500 hover:-translate-y-2 ${
+              className={`relative p-7 sm:p-8 lg:p-10 rounded-[2rem] lg:rounded-[2.5rem] glass-card transition-all duration-500 hover:-translate-y-2 ${
                 plan.featured ? "border-primary/40 ring-1 ring-primary/20" : ""
-              }`}
+              } ${i === 2 ? "sm:col-span-2 lg:col-span-1" : ""}`}
             >
               {plan.featured && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-black px-6 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg shadow-primary/40">
@@ -49,17 +49,17 @@ export default function Spaces() {
                 </div>
               )}
 
-              <h3 className="text-white mb-3 text-3xl font-bold">{plan.name}</h3>
-              <p className="text-white/40 text-sm mb-10 h-10 font-light leading-relaxed">{plan.desc}</p>
+              <h3 className="text-white mb-3 text-2xl lg:text-3xl font-bold">{plan.name}</h3>
+              <p className="text-white/40 text-sm mb-8 lg:mb-10 min-h-[3.5rem] font-light leading-relaxed">{plan.desc}</p>
               
               <ImageGallery images={plan.images} alt={`${plan.name} at The Cowork, Lahore`} />
 
-              <div className="mb-12">
-                <span className="text-5xl font-bold text-gradient-gold">{plan.priceLabel}</span>
+              <div className="mb-10 lg:mb-12">
+                <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gradient-gold">{plan.priceLabel}</span>
                 <span className="text-white/30 text-sm ml-2">{plan.period}</span>
               </div>
 
-              <div className="space-y-5 mb-12">
+              <div className="space-y-4 lg:space-y-5 mb-10 lg:mb-12">
                 {plan.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-4 text-sm text-white/70">
                     <div className="mt-1 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
@@ -85,7 +85,7 @@ export default function Spaces() {
       </Section>
 
       <Section dark>
-        <div className="bg-zinc-900 rounded-lg p-8 md:p-12 border border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="bg-zinc-900 rounded-2xl p-7 sm:p-6 sm:p-8 lg:p-12 border border-white/5 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-8">
           <div>
             <h3 className="text-white mb-2">Need a Custom Solution?</h3>
             <p className="text-muted-foreground max-w-xl">
@@ -94,7 +94,7 @@ export default function Spaces() {
             </p>
           </div>
           <Link href="/contact">
-            <button className="px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-black transition-all rounded font-medium whitespace-nowrap">
+            <button className="w-full lg:w-auto px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-black transition-all rounded-full font-medium whitespace-nowrap">
               Contact Sales
             </button>
           </Link>
