@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { MonitorPlay, Mic, PenTool, Zap, Users, Coffee } from "lucide-react";
+import { MonitorPlay, Mic, PenTool, Zap, Users, Utensils } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
@@ -16,7 +16,7 @@ const KIT = [
   { icon: <PenTool className="w-6 h-6 text-primary" />, title: "Whiteboards", desc: "With markers that work. Wiped between bookings." },
   { icon: <Zap className="w-6 h-6 text-primary" />, title: "Power backup", desc: "The room does not go dark mid-pitch." },
   { icon: <Users className="w-6 h-6 text-primary" />, title: "Guest reception", desc: "Your visitors are met at the door and shown in." },
-  { icon: <Coffee className="w-6 h-6 text-primary" />, title: "Tea and coffee service", desc: "Served to the room. Included, not billed per cup." },
+  { icon: <Utensils className="w-6 h-6 text-primary" />, title: "Tea service", desc: "Served to the room. Included, not billed per cup." },
 ];
 
 export default function MeetingRooms() {

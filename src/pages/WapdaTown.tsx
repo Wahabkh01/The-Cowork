@@ -47,7 +47,7 @@ export default function WapdaTown() {
             dedicated fibre with an automatic backup line, industrial generators plus UPS on every desk,
             biometric entry, CCTV and on-site security, ergonomic furniture, sound-insulated{" "}
             <Link href="/meeting-rooms-lahore">meeting rooms</Link> with screens and conference audio,
-            printing, mail handling, daily cleaning, and a café that does not run out of coffee.
+            printing, mail handling, daily cleaning, and complimentary tea and refreshments.
           </p>
           <p>
             It is also open around the clock, with a staffed{" "}

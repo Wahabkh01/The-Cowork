@@ -23,6 +23,8 @@ export const NAP = {
   full: "95 College Road, PCSIR Staff Colony, Lahore 54770, Pakistan",
   phone: "+92 333 4835258",
   phoneE164: "+923334835258",
+  phone2: "+92 300 4449874",
+  phone2E164: "+923004449874",
   whatsapp: "923334835258",
   email: "thecoworkpk@gmail.com",
   latitude: 31.4735297,
@@ -104,7 +106,7 @@ export const PLANS: Plan[] = [
     features: [
       "Access to the open workspace",
       "High-speed fibre internet with backup line",
-      "Complimentary coffee, tea and filtered water",
+      "Complimentary tea and filtered water",
       "2 hours of meeting room credits each month",
       "Use of our address as your business address",
       "Full power backup — no load shedding downtime",

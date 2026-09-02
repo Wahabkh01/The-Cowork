@@ -15,7 +15,7 @@ import { SHIFTS } from "@/data/site";
 const INCLUDED = [
   "Fibre internet with automatic backup line",
   "Electricity and industrial power backup",
-  "Complimentary coffee, tea and filtered water",
+  "Complimentary tea and filtered water",
   "Daily cleaning and maintenance",
   "Meeting room credits on every plan",
   "Biometric access, CCTV and security",

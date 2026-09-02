@@ -32,7 +32,7 @@ export default function DedicatedDesk() {
           <li><strong>Mail handling and reception service</strong>, 9:00 AM to 8:00 PM.</li>
           <li><strong>100 free printed pages</strong> a month.</li>
           <li><strong>Fibre internet with a backup line, and industrial power backup.</strong></li>
-          <li><strong>Complimentary coffee and tea</strong>, daily cleaning, on-site parking, CCTV and security.</li>
+          <li><strong>Complimentary tea and filtered water</strong>, daily cleaning, on-site parking, CCTV and security.</li>
         </ul>
       </Disclosure>
 

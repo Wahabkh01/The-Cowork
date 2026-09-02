@@ -135,7 +135,7 @@ export default function About() {
         <Disclosure summary="Our name, address and hours, for the record" level="h2">
           <p>
             We trade as <strong>The Cowork</strong>. The address is <strong>{NAP.full}</strong>, the
-            phone number is <strong>{NAP.phone}</strong>, and the email is{" "}
+            phone numbers are <strong>{NAP.phone}</strong> / <strong>{NAP.phone2}</strong>, and the email is{" "}
             <strong>{NAP.email}</strong>. The space is open <strong>24 hours a day, seven days a
             week</strong> for members, and reception is staffed <strong>9:00 AM to 8:00 PM daily</strong>.
             If you find us listed anywhere under a different name, address or number, that listing is out

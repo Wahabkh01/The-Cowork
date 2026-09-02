@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Moon, Zap, Wifi, ShieldCheck, Car, Coffee } from "lucide-react";
+import { Moon, Zap, Wifi, ShieldCheck, Car, Utensils } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
@@ -17,7 +17,7 @@ const NIGHT_FACTS = [
   { icon: <Wifi className="w-6 h-6 text-primary" />, title: "Fibre with a second line", desc: "Automatic failover, sized for simultaneous video calls and large uploads." },
   { icon: <ShieldCheck className="w-6 h-6 text-primary" />, title: "Security all night", desc: "Biometric entry, CCTV throughout, and personnel in the building." },
   { icon: <Car className="w-6 h-6 text-primary" />, title: "Parking inside", desc: "You are not walking to a car left on College Road at three in the morning." },
-  { icon: <Coffee className="w-6 h-6 text-primary" />, title: "The café stays stocked", desc: "Coffee, tea and water through the night. The 2 AM slump is solvable." },
+  { icon: <Utensils className="w-6 h-6 text-primary" />, title: "The café stays stocked", desc: "Tea and filtered water through the night. The 2 AM slump is solvable." },
 ];
 
 export default function NightShift() {

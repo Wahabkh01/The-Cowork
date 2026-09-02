@@ -82,7 +82,10 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-4">
                 <Phone className="text-primary shrink-0" size={18} aria-hidden="true" />
-                <a href={`tel:${NAP.phoneE164}`} className="hover:text-primary transition-colors">{NAP.phone}</a>
+                <div className="flex flex-col gap-1">
+                  <a href={`tel:${NAP.phoneE164}`} className="hover:text-primary transition-colors">{NAP.phone}</a>
+                  <a href={`tel:${NAP.phone2E164}`} className="hover:text-primary transition-colors">{NAP.phone2}</a>
+                </div>
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="text-primary shrink-0" size={18} aria-hidden="true" />

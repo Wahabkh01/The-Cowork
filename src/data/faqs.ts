@@ -15,7 +15,7 @@ export const GENERAL_FAQS: Faq[] = [
   },
   {
     q: "How much does a coworking space in Lahore cost at The Cowork?",
-    a: "A Hot Desk is PKR 15,000 per month, a Dedicated Desk is PKR 25,000 per month, and a Private Office starts at PKR 60,000 per month. Every rate includes internet, full power backup, complimentary coffee and tea, meeting room credits and 24/7 access. There are no hidden setup or maintenance charges.",
+    a: "A Hot Desk is PKR 15,000 per month, a Dedicated Desk is PKR 25,000 per month, and a Private Office starts at PKR 60,000 per month. Every rate includes internet, full power backup, complimentary tea and filtered water, meeting room credits and 24/7 access. There are no hidden setup or maintenance charges.",
   },
   {
     q: "Do you offer a night shift?",
@@ -42,7 +42,7 @@ export const GENERAL_FAQS: Faq[] = [
 export const PRICING_FAQS: Faq[] = [
   {
     q: "Are the published prices the final price?",
-    a: "Yes. PKR 15,000 for a Hot Desk, PKR 25,000 for a Dedicated Desk and PKR 60,000 for a Private Office are the monthly rates, inclusive of internet, electricity and power backup, coffee and tea, cleaning, and your meeting room credits. We publish them precisely so you do not have to fill in a form to find out whether we fit your budget.",
+    a: "Yes. PKR 15,000 for a Hot Desk, PKR 25,000 for a Dedicated Desk and PKR 60,000 for a Private Office are the monthly rates, inclusive of internet, electricity and power backup, tea and filtered water, cleaning, and your meeting room credits. We publish them precisely so you do not have to fill in a form to find out whether we fit your budget.",
   },
   {
     q: "Is the price different for the night shift?",
@@ -104,6 +104,6 @@ export const MEETING_ROOM_FAQS: Faq[] = [
   },
   {
     q: "What equipment is in the rooms?",
-    a: "Large-format screens for presentations and video calls, conference audio, whiteboards, and the same fibre internet and power backup as the rest of the building. Tea and coffee service for your guests is included.",
+    a: "Large-format screens for presentations and video calls, conference audio, whiteboards, and the same fibre internet and power backup as the rest of the building. Tea service for your guests is included.",
   },
 ];

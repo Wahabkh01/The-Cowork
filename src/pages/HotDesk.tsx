@@ -34,7 +34,7 @@ export default function HotDesk() {
           <li><strong>A seat in the open workspace</strong>, any day, on the shift you have chosen.</li>
           <li><strong>Dedicated fibre internet</strong> with an automatic failover line.</li>
           <li><strong>Full power backup</strong> — generators plus UPS on every desk and network device.</li>
-          <li><strong>Complimentary coffee, tea and filtered water</strong>, day and night.</li>
+          <li><strong>Complimentary tea and filtered water</strong>, day and night.</li>
           <li><strong>Two hours of meeting room credits</strong> a month.</li>
           <li><strong>A business address</strong> for your invoices, website and registration.</li>
           <li><strong>24/7 biometric access</strong>, CCTV, on-site security and parking inside the property.</li>

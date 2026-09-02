@@ -138,7 +138,7 @@ export default function Home() {
               {[
                 "24/7 Secure Access",
                 "Hi-Speed Fiber",
-                "Complimentary Coffee",
+                "Complimentary Tea & Water",
                 "Concierge Service"
               ].map((feature, i) => (
                 <div key={i} className="flex items-center gap-4 text-white/80 glass-button p-4 rounded-2xl">
@@ -192,7 +192,7 @@ export default function Home() {
             <strong>dedicated desk</strong> is a permanent seat with a locker that stays yours at{" "}
             <strong>PKR 25,000 a month</strong>. A <strong>private office</strong> is a furnished,
             lockable cabin for a team, from <strong>PKR 60,000 a month</strong>. Internet, electricity,
-            power backup, cleaning, coffee and your meeting room credits are inside those numbers.
+            power backup, cleaning, tea & refreshments and your meeting room credits are inside those numbers.
             There is no joining fee and no maintenance charge added later. See the full{" "}
             <Link href="/pricing">rate card</Link>.
           </p>

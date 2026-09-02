@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Section } from "@/components/Section";
-import { Wifi, Zap, Coffee, Shield, Printer, MonitorPlay, Sofa, Key } from "lucide-react";
+import { Wifi, Zap, Utensils, Shield, Printer, MonitorPlay, Sofa, Car } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { Img } from "@/components/Img";
 import { Link } from "wouter";
@@ -19,9 +19,9 @@ export default function Amenities() {
       desc: "Industrial-grade generators and UPS systems. Load shedding is not a word in our dictionary."
     },
     {
-      icon: <Coffee className="w-8 h-8" />,
-      title: "Premium Café",
-      desc: "Complimentary artisan coffee, tea, and filtered water. Snacks available at the bar."
+      icon: <Utensils className="w-8 h-8" />,
+      title: "Tea & Refreshments",
+      desc: "Complimentary tea and filtered water. Snacks available at the bar."
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -40,13 +40,13 @@ export default function Amenities() {
     },
     {
       icon: <MonitorPlay className="w-8 h-8" />,
-      title: "Tech-Enabled Rooms",
-      desc: "Meeting rooms equipped with 4K screens, Polycom conference systems, and whiteboards."
+      title: "Tech-Enabled Rooms (Coming Soon)",
+      desc: "Future endeavor: Meeting rooms equipped with 4K screens, Polycom conference systems, and whiteboards."
     },
     {
-      icon: <Key className="w-8 h-8" />,
-      title: "Valet Parking",
-      desc: "Hassle-free parking with dedicated valet service for you and your guests."
+      icon: <Car className="w-8 h-8" />,
+      title: "On-Site Parking",
+      desc: "Hassle-free parking inside the property for you and your guests."
     }
   ];
 
@@ -95,7 +95,7 @@ export default function Amenities() {
         <Img
           name="AmenitiesOfficeBanner"
           sizes="100vw"
-          alt="The Cowork amenities area in Lahore with desks, lounge seating and a coffee station"
+          alt="The Cowork amenities area in Lahore with desks, lounge seating and a refreshment station"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 z-20 flex items-center justify-center px-6 text-center">

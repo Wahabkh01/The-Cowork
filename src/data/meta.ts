@@ -105,7 +105,7 @@ export const localBusinessSchema = {
     "24/7 power backup",
     "Night shift access",
     "Meeting rooms",
-    "Complimentary coffee and tea",
+    "Complimentary tea and filtered water",
     "Biometric access and CCTV",
     "On-site parking",
     "Printing and mail handling",
@@ -205,7 +205,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/pricing",
     title: "Coworking Space Price in Lahore — Published Rate Card",
     description:
-      "Our full rate card, published in the open: hot desk PKR 15,000, dedicated desk PKR 25,000, private office from PKR 60,000 per month. Internet, power backup, coffee and meeting room credits included.",
+      "Our full rate card, published in the open: hot desk PKR 15,000, dedicated desk PKR 25,000, private office from PKR 60,000 per month. Internet, power backup, tea & refreshments and meeting room credits included.",
     trail: [{ name: "Pricing", path: "/pricing" }],
     extraSchema: [
       faqSchema(PRICING_FAQS),
@@ -232,7 +232,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/hot-desk-lahore",
     title: "Hot Desk in Lahore — PKR 15,000 per Month",
     description:
-      "A flexible hot desk in Lahore at PKR 15,000 per month: open workspace seating, fibre internet, complimentary coffee and tea, meeting room credits, a business address and 24/7 access.",
+      "A flexible hot desk in Lahore at PKR 15,000 per month: open workspace seating, fibre internet, complimentary tea and filtered water, meeting room credits, a business address and 24/7 access.",
     trail: [
       { name: "Spaces & Plans", path: "/spaces" },
       { name: "Hot Desk", path: "/hot-desk-lahore" },

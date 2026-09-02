@@ -25,16 +25,31 @@ export default function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {[
                 { icon: <MapPin />, title: "Visit", val: NAP.full },
-                { icon: <Phone />, title: "Call", val: NAP.phone, href: `tel:${NAP.phoneE164}` },
+                { 
+                  icon: <Phone />, 
+                  title: "Call Us", 
+                  contacts: [
+                    { val: NAP.phone, href: `tel:${NAP.phoneE164}` },
+                    { val: NAP.phone2, href: `tel:${NAP.phone2E164}` }
+                  ]
+                },
                 { icon: <Mail />, title: "Email", val: NAP.email, href: `mailto:${NAP.email}` },
                 { icon: <Clock />, title: "Hours", val: `Open 24 hours · ${HOURS.receptionShort}` },
-              ].map((item: { icon: JSX.Element; title: string; val: string; href?: string }, i) => (
+              ].map((item: { icon: JSX.Element; title: string; val?: string; href?: string; contacts?: { val: string; href: string }[] }, i) => (
                 <div key={i} className="glass-card p-6 rounded-3xl group">
                   <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-primary mb-4 group-hover:bg-primary/10 transition-colors">
                     {item.icon}
                   </div>
                   <h3 className="text-white text-lg mb-1 font-bold">{item.title}</h3>
-                  {item.href ? (
+                  {item.contacts ? (
+                    <div className="flex flex-col gap-1">
+                      {item.contacts.map((c, idx) => (
+                        <a key={idx} href={c.href} className="text-white/40 text-sm font-light hover:text-primary transition-colors break-words">
+                          {c.val}
+                        </a>
+                      ))}
+                    </div>
+                  ) : item.href ? (
                     <a href={item.href} className="text-white/40 text-sm font-light hover:text-primary transition-colors break-words">{item.val}</a>
                   ) : (
                     <p className="text-white/40 text-sm font-light">{item.val}</p>
