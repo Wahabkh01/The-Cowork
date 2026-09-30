@@ -191,21 +191,21 @@ const PAGES: Record<string, PageMeta> = {
     path: "/",
     title: "Coworking Space in Johar Town Lahore",
     description:
-      "The Cowork is a coworking space beside Johar Town, Lahore. Hot desks from PKR 15,000, dedicated desks and private offices, with 24/7 access, a night shift for US hours, fibre internet and full power backup.",
+      "Coworking space beside Johar Town, Lahore. Hot desks from PKR 15,000, dedicated desks and private offices. 24/7 access, night shift, fibre and power backup.",
     extraSchema: [localBusinessSchema, faqSchema(GENERAL_FAQS.slice(0, 6))],
   },
   "/spaces": {
     path: "/spaces",
     title: "Coworking Plans, Desks & Private Offices in Lahore",
     description:
-      "Compare every workspace at The Cowork: hot desks at PKR 15,000, dedicated desks at PKR 25,000 and private offices from PKR 60,000 per month, all with 24/7 access in Lahore.",
+      "Compare every workspace at The Cowork Lahore: hot desks PKR 15,000, dedicated desks PKR 25,000, private offices from PKR 60,000. All with 24/7 access.",
     trail: [{ name: "Spaces & Plans", path: "/spaces" }],
   },
   "/pricing": {
     path: "/pricing",
     title: "Coworking Space Price in Lahore — Published Rate Card",
     description:
-      "Our full rate card, published in the open: hot desk PKR 15,000, dedicated desk PKR 25,000, private office from PKR 60,000 per month. Internet, power backup, tea & refreshments and meeting room credits included.",
+      "The Cowork Lahore rate card, published in the open: hot desk PKR 15,000, dedicated desk PKR 25,000, private office from PKR 60,000 per month.",
     trail: [{ name: "Pricing", path: "/pricing" }],
     extraSchema: [
       faqSchema(PRICING_FAQS),
@@ -224,7 +224,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/night-shift-coworking-lahore",
     title: "Night Shift & 24/7 Coworking Space in Lahore",
     description:
-      "A genuine night shift coworking space in Lahore, 06:00 PM to 03:00 AM, built for freelancers and teams on US and UK client hours. 24/7 access, uninterrupted power and fibre internet.",
+      "A genuine night shift coworking space in Lahore, 6 PM to 3 AM, for freelancers on US and UK client hours. 24/7 access, backup power and fibre internet.",
     trail: [{ name: "Night Shift Coworking", path: "/night-shift-coworking-lahore" }],
     extraSchema: [faqSchema(NIGHT_SHIFT_FAQS), localBusinessSchema],
   },
@@ -232,7 +232,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/hot-desk-lahore",
     title: "Hot Desk in Lahore — PKR 15,000 per Month",
     description:
-      "A flexible hot desk in Lahore at PKR 15,000 per month: open workspace seating, fibre internet, complimentary tea and filtered water, meeting room credits, a business address and 24/7 access.",
+      "A flexible hot desk in Lahore at PKR 15,000 a month: open workspace seating, fibre internet, meeting room credits, a business address and 24/7 access.",
     trail: [
       { name: "Spaces & Plans", path: "/spaces" },
       { name: "Hot Desk", path: "/hot-desk-lahore" },
@@ -254,7 +254,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/private-office-lahore",
     title: "Private Office for Rent in Lahore — from PKR 60,000",
     description:
-      "Furnished, lockable private offices for rent in Lahore from PKR 60,000 per month. Teams of 2 to 50, sound-insulated walls, custom branding, inclusive meeting room access and daily cleaning.",
+      "Furnished, lockable private offices for rent in Lahore from PKR 60,000 a month. Teams of 2 to 50, sound-insulated, custom branding, daily cleaning.",
     trail: [
       { name: "Spaces & Plans", path: "/spaces" },
       { name: "Private Office", path: "/private-office-lahore" },
@@ -265,7 +265,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/meeting-rooms-lahore",
     title: "Meeting Rooms in Lahore — Book by the Hour",
     description:
-      "Book a meeting room in Lahore beside Johar Town: large screens, conference audio, whiteboards, fibre internet, power backup and tea service. Included with membership or bookable by the hour.",
+      "Book a meeting room in Lahore beside Johar Town: large screens, conference audio, whiteboards, fibre and power backup. Bookable by the hour.",
     trail: [{ name: "Meeting Rooms", path: "/meeting-rooms-lahore" }],
     extraSchema: [faqSchema(MEETING_ROOM_FAQS)],
   },
@@ -273,7 +273,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/coworking-space-wapda-town",
     title: "Coworking Space near Wapda Town, Lahore",
     description:
-      "The closest serious coworking space to Wapda Town, Lahore. Desks from PKR 15,000 a month, private offices from PKR 60,000, 24/7 access and parking — minutes from Wapda Town via College Road.",
+      "The closest serious coworking space to Wapda Town, Lahore. Desks from PKR 15,000, private offices from PKR 60,000, 24/7 access and on-site parking.",
     trail: [{ name: "Wapda Town", path: "/coworking-space-wapda-town" }],
     extraSchema: [localBusinessSchema],
   },
@@ -281,7 +281,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/coworking-space-pcsir",
     title: "Coworking Space in PCSIR Society, College Road Lahore",
     description:
-      "A coworking space inside PCSIR Staff Colony on College Road, Lahore. Hot desks, dedicated desks and private offices with 24/7 access, backup power and on-site parking.",
+      "A coworking space inside PCSIR Staff Colony, College Road, Lahore. Hot desks, dedicated desks and private offices with 24/7 access and backup power.",
     trail: [{ name: "PCSIR & College Road", path: "/coworking-space-pcsir" }],
     extraSchema: [localBusinessSchema],
   },
@@ -289,7 +289,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/amenities",
     title: "Amenities — Internet, Power Backup, Café & Meeting Rooms",
     description:
-      "What is included at The Cowork, Lahore: high-speed fibre with a backup line, industrial power backup, biometric security, ergonomic furniture, printing, a stocked café and tech-equipped meeting rooms.",
+      "What is included at The Cowork, Lahore: fibre with a backup line, industrial power backup, biometric security, printing, café and meeting rooms.",
     trail: [{ name: "Amenities", path: "/amenities" }],
   },
   "/community": {
@@ -310,7 +310,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/faq",
     title: "Coworking Space FAQs — Hours, Prices, Access & Parking",
     description:
-      "Straight answers on The Cowork in Lahore: opening hours, the night shift, monthly prices, meeting rooms, power backup, internet speed, parking and how to book a tour.",
+      "Straight answers on The Cowork Lahore: opening hours, the night shift, prices, meeting rooms, power backup, internet, parking and booking a tour.",
     trail: [{ name: "FAQs", path: "/faq" }],
     extraSchema: [faqSchema(GENERAL_FAQS.concat(PRICING_FAQS, NIGHT_SHIFT_FAQS))],
   },
