@@ -23,7 +23,7 @@ export default function TeamOffice() {
         </p>
       </Disclosure>
 
-      <Disclosure summary="What PKR 90,000 a month buys" level="h2">
+      <Disclosure summary="What does a 6-person office cost, and what is included?" level="h2">
         <ul>
           <li><strong>A private furnished office for six</strong>, with desks, ergonomic chairs and a lockable door.</li>
           <li><strong>Sound-insulated walls</strong> for calls, interviews and anything confidential.</li>
@@ -36,7 +36,7 @@ export default function TeamOffice() {
         </ul>
       </Disclosure>
 
-      <Disclosure summary="Good for early teams" level="h2">
+      <Disclosure summary="Who is the 6-person office for?" level="h2">
         <p>
           Six seats behind one door is the right shape for an agency, a startup or a remote team that has
           outgrown kitchen tables and <Link href="/hot-desk-lahore">hot desks</Link>. You get a real
@@ -55,7 +55,7 @@ export default function TeamOffice() {
         </p>
       </Disclosure>
 
-      <Disclosure summary="How to take one" level="h2">
+      <Disclosure summary="How do I book a 6-person office?" level="h2">
         <p>
           Offices turn over slowly, so availability moves. Message reception on WhatsApp or book a tour
           and we will tell you what is free, show you the room, and put the rate in writing. Every plan

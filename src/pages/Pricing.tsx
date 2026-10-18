@@ -10,7 +10,7 @@ import { Disclosure, DetailPanel } from "@/components/Details";
 import { FaqSection } from "@/components/FaqSection";
 import { CtaBand } from "@/components/CtaBand";
 import { PRICING_FAQS } from "@/data/faqs";
-import { SHIFTS } from "@/data/site";
+import { SHIFTS, SITE_REVIEWED } from "@/data/site";
 
 const INCLUDED = [
   "Fibre internet with automatic backup line",
@@ -37,10 +37,10 @@ export default function Pricing() {
       <Breadcrumbs path="/pricing" />
 
       <PageHero
-        eyebrow="Published rate card"
+        eyebrow={`Published rate card · updated ${SITE_REVIEWED.label}`}
         h1="Coworking Space Price in"
         highlight="Lahore"
-        lead="No forms, no tours before you get a number. Here is what a desk costs."
+        lead="No forms, no tours before you get a number. Every seat is PKR 15,000 a month."
       />
 
       <Section>
@@ -111,8 +111,7 @@ export default function Pricing() {
             desk at the premium end. We sit in the middle, and what you get for it is the part worth
             checking line by line: genuine backup power rather than a shared generator, a second internet
             line rather than a single connection, meeting room credits included rather than billed, and a{" "}
-            <Link href="/night-shift-coworking-lahore">night shift</Link> with security on site all night,
-            which most of the market does not run at all.
+            <Link href="/night-shift-coworking-lahore">night shift</Link> with security on site all night.
           </p>
         </Disclosure>
 

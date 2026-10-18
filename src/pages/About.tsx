@@ -3,7 +3,7 @@ import { Section } from "@/components/Section";
 import { Link } from "wouter";
 import { Seo } from "@/components/Seo";
 import { Disclosure, DetailPanel } from "@/components/Details";
-import { NAP } from "@/data/site";
+import { NAP, FOUNDERS, FORMER_NAME, FOUNDING_YEAR } from "@/data/site";
 
 export default function About() {
   return (
@@ -56,8 +56,9 @@ export default function About() {
             <h2 className="text-white mb-8">Our <span className="text-gradient-gold">Mission</span></h2>
             <div className="space-y-8 text-white/50 text-lg font-light leading-relaxed">
               <p>
-                Founded in 2023, The Cowork was born from a frustration with traditional, uninspiring office spaces. 
-                We created a sanctuary that feels like a 5-star hotel but functions like a high-tech headquarters.
+                The Cowork was founded in {FOUNDING_YEAR} by {FOUNDERS[0]} and {FOUNDERS[1]}, and
+                traded as {FORMER_NAME} before taking its current name. It started from a frustration with
+                uninspiring offices and unreliable power, and set out to fix both with a proper workspace.
               </p>
               <p>
                 Our aim is simple: a productive, hassle-free workspace with honest, published prices,

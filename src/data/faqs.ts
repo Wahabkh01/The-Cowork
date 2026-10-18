@@ -77,7 +77,7 @@ export const NIGHT_SHIFT_FAQS: Faq[] = [
   },
   {
     q: "I work US hours. Does that fit?",
-    a: "It fits well. 06:00 PM in Lahore is roughly 8:00 AM US Eastern, so the night shift lines up with a normal American working morning. UK-hours workers usually take the earlier part of the same slot.",
+    a: "It fits well. 06:00 PM in Lahore is 8:00 AM US Eastern in winter and 9:00 AM during US daylight saving, so the night shift lines up with a normal American working morning. UK-hours workers usually take the earlier part of the same slot.",
   },
   {
     q: "Is it safe to leave at 3 AM?",

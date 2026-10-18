@@ -101,7 +101,7 @@ export function Footer() {
 
         <div className="border-t border-white/5 pt-8 sm:pt-10 lg:pt-12 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10 text-[10px] font-bold uppercase tracking-widest text-white/20">
           <p>&copy; {new Date().getFullYear()} {BUSINESS_NAME}. Built for Excellence.</p>
-          <p>Coworking Space in Johar Town, Lahore</p>
+          <p>Coworking Space beside Johar Town, Lahore</p>
         </div>
       </div>
       <a

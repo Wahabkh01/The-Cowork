@@ -39,7 +39,20 @@ export const NAP = {
  */
 export const SOCIAL: { facebook: string; instagram?: string; linkedin?: string } = {
   facebook: "https://www.facebook.com/ShareSpacepk",
+  instagram: "https://www.instagram.com/thecoworkpk",
 };
+
+/** The business traded as ShareSpace before becoming The Cowork; the Facebook page still carries that name. */
+export const FORMER_NAME = "ShareSpace";
+
+export const FOUNDERS = ["Khawaja Farukh Ishfaq", "Umar Khan"] as const;
+export const FOUNDING_YEAR = "2023";
+
+/**
+ * When the rate card and page facts were last reviewed. Shown on /pricing and the plan pages and
+ * emitted as schema.org dateModified — update it whenever prices or plan details change.
+ */
+export const SITE_REVIEWED = { iso: "2026-10-18", label: "October 2026" } as const;
 
 /** Non-empty verified profile URLs, for `sameAs` and the footer. */
 export const SOCIAL_LINKS = Object.entries(SOCIAL).filter(

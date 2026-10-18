@@ -28,7 +28,7 @@ export default function Home() {
           <Img
             name="LandingPageImage"
             sizes="100vw"
-            alt="Luxury coworking space in Johar Town, Lahore"
+            alt="The open workspace at The Cowork, beside Johar Town, Lahore"
             priority
             className="w-full h-full object-cover"
           />
@@ -219,8 +219,8 @@ export default function Home() {
           <p>
             That distinction matters more here than it does in most cities. A large share of Lahore's
             freelancers and agency teams work American or British hours, which means starting at six in
-            the evening and finishing at two or three in the morning. Almost no coworking space in the
-            city is genuinely built for that. We are — read about the{" "}
+            the evening and finishing at two or three in the morning. This building is set up for that: a
+            6 PM–3 AM night shift with security on site all night — read about the{" "}
             <Link href="/night-shift-coworking-lahore">night shift</Link>.
           </p>
         </Disclosure>

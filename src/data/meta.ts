@@ -1,4 +1,7 @@
-import { SITE_URL, BUSINESS_NAME, LEGAL_NAME, NAP, SOCIAL_LINKS, HOURS, PLANS, monthlyTotal } from "./site";
+import {
+  SITE_URL, BUSINESS_NAME, LEGAL_NAME, NAP, SOCIAL_LINKS, HOURS, PLANS, monthlyTotal,
+  FORMER_NAME, FOUNDERS, FOUNDING_YEAR, SITE_REVIEWED,
+} from "./site";
 import { GENERAL_FAQS, PRICING_FAQS, NIGHT_SHIFT_FAQS, MEETING_ROOM_FAQS, Faq } from "./faqs";
 
 const abs = (p: string) => new URL(p, SITE_URL).toString();
@@ -20,8 +23,11 @@ export const organizationSchema = {
   "@type": "Organization",
   "@id": ORG_ID,
   name: BUSINESS_NAME,
+  alternateName: FORMER_NAME,
   legalName: LEGAL_NAME,
   url: SITE_URL,
+  foundingDate: FOUNDING_YEAR,
+  founder: FOUNDERS.map((name) => ({ "@type": "Person", name })),
   logo: {
     "@type": "ImageObject",
     url: abs("/Images/Logo.png"),
@@ -74,6 +80,7 @@ export const localBusinessSchema = {
   "@id": BUSINESS_ID,
   additionalType: "https://en.wikipedia.org/wiki/Coworking",
   name: BUSINESS_NAME,
+  alternateName: FORMER_NAME,
   legalName: LEGAL_NAME,
   description:
     "Coworking space in Lahore beside Johar Town offering hot desks and 6- and 15-person private offices with 24/7 access, a dedicated night shift, fibre internet and full power backup.",
@@ -330,7 +337,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/community",
     title: "Coworking Community & Events in Lahore",
     description:
-      "Meet the founders, freelancers and teams working at The Cowork in Lahore. Workshops, networking mixers and wellness sessions run through the year for members.",
+      "Meet the freelancers and teams working at The Cowork in Lahore: a day crowd and a night crowd, with introductions through reception rather than a members' app.",
     trail: [{ name: "Community", path: "/community" }],
   },
   "/about": {
@@ -369,6 +376,21 @@ export function getMeta(path: string): PageMeta {
   return PAGES[clean] ?? NOT_FOUND_META;
 }
 
+const PAGE_TYPES: Record<string, string> = { "/about": "AboutPage", "/contact": "ContactPage" };
+
+/** The page itself, dated, so AI and search engines get a freshness signal and a clear subject. */
+const webPageSchema = (meta: PageMeta) => ({
+  "@type": PAGE_TYPES[meta.path] ?? "WebPage",
+  "@id": `${abs(meta.path)}#webpage`,
+  url: abs(meta.path),
+  name: meta.title,
+  description: meta.description,
+  inLanguage: "en-PK",
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  about: { "@id": BUSINESS_ID },
+  dateModified: SITE_REVIEWED.iso,
+});
+
 /**
  * Full JSON-LD graph for a page: Organization, LocalBusiness and WebSite on every page (so any
  * `@id` reference to them resolves), then breadcrumbs and anything page-specific.
@@ -383,6 +405,7 @@ export function buildJsonLd(meta: PageMeta) {
       breadcrumbSchema([{ name: "Home", path: "/" }, ...meta.trail]),
     );
   }
+  if (!meta.noIndex) graph.push(webPageSchema(meta));
   if (meta.extraSchema) graph.push(...meta.extraSchema);
 
   return { "@context": "https://schema.org", "@graph": graph };

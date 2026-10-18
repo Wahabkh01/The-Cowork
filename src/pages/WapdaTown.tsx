@@ -26,7 +26,7 @@ export default function WapdaTown() {
       </Section>
 
       <DetailPanel title="Coming from Wapda Town">
-        <Disclosure summary="The commute is the whole argument" level="h2">
+        <Disclosure summary="How far is The Cowork from Wapda Town?" level="h2">
           <p>
             Wapda Town residents who want a coworking space usually end up looking at the cluster around
             Johar Town's main boulevard — 22-N, Ali Center, the Service Road spaces. They are decent
@@ -41,7 +41,7 @@ export default function WapdaTown() {
           </p>
         </Disclosure>
 
-        <Disclosure summary="What you get for the shorter drive" level="h2">
+        <Disclosure summary="What does the space include?" level="h2">
           <p>
             Not a compromise, which is the usual trade for being off the main road. The building runs
             dedicated fibre with an automatic backup line, industrial generators plus UPS on every desk,
@@ -57,7 +57,7 @@ export default function WapdaTown() {
           </p>
         </Disclosure>
 
-        <Disclosure summary="Who comes to us from Wapda Town" level="h2">
+        <Disclosure summary="Who comes here from Wapda Town?" level="h2">
           <p>
             Mostly two groups. Freelancers and remote employees who have been working from home since the
             pandemic and have finally admitted the house is not an office — those take{" "}

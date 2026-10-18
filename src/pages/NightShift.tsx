@@ -74,14 +74,14 @@ export default function NightShift() {
             All of those people have the same problem: the infrastructure they need — reliable power, a
             serious internet connection, a quiet room — is mostly sold on a 9-to-6 basis. So they work
             from home through the night, fight the load shedding, and take client calls with a generator
-            running outside the window. Between 6 PM and 3 AM this space runs at full capacity. It is not
+            running outside the window. Between 6 PM and 3 AM this space is fully operational. It is not
             a key handed to you at closing time. It is the same workspace, at night.
           </p>
         </Disclosure>
 
         <Disclosure summary="How the timings line up with your clients" level="h2">
           <ul>
-            <li><strong>US Eastern.</strong> 6 PM in Lahore is roughly 8 AM in New York — start of the shift is start of their morning.</li>
+            <li><strong>US Eastern.</strong> 6 PM in Lahore is 8 AM in New York in winter and 9 AM during US daylight saving — start of the shift is start of their morning.</li>
             <li><strong>US Central and Mountain.</strong> The middle of our shift covers their working morning and early afternoon.</li>
             <li><strong>US Pacific.</strong> Their 9 AM lands around 9 PM here, comfortably inside the shift.</li>
             <li><strong>UK and Ireland.</strong> Their full working day sits in the earlier part of the evening.</li>
@@ -108,14 +108,11 @@ export default function NightShift() {
           </p>
         </Disclosure>
 
-        <Disclosure summary="Who else in Lahore actually does this" level="h2">
+        <Disclosure summary="What should I ask about 24/7 access on a tour?" level="h2">
           <p>
-            Very few, honestly. Most coworking spaces in the Johar Town radius advertise 24/7 access,
-            which usually means the door opens with a card and everything else — the security, the power
-            backup, the support — has gone home. Here security stays on site all night and the power and
-            internet keep running. If you have been
-            quoted "24/7" elsewhere, the useful question on the tour is who is actually in the building
-            at midnight.
+            Plenty of spaces advertise 24/7 access. The useful question on any tour is who is actually in
+            the building at midnight, and whether the power and internet stay on. Here security is on
+            site all night, the generators and UPS cover load shedding, and the fibre has a backup line.
           </p>
           <p>
             Every plan works on the night shift at the same rate: see{" "}

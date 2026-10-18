@@ -27,12 +27,12 @@ export default function Community() {
             </p>
             <div className="flex gap-6">
                <div className="glass-card p-6 rounded-3xl min-w-[140px] text-center">
-                 <div className="text-4xl font-black text-gradient-gold mb-1">50+</div>
-                 <div className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Companies</div>
+                 <div className="text-4xl font-black text-gradient-gold mb-1">2</div>
+                 <div className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Shifts, day & night</div>
                </div>
                <div className="glass-card p-6 rounded-3xl min-w-[140px] text-center">
-                 <div className="text-4xl font-black text-gradient-gold mb-1">Weekly</div>
-                 <div className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Events</div>
+                 <div className="text-4xl font-black text-gradient-gold mb-1">24/7</div>
+                 <div className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Member access</div>
                </div>
             </div>
           </motion.div>
@@ -64,18 +64,18 @@ export default function Community() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              title: "Founder Fridays",
-              desc: "Fireside chats with entrepreneurs sharing their journey.",
+              title: "Introductions",
+              desc: "Reception knows what most members do and will point you at the person you need.",
               icon: <Users className="w-6 h-6 text-primary" />
             },
             {
-              title: "Wellness Workshops",
-              desc: "Yoga sessions and mental health workshops to keep you balanced.",
+              title: "A real night crowd",
+              desc: "Freelancers and teams on US and UK hours, working the same shift as you.",
               icon: <Heart className="w-6 h-6 text-primary" />
             },
             {
-              title: "Networking Mixers",
-              desc: "Casual evening gatherings to meet your neighbors and find collaborators.",
+              title: "Occasional events",
+              desc: "Member get-togethers when there is a reason for one. Ask reception what is coming up.",
               icon: <Calendar className="w-6 h-6 text-primary" />
             }
           ].map((event, i) => (

@@ -24,7 +24,7 @@ export default function PrivateOffice() {
         </p>
       </Disclosure>
 
-      <Disclosure summary="What PKR 225,000 a month buys" level="h2">
+      <Disclosure summary="What does a 15-person office cost, and what is included?" level="h2">
         <ul>
           <li><strong>A fully furnished private office for fifteen</strong> with a lockable door.</li>
           <li><strong>Sound-insulated walls</strong> — usable for client calls, interviews and anything confidential.</li>
