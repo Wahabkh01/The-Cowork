@@ -134,9 +134,9 @@ export default function Pricing() {
         <Disclosure summary="Meeting rooms and extra hours" level="h2">
           <p>
             Meeting room credits come with every plan — two hours a month on a{" "}
-            <Link href="/hot-desk-lahore">hot desk</Link>, five on a{" "}
-            <Link href="/dedicated-desk-lahore">dedicated desk</Link>, and inclusive access with a{" "}
-            <Link href="/private-office-lahore">private office</Link>. Additional hours, and bookings
+            <Link href="/hot-desk-lahore">hot desk</Link>, and inclusive access with a{" "}
+            <Link href="/team-office-lahore">6-person office</Link> or a{" "}
+            <Link href="/private-office-lahore">15-person office</Link>. Additional hours, and bookings
             from people who are not members, are quoted per hour — message reception and we will confirm
             the rate and the slot. More on the{" "}
             <Link href="/meeting-rooms-lahore">meeting rooms page</Link>.
@@ -145,8 +145,8 @@ export default function Pricing() {
 
         <Disclosure summary="Larger private offices" level="h2">
           <p>
-            PKR 60,000 is the starting monthly rate for a private office. Larger cabins and multi-room
-            layouts for teams above roughly ten people are quoted on the footprint you need — send us
+            Private offices are PKR 15,000 per seat: PKR 90,000 a month for six, PKR 225,000 for fifteen.
+            Multi-room layouts for teams above fifteen people are quoted on the footprint you need — send us
             your headcount and we will come back with a written figure rather than a range.
           </p>
         </Disclosure>

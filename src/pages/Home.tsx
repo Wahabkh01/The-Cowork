@@ -198,10 +198,10 @@ export default function Home() {
           </p>
           <p>
             We rent three things and we publish what each one costs. A <strong>hot desk</strong> is any
-            free seat in the open workspace at <strong>PKR 15,000 a month</strong>. A{" "}
-            <strong>dedicated desk</strong> is a permanent seat with a locker that stays yours at{" "}
-            <strong>PKR 25,000 a month</strong>. A <strong>private office</strong> is a furnished,
-            lockable cabin for a team, from <strong>PKR 60,000 a month</strong>. Internet, electricity,
+            free seat in the open workspace at <strong>PKR 15,000 per seat a month</strong>. A{" "}
+            <strong>6-person office</strong> is a furnished, lockable private room for a small team at{" "}
+            <strong>PKR 90,000 a month</strong>, and a <strong>15-person office</strong> is the same for a
+            larger team at <strong>PKR 225,000 a month</strong> — both PKR 15,000 per seat. Internet, electricity,
             power backup, cleaning, tea & refreshments and your meeting room credits are inside those numbers.
             There is no joining fee and no maintenance charge added later. See the full{" "}
             <Link href="/pricing">rate card</Link>.
@@ -240,13 +240,13 @@ export default function Home() {
             </li>
             <li>
               <strong>Startups and small agencies.</strong> Two to ten people who need a proper office
-              but not a five-year lease. Take a block of{" "}
-              <Link href="/dedicated-desk-lahore">dedicated desks</Link> and add seats as you hire.
+              but not a five-year lease. Take a{" "}
+              <Link href="/team-office-lahore">6-person office</Link> and move up as you hire.
             </li>
             <li>
               <strong>Established teams and branches.</strong> Companies opening a Lahore presence, or a
               delivery team needing a lockable, branded room with sound insulation for client calls.{" "}
-              <Link href="/private-office-lahore">Private offices</Link> take teams from 2 up to 50.
+              The <Link href="/private-office-lahore">15-person office</Link> takes a full team.
             </li>
           </ul>
         </Disclosure>

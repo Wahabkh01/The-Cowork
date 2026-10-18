@@ -25,7 +25,7 @@ export const NAP = {
   phoneE164: "+923334835258",
   phone2: "+92 300 4449874",
   phone2E164: "+923004449874",
-  whatsapp: "923334835258",
+  whatsapp: "923087770222",
   email: "thecoworkpk@gmail.com",
   latitude: 31.4735297,
   longitude: 74.2900199,
@@ -80,7 +80,10 @@ export const SHIFTS = [
 export type Plan = {
   slug: string;
   name: string;
+  /** Monthly rate per seat, in PKR. */
   price: number;
+  /** Seats included; the monthly total is price × seats. Omitted for single-seat plans. */
+  seats?: number;
   priceLabel: string;
   period: string;
   short: string;
@@ -90,7 +93,15 @@ export type Plan = {
   images: ImageName[];
   featured?: boolean;
   bestFor: string;
+  meetingRooms: string;
 };
+
+/** What a plan costs per month in total, across all of its seats. */
+export const monthlyTotal = (plan: Plan) => plan.price * (plan.seats ?? 1);
+
+/** "PKR 90,000 a month for 6 seats", or null for single-seat plans. */
+export const totalLabel = (plan: Plan) =>
+  plan.seats ? `PKR ${monthlyTotal(plan).toLocaleString("en-US")} a month for ${plan.seats} seats` : null;
 
 /** The published rate card. These are the only prices quoted anywhere on the site. */
 export const PLANS: Plan[] = [
@@ -99,7 +110,7 @@ export const PLANS: Plan[] = [
     name: "Hot Desk",
     price: 15000,
     priceLabel: "PKR 15,000",
-    period: "per month",
+    period: "per seat / month",
     short: "Any free desk in the open workspace, any day you turn up.",
     desc: "A flexible seat in the open workspace for freelancers and remote workers who do not need the same desk twice.",
     bestFor: "Freelancers, remote employees, part-time users",
@@ -112,38 +123,42 @@ export const PLANS: Plan[] = [
       "Full power backup — no load shedding downtime",
     ],
     images: ["HotDesk1", "HostDesk4", "HotDesk3"],
+    meetingRooms: "2 hours / month",
   },
   {
-    slug: "dedicated-desk-lahore",
-    name: "Dedicated Desk",
-    price: 25000,
-    priceLabel: "PKR 25,000",
-    period: "per month",
+    slug: "team-office-lahore",
+    name: "6-Person Office",
+    price: 15000,
+    seats: 6,
+    priceLabel: "PKR 15,000",
+    period: "per seat / month",
     featured: true,
-    short: "Your own permanent desk and locker in a shared premium office.",
-    desc: "A reserved desk that stays yours — leave your monitor set up, your files locked away and your chair where you like it.",
-    bestFor: "Full-time freelancers, two- and three-person teams",
+    short: "A lockable, furnished private office for a team of six — PKR 90,000 a month.",
+    desc: "A fully furnished, sound-insulated private office for six people at PKR 15,000 per seat, PKR 90,000 a month in total.",
+    bestFor: "Small teams, agencies and startups of up to six",
     features: [
-      "Reserved desk and ergonomic chair, permanently yours",
-      "Lockable storage cabinet",
+      "Private furnished office for 6, with lockable door",
+      "Sound-insulated walls for calls and client meetings",
       "24/7 access, day shift or night shift",
-      "5 hours of meeting room credits each month",
+      "Inclusive meeting room access",
       "Mail handling and reception service",
-      "100 free printed pages per month",
+      "Daily cleaning service",
     ],
-    images: ["DedicatedDesk1", "Worker1", "DedicatedDesk3"],
+    images: ["DedicatedOffice1", "DedicatedDesk1", "DedicatedDesk3"],
+    meetingRooms: "Inclusive",
   },
   {
     slug: "private-office-lahore",
-    name: "Private Office",
-    price: 60000,
-    priceLabel: "PKR 60,000",
-    period: "per month",
-    short: "A lockable, furnished private cabin for your whole team.",
-    desc: "A fully furnished, sound-insulated private office for teams from 2 to 50 people, with your branding on the door.",
-    bestFor: "Startups, agencies, established company branches",
+    name: "15-Person Office",
+    price: 15000,
+    seats: 15,
+    priceLabel: "PKR 15,000",
+    period: "per seat / month",
+    short: "A larger furnished private office for a team of fifteen — PKR 225,000 a month.",
+    desc: "A fully furnished, sound-insulated private office for fifteen people at PKR 15,000 per seat, PKR 225,000 a month in total, with your branding on the door.",
+    bestFor: "Growing agencies, product teams, company branches",
     features: [
-      "Fully furnished private room with lockable door",
+      "Private furnished office for 15, with lockable door",
       "Sound-insulated walls for calls and client meetings",
       "Custom branding on the door and inside the office",
       "Inclusive meeting room access",
@@ -151,6 +166,7 @@ export const PLANS: Plan[] = [
       "Daily cleaning service",
     ],
     images: ["PrivateOffice1", "PrivateOffice2", "PrivateOffice3"],
+    meetingRooms: "Inclusive",
   },
 ];
 

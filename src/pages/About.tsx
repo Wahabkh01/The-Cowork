@@ -114,7 +114,7 @@ export default function About() {
           </p>
           <p>
             <strong>Honesty about money.</strong> Our rate card is on the website: PKR 15,000 for a hot
-            desk, PKR 25,000 for a dedicated desk, PKR 60,000 for a private office, all inclusive. Most
+            desk, and PKR 15,000 per seat for a 6- or 15-person private office, all inclusive. Most
             spaces in this market make you sit through a tour before they will give you a number. We
             think that wastes your time and filters for the wrong people. See{" "}
             <Link href="/pricing">pricing</Link>.

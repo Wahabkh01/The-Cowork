@@ -14,7 +14,7 @@ export const ROUTES: RouteDef[] = [
   { path: "/pricing", priority: 0.9, changefreq: "weekly" },
   { path: "/night-shift-coworking-lahore", priority: 0.9, changefreq: "weekly" },
   { path: "/hot-desk-lahore", priority: 0.8, changefreq: "monthly" },
-  { path: "/dedicated-desk-lahore", priority: 0.8, changefreq: "monthly" },
+  { path: "/team-office-lahore", priority: 0.8, changefreq: "monthly" },
   { path: "/private-office-lahore", priority: 0.8, changefreq: "monthly" },
   { path: "/meeting-rooms-lahore", priority: 0.8, changefreq: "monthly" },
   { path: "/coworking-space-wapda-town", priority: 0.8, changefreq: "monthly" },

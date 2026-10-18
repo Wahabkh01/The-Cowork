@@ -1,4 +1,4 @@
-import { SITE_URL, BUSINESS_NAME, LEGAL_NAME, NAP, SOCIAL_LINKS, HOURS, PLANS } from "./site";
+import { SITE_URL, BUSINESS_NAME, LEGAL_NAME, NAP, SOCIAL_LINKS, HOURS, PLANS, monthlyTotal } from "./site";
 import { GENERAL_FAQS, PRICING_FAQS, NIGHT_SHIFT_FAQS, MEETING_ROOM_FAQS, Faq } from "./faqs";
 
 const abs = (p: string) => new URL(p, SITE_URL).toString();
@@ -47,13 +47,13 @@ export const localBusinessSchema = {
   name: BUSINESS_NAME,
   legalName: LEGAL_NAME,
   description:
-    "Coworking space in Lahore beside Johar Town offering hot desks, dedicated desks and private offices with 24/7 access, a dedicated night shift, fibre internet and full power backup.",
+    "Coworking space in Lahore beside Johar Town offering hot desks and 6- and 15-person private offices with 24/7 access, a dedicated night shift, fibre internet and full power backup.",
   url: SITE_URL,
   telephone: NAP.phone,
   email: NAP.email,
   image: [abs("/Images/LandingPageImage.webp"), abs("/Images/HotDesk1.webp"), abs("/Images/PrivateOffice1.webp")],
   logo: abs("/Images/Logo.png"),
-  priceRange: "PKR 15,000 – PKR 60,000 per month",
+  priceRange: "PKR 15,000 – PKR 225,000 per month",
   currenciesAccepted: "PKR",
   address: {
     "@type": "PostalAddress",
@@ -115,12 +115,12 @@ export const localBusinessSchema = {
     name: `${plan.name} — coworking membership in Lahore`,
     description: plan.desc,
     url: abs(`/${plan.slug}`),
-    price: plan.price,
+    price: monthlyTotal(plan),
     priceCurrency: "PKR",
     availability: "https://schema.org/InStock",
     priceSpecification: {
       "@type": "UnitPriceSpecification",
-      price: plan.price,
+      price: monthlyTotal(plan),
       priceCurrency: "PKR",
       unitCode: "MON",
       referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
@@ -161,13 +161,13 @@ const planSchema = (slug: string) => {
     offers: {
       "@type": "Offer",
       url: abs(`/${plan.slug}`),
-      price: plan.price,
+      price: monthlyTotal(plan),
       priceCurrency: "PKR",
       availability: "https://schema.org/InStock",
       seller: { "@id": BUSINESS_ID },
       priceSpecification: {
         "@type": "UnitPriceSpecification",
-        price: plan.price,
+        price: monthlyTotal(plan),
         priceCurrency: "PKR",
         unitCode: "MON",
       },
@@ -191,21 +191,21 @@ const PAGES: Record<string, PageMeta> = {
     path: "/",
     title: "Coworking Space in Johar Town Lahore",
     description:
-      "Coworking space beside Johar Town, Lahore. Hot desks from PKR 15,000, dedicated desks and private offices. 24/7 access, night shift, fibre and power backup.",
+      "Coworking space beside Johar Town, Lahore. Hot desks and private office seats from PKR 15,000. 24/7 access, night shift, fibre and power backup.",
     extraSchema: [localBusinessSchema, faqSchema(GENERAL_FAQS.slice(0, 6))],
   },
   "/spaces": {
     path: "/spaces",
-    title: "Coworking Plans, Desks & Private Offices in Lahore",
+    title: "Coworking Plans, Hot Desks & Private Offices in Lahore",
     description:
-      "Compare every workspace at The Cowork Lahore: hot desks PKR 15,000, dedicated desks PKR 25,000, private offices from PKR 60,000. All with 24/7 access.",
+      "Compare every workspace at The Cowork Lahore: hot desks and 6- and 15-person offices, all at PKR 15,000 per seat. All with 24/7 access.",
     trail: [{ name: "Spaces & Plans", path: "/spaces" }],
   },
   "/pricing": {
     path: "/pricing",
     title: "Coworking Space Price in Lahore — Published Rate Card",
     description:
-      "The Cowork Lahore rate card, published in the open: hot desk PKR 15,000, dedicated desk PKR 25,000, private office from PKR 60,000 per month.",
+      "The Cowork Lahore rate card, published in the open: hot desk PKR 15,000 per seat; 6-person office PKR 90,000; 15-person office PKR 225,000 per month.",
     trail: [{ name: "Pricing", path: "/pricing" }],
     extraSchema: [
       faqSchema(PRICING_FAQS),
@@ -230,34 +230,34 @@ const PAGES: Record<string, PageMeta> = {
   },
   "/hot-desk-lahore": {
     path: "/hot-desk-lahore",
-    title: "Hot Desk in Lahore — PKR 15,000 per Month",
+    title: "Hot Desk in Lahore — PKR 15,000 per Seat",
     description:
-      "A flexible hot desk in Lahore at PKR 15,000 a month: open workspace seating, fibre internet, meeting room credits, a business address and 24/7 access.",
+      "A flexible hot desk in Lahore at PKR 15,000 per seat a month: open workspace seating, fibre internet, meeting room credits, a business address and 24/7 access.",
     trail: [
       { name: "Spaces & Plans", path: "/spaces" },
       { name: "Hot Desk", path: "/hot-desk-lahore" },
     ],
     extraSchema: [planSchema("hot-desk-lahore")],
   },
-  "/dedicated-desk-lahore": {
-    path: "/dedicated-desk-lahore",
-    title: "Dedicated Desk in Lahore — PKR 25,000 per Month",
+  "/team-office-lahore": {
+    path: "/team-office-lahore",
+    title: "6-Person Private Office in Lahore — PKR 15,000 per Seat",
     description:
-      "Your own permanent desk in Lahore at PKR 25,000 per month, with lockable storage, 24/7 access, 5 hours of meeting room credits, mail handling and free printing.",
+      "A furnished, lockable private office for six in Lahore at PKR 15,000 per seat (PKR 90,000 a month), with 24/7 access, meeting rooms, fibre and power backup.",
     trail: [
       { name: "Spaces & Plans", path: "/spaces" },
-      { name: "Dedicated Desk", path: "/dedicated-desk-lahore" },
+      { name: "6-Person Office", path: "/team-office-lahore" },
     ],
-    extraSchema: [planSchema("dedicated-desk-lahore")],
+    extraSchema: [planSchema("team-office-lahore")],
   },
   "/private-office-lahore": {
     path: "/private-office-lahore",
-    title: "Private Office for Rent in Lahore — from PKR 60,000",
+    title: "15-Person Private Office for Rent in Lahore — PKR 15,000 per Seat",
     description:
-      "Furnished, lockable private offices for rent in Lahore from PKR 60,000 a month. Teams of 2 to 50, sound-insulated, custom branding, daily cleaning.",
+      "A furnished, lockable private office for fifteen in Lahore at PKR 15,000 per seat (PKR 225,000 a month). Sound-insulated, custom branding, daily cleaning.",
     trail: [
       { name: "Spaces & Plans", path: "/spaces" },
-      { name: "Private Office", path: "/private-office-lahore" },
+      { name: "15-Person Office", path: "/private-office-lahore" },
     ],
     extraSchema: [planSchema("private-office-lahore")],
   },
@@ -273,7 +273,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/coworking-space-wapda-town",
     title: "Coworking Space near Wapda Town, Lahore",
     description:
-      "The closest serious coworking space to Wapda Town, Lahore. Desks from PKR 15,000, private offices from PKR 60,000, 24/7 access and on-site parking.",
+      "The closest serious coworking space to Wapda Town, Lahore. Hot desks and office seats at PKR 15,000, 24/7 access and on-site parking.",
     trail: [{ name: "Wapda Town", path: "/coworking-space-wapda-town" }],
     extraSchema: [localBusinessSchema],
   },
@@ -281,7 +281,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/coworking-space-pcsir",
     title: "Coworking Space in PCSIR Society, College Road Lahore",
     description:
-      "A coworking space inside PCSIR Staff Colony, College Road, Lahore. Hot desks, dedicated desks and private offices with 24/7 access and backup power.",
+      "A coworking space inside PCSIR Staff Colony, College Road, Lahore. Hot desks and 6- and 15-person private offices with 24/7 access and backup power.",
     trail: [{ name: "PCSIR & College Road", path: "/coworking-space-pcsir" }],
     extraSchema: [localBusinessSchema],
   },

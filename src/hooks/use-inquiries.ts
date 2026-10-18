@@ -14,13 +14,13 @@ export interface InquiryData {
 const interestLabels: Record<string, string> = {
   general: "General Inquiry",
   tour: "Book a Tour",
-  office: "Private Office / Cabin",
-  desk: "Dedicated Desk",
+  office: "15-Person Office",
+  desk: "6-Person Office",
   hotdesk: "Hot Desk",
 };
 
 export function buildWhatsAppUrl(data: InquiryData): string {
-  const phoneNumber = "923334835258";
+  const phoneNumber = "923087770222";
   const interestLabel = interestLabels[data.type] || data.type;
 
   const text = 

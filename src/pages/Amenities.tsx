@@ -156,9 +156,9 @@ export default function Amenities() {
         <Disclosure summary="Included with every plan, and available around the clock" level="h2">
           <p>
             Everything on this page comes with a <Link href="/hot-desk-lahore">hot desk</Link>, a{" "}
-            <Link href="/dedicated-desk-lahore">dedicated desk</Link> and a{" "}
-            <Link href="/private-office-lahore">private office</Link> alike. What changes between plans
-            is the permanence of your seat, your storage, your printing allowance and how many{" "}
+            <Link href="/team-office-lahore">6-person office</Link> and a{" "}
+            <Link href="/private-office-lahore">15-person office</Link> alike. What changes between plans
+            is whether you have a room of your own, its size, and how many{" "}
             <Link href="/meeting-rooms-lahore">meeting room</Link> hours you get. Rates are on the{" "}
             <Link href="/pricing">pricing page</Link>.
           </p>

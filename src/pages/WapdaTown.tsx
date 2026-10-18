@@ -61,11 +61,11 @@ export default function WapdaTown() {
           <p>
             Mostly two groups. Freelancers and remote employees who have been working from home since the
             pandemic and have finally admitted the house is not an office — those take{" "}
-            <Link href="/hot-desk-lahore">hot desks</Link> or{" "}
-            <Link href="/dedicated-desk-lahore">dedicated desks</Link>. And small teams of three to
-            eight, often an agency or software shop, where the founder lives locally and does not want
-            the team commuting into central Lahore every day. Those take{" "}
-            <Link href="/private-office-lahore">private offices</Link>.
+            <Link href="/hot-desk-lahore">hot desks</Link>. And small teams of three to
+            fifteen, often an agency or software shop, where the founder lives locally and does not want
+            the team commuting into central Lahore every day. Those take a{" "}
+            <Link href="/team-office-lahore">6-person</Link> or{" "}
+            <Link href="/private-office-lahore">15-person office</Link>.
           </p>
         </Disclosure>
 

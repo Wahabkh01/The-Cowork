@@ -149,9 +149,9 @@ export default function Community() {
             Every plan includes access to everything on this page — there is no separate community fee
             and no tier that excludes you from events. Rates are on the{" "}
             <Link href="/pricing">pricing page</Link>: PKR 15,000 for a{" "}
-            <Link href="/hot-desk-lahore">hot desk</Link>, PKR 25,000 for a{" "}
-            <Link href="/dedicated-desk-lahore">dedicated desk</Link>, from PKR 60,000 for a{" "}
-            <Link href="/private-office-lahore">private office</Link>.
+            <Link href="/hot-desk-lahore">hot desk</Link>, PKR 90,000 for a{" "}
+            <Link href="/team-office-lahore">6-person office</Link>, PKR 225,000 for a{" "}
+            <Link href="/private-office-lahore">15-person office</Link>.
           </p>
         </Disclosure>
       </DetailPanel>

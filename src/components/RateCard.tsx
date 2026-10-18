@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Check } from "lucide-react";
-import { PLANS } from "@/data/site";
+import { PLANS, totalLabel } from "@/data/site";
 
 /** The published rate card. Rendered as a real table so it is legible to crawlers and screen readers. */
 export function RateTable() {
@@ -29,13 +29,10 @@ export function RateTable() {
               <td className="px-6 py-5 whitespace-nowrap">
                 <span className="text-gradient-gold font-bold text-xl">{plan.priceLabel}</span>
                 <span className="text-white/30 text-xs ml-2">{plan.period}</span>
+                {plan.seats && <span className="block text-white/40 text-xs mt-1">{totalLabel(plan)}</span>}
               </td>
               <td className="px-6 py-5 text-white/50 text-sm font-light">{plan.bestFor}</td>
-              <td className="px-6 py-5 text-white/50 text-sm font-light">
-                {plan.slug === "hot-desk-lahore" && "2 hours / month"}
-                {plan.slug === "dedicated-desk-lahore" && "5 hours / month"}
-                {plan.slug === "private-office-lahore" && "Inclusive"}
-              </td>
+              <td className="px-6 py-5 text-white/50 text-sm font-light">{plan.meetingRooms}</td>
             </tr>
           ))}
         </tbody>
@@ -70,6 +67,7 @@ export function PlanCards() {
           <div className="mb-8">
             <span className="text-3xl sm:text-4xl font-bold text-gradient-gold">{plan.priceLabel}</span>
             <span className="text-white/30 text-sm ml-2">{plan.period}</span>
+            {plan.seats && <p className="text-white/40 text-xs mt-2">{totalLabel(plan)}</p>}
           </div>
 
           <ul className="space-y-4 mb-10">

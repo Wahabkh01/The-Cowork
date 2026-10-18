@@ -120,8 +120,8 @@ export default function NightShift() {
             Every plan works on the night shift at the same rate: see{" "}
             <Link href="/pricing">pricing</Link>,{" "}
             <Link href="/hot-desk-lahore">hot desks</Link>,{" "}
-            <Link href="/dedicated-desk-lahore">dedicated desks</Link> and{" "}
-            <Link href="/private-office-lahore">private offices</Link>.
+            <Link href="/team-office-lahore">6-person offices</Link> and{" "}
+            <Link href="/private-office-lahore">15-person offices</Link>.
           </p>
         </Disclosure>
       </DetailPanel>

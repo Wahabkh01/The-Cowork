@@ -7,6 +7,11 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/dedicated-desk-lahore",
+      "destination": "/team-office-lahore",
+      "permanent": true
     }
   ],
   "rewrites": [

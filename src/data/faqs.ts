@@ -15,7 +15,7 @@ export const GENERAL_FAQS: Faq[] = [
   },
   {
     q: "How much does a coworking space in Lahore cost at The Cowork?",
-    a: "A Hot Desk is PKR 15,000 per month, a Dedicated Desk is PKR 25,000 per month, and a Private Office starts at PKR 60,000 per month. Every rate includes internet, full power backup, complimentary tea and filtered water, meeting room credits and 24/7 access. There are no hidden setup or maintenance charges.",
+    a: "Every seat is PKR 15,000 per month. A Hot Desk is one seat at PKR 15,000; a 6-Person Office is PKR 90,000 per month and a 15-Person Office is PKR 225,000 per month. Every rate includes internet, full power backup, complimentary tea and filtered water, meeting room credits and 24/7 access. There are no hidden setup or maintenance charges.",
   },
   {
     q: "Do you offer a night shift?",
@@ -42,7 +42,7 @@ export const GENERAL_FAQS: Faq[] = [
 export const PRICING_FAQS: Faq[] = [
   {
     q: "Are the published prices the final price?",
-    a: "Yes. PKR 15,000 for a Hot Desk, PKR 25,000 for a Dedicated Desk and PKR 60,000 for a Private Office are the monthly rates, inclusive of internet, electricity and power backup, tea and filtered water, cleaning, and your meeting room credits. We publish them precisely so you do not have to fill in a form to find out whether we fit your budget.",
+    a: "Yes. PKR 15,000 per seat for a Hot Desk, PKR 90,000 for a 6-Person Office and PKR 225,000 for a 15-Person Office (PKR 15,000 per seat) are the monthly rates, inclusive of internet, electricity and power backup, tea and filtered water, cleaning, and your meeting room credits. We publish them precisely so you do not have to fill in a form to find out whether we fit your budget.",
   },
   {
     q: "Is the price different for the night shift?",
@@ -58,11 +58,11 @@ export const PRICING_FAQS: Faq[] = [
   },
   {
     q: "What does a Private Office cost for a larger team?",
-    a: "Private Offices start at PKR 60,000 per month. Larger cabins and multi-room layouts for teams above roughly ten people are quoted on the footprint you need — send us your headcount and we will come back with a written figure.",
+    a: "Private offices are PKR 15,000 per seat: PKR 90,000 a month for the 6-Person Office and PKR 225,000 a month for the 15-Person Office. Multi-room layouts for teams above fifteen people are quoted on the footprint you need — send us your headcount and we will come back with a written figure.",
   },
   {
     q: "Are meeting rooms charged separately?",
-    a: "Every plan includes meeting room credits: 2 hours a month on a Hot Desk, 5 hours on a Dedicated Desk, and inclusive access on a Private Office. Additional hours, and bookings for non-members, are quoted per hour on request.",
+    a: "Every plan includes meeting room credits: 2 hours a month on a Hot Desk, and inclusive access with a 6-Person or 15-Person Office. Additional hours, and bookings for non-members, are quoted per hour on request.",
   },
 ];
 
@@ -96,7 +96,7 @@ export const MEETING_ROOM_FAQS: Faq[] = [
   },
   {
     q: "How many meeting room hours are included?",
-    a: "2 hours a month with a Hot Desk, 5 hours with a Dedicated Desk, and inclusive use with a Private Office. Extra hours are available on request.",
+    a: "2 hours a month with a Hot Desk, and inclusive use with a 6-Person or 15-Person Office. Extra hours are available on request.",
   },
   {
     q: "Can non-members book a room?",

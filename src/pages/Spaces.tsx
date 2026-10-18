@@ -7,7 +7,7 @@ import { Seo } from "@/components/Seo";
 import { Disclosure, DetailPanel } from "@/components/Details";
 import { FaqSection } from "@/components/FaqSection";
 import { GENERAL_FAQS } from "@/data/faqs";
-import { PLANS, SHIFTS } from "@/data/site";
+import { PLANS, SHIFTS, totalLabel } from "@/data/site";
 
 export default function Spaces() {
   const plans = PLANS;
@@ -57,6 +57,7 @@ export default function Spaces() {
               <div className="mb-10 lg:mb-12">
                 <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gradient-gold">{plan.priceLabel}</span>
                 <span className="text-white/30 text-sm ml-2">{plan.period}</span>
+                {plan.seats && <p className="text-white/40 text-xs mt-2">{totalLabel(plan)}</p>}
               </div>
 
               <div className="space-y-4 lg:space-y-5 mb-10 lg:mb-12">
@@ -75,7 +76,7 @@ export default function Spaces() {
                   plan.featured
                     ? "bg-primary text-black hover:scale-[1.02] shadow-xl shadow-primary/20"
                     : "glass-button text-white hover:scale-[1.02]"
-                }`} data-testid={`button-select-${plan.name.toLowerCase().replace(' ', '-')}`}>
+                }`} data-testid={`button-select-${plan.slug}`}>
                   Select Plan
                 </button>
               </Link>
@@ -89,7 +90,7 @@ export default function Spaces() {
           <div>
             <h3 className="text-white mb-2">Need a Custom Solution?</h3>
             <p className="text-muted-foreground max-w-xl">
-              We offer bespoke office layouts for teams larger than 20 people. 
+              We offer bespoke office layouts for teams larger than 15 people. 
               Let us design your dream headquarters.
             </p>
           </div>
@@ -114,13 +115,13 @@ export default function Spaces() {
               empty while you are at a client site.
             </li>
             <li>
-              <strong>Four or five days, external monitor, papers, a routine.</strong> Take a{" "}
-              <Link href="/dedicated-desk-lahore">dedicated desk</Link>. The PKR 10,000 difference buys
-              back the twenty minutes a day you would spend setting up and packing down.
+              <strong>A small team of up to six.</strong> Take a{" "}
+              <Link href="/team-office-lahore">6-person office</Link>. PKR 15,000 per seat buys a room of your own,
+              set up once and left that way.
             </li>
             <li>
-              <strong>A team, constant calls, or anything confidential.</strong> Take a{" "}
-              <Link href="/private-office-lahore">private office</Link>. Open-plan and back-to-back
+              <strong>A team of up to fifteen, constant calls, or anything confidential.</strong> Take a{" "}
+              <Link href="/private-office-lahore">15-person office</Link>. Open-plan and back-to-back
               client calls do not mix, for you or for the people around you.
             </li>
           </ul>
@@ -148,7 +149,7 @@ export default function Spaces() {
             load shedding does not interrupt anything. Complimentary tea and filtered water. Daily cleaning.
             Biometric access, CCTV and on-site security. Parking inside the property. Reception and mail
             handling between 9:00 AM and 8:00 PM. And meeting room credits, which scale with the plan —
-            2 hours on a hot desk, 5 on a dedicated desk, inclusive access with a private office. The full list
+            2 hours on a hot desk, inclusive access with a 6- or 15-person office. The full list
             is on the <Link href="/amenities">amenities page</Link>, and{" "}
             <Link href="/meeting-rooms-lahore">meeting rooms</Link> have their own page.
           </p>
@@ -156,7 +157,7 @@ export default function Spaces() {
 
         <Disclosure summary="Larger teams and custom layouts" level="h2">
           <p>
-            Above roughly ten people, a standard cabin stops being the right shape. Tell us your
+            Above fifteen people, a single office stops being the right shape. Tell us your
             headcount, how you want the room laid out, and when you need it, and we will quote the
             footprint rather than quote you a range. Multi-room arrangements for teams up to fifty are
             something we build regularly.

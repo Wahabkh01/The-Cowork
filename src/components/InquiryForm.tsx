@@ -26,7 +26,7 @@ type InsertInquiry = z.infer<typeof insertInquirySchema>;
 export function InquiryForm({ defaultType = "general" }: { defaultType?: string }) {
   const mutation = useCreateInquiry();
   const [showThankYouDialog, setShowThankYouDialog] = useState(false);
-  const [waUrl, setWaUrl] = useState<string>("https://wa.me/923334835258");
+  const [waUrl, setWaUrl] = useState<string>("https://wa.me/923087770222");
   
   const form = useForm<InsertInquiry>({
     resolver: zodResolver(insertInquirySchema),
@@ -161,8 +161,8 @@ export function InquiryForm({ defaultType = "general" }: { defaultType?: string 
                     <SelectContent className="bg-zinc-900 border-white/10 text-white">
                       <SelectItem value="general">General Inquiry</SelectItem>
                       <SelectItem value="tour">Book a Tour</SelectItem>
-                      <SelectItem value="office">Private Office / Cabin</SelectItem>
-                      <SelectItem value="desk">Dedicated Desk</SelectItem>
+                      <SelectItem value="office">15-Person Office</SelectItem>
+                      <SelectItem value="desk">6-Person Office</SelectItem>
                       <SelectItem value="hotdesk">Hot Desk</SelectItem>
                     </SelectContent>
                   </Select>

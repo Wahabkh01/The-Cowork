@@ -61,8 +61,8 @@ export default function MeetingRooms() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {[
             { plan: "Hot Desk", hours: "2 hours", slug: "hot-desk-lahore" },
-            { plan: "Dedicated Desk", hours: "5 hours", slug: "dedicated-desk-lahore" },
-            { plan: "Private Office", hours: "Inclusive", slug: "private-office-lahore" },
+            { plan: "6-Person Office", hours: "Inclusive", slug: "team-office-lahore" },
+            { plan: "15-Person Office", hours: "Inclusive", slug: "private-office-lahore" },
           ].map((row) => (
             <Link key={row.slug} href={`/${row.slug}`}>
               <div className="glass-card p-10 rounded-3xl text-center cursor-pointer hover:border-primary/30 transition-all duration-500">
@@ -79,9 +79,9 @@ export default function MeetingRooms() {
           <p>
             Every membership includes room time — you are not charged per meeting on top of your monthly
             rate until you exceed the allowance. Two hours a month with a{" "}
-            <Link href="/hot-desk-lahore">hot desk</Link>, five with a{" "}
-            <Link href="/dedicated-desk-lahore">dedicated desk</Link>, inclusive access with a{" "}
-            <Link href="/private-office-lahore">private office</Link>. Additional hours beyond your
+            <Link href="/hot-desk-lahore">hot desk</Link>, inclusive access with a{" "}
+            <Link href="/team-office-lahore">6-person</Link> or{" "}
+            <Link href="/private-office-lahore">15-person office</Link>. Additional hours beyond your
             allowance are quoted per hour; ask reception and we will tell you the figure before you book,
             not after.
           </p>

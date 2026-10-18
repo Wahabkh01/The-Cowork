@@ -51,8 +51,8 @@ export function Footer() {
           <div>
             <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-[10px]">Explore</h4>
             <ul className="space-y-1.5 text-sm text-white/40 font-light">
-              <li><Link href="/private-office-lahore"><span className="inline-block py-2 hover:text-primary cursor-pointer transition-colors">Private Offices</span></Link></li>
-              <li><Link href="/dedicated-desk-lahore"><span className="inline-block py-2 hover:text-primary cursor-pointer transition-colors">Dedicated Desks</span></Link></li>
+              <li><Link href="/private-office-lahore"><span className="inline-block py-2 hover:text-primary cursor-pointer transition-colors">15-Person Offices</span></Link></li>
+              <li><Link href="/team-office-lahore"><span className="inline-block py-2 hover:text-primary cursor-pointer transition-colors">6-Person Offices</span></Link></li>
               <li><Link href="/hot-desk-lahore"><span className="inline-block py-2 hover:text-primary cursor-pointer transition-colors">Hot Desks</span></Link></li>
               <li><Link href="/meeting-rooms-lahore"><span className="inline-block py-2 hover:text-primary cursor-pointer transition-colors">Meeting Rooms</span></Link></li>
               <li><Link href="/pricing"><span className="inline-block py-2 hover:text-primary cursor-pointer transition-colors">Pricing</span></Link></li>

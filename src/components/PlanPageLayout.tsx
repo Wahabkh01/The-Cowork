@@ -9,7 +9,7 @@ import { Section } from "@/components/Section";
 import { CtaBand } from "@/components/CtaBand";
 import { DetailPanel } from "@/components/Details";
 import ImageGallery from "@/components/ImageGallery";
-import { PLANS, planBySlug } from "@/data/site";
+import { PLANS, planBySlug, totalLabel } from "@/data/site";
 
 export function PlanPageLayout({
   slug,
@@ -48,6 +48,7 @@ export function PlanPageLayout({
           <div className="text-center mb-12">
             <span className="text-5xl font-bold text-gradient-gold">{plan.priceLabel}</span>
             <span className="text-white/30 text-sm ml-2">{plan.period}</span>
+            {plan.seats && <p className="text-white/40 text-sm mt-2">{totalLabel(plan)}</p>}
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-12">
@@ -82,6 +83,7 @@ export function PlanPageLayout({
                 <p className="text-gradient-gold font-bold mb-4 text-xl">
                   {other.priceLabel} <span className="text-white/30 text-xs font-normal">{other.period}</span>
                 </p>
+                {other.seats && <p className="text-white/40 text-xs -mt-2 mb-4">{totalLabel(other)}</p>}
                 <p className="text-white/50 font-light leading-relaxed text-sm">{other.short}</p>
               </div>
             </Link>

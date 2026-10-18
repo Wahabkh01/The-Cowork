@@ -12,7 +12,7 @@ import Spaces from "@/pages/Spaces";
 import Pricing from "@/pages/Pricing";
 import NightShift from "@/pages/NightShift";
 import HotDesk from "@/pages/HotDesk";
-import DedicatedDesk from "@/pages/DedicatedDesk";
+import TeamOffice from "@/pages/TeamOffice";
 import PrivateOffice from "@/pages/PrivateOffice";
 import MeetingRooms from "@/pages/MeetingRooms";
 import WapdaTown from "@/pages/WapdaTown";
@@ -41,7 +41,7 @@ function Router() {
       <Route path="/pricing" component={Pricing} />
       <Route path="/night-shift-coworking-lahore" component={NightShift} />
       <Route path="/hot-desk-lahore" component={HotDesk} />
-      <Route path="/dedicated-desk-lahore" component={DedicatedDesk} />
+      <Route path="/team-office-lahore" component={TeamOffice} />
       <Route path="/private-office-lahore" component={PrivateOffice} />
       <Route path="/meeting-rooms-lahore" component={MeetingRooms} />
       <Route path="/coworking-space-wapda-town" component={WapdaTown} />

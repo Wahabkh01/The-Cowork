@@ -24,7 +24,7 @@ export default function HotDesk() {
         </p>
       </Disclosure>
 
-      <Disclosure summary="What PKR 15,000 a month buys" level="h2">
+      <Disclosure summary="What PKR 15,000 per seat buys" level="h2">
         <p>
           The rate is inclusive. No joining fee, no maintenance charge, and no separate electricity bill
           — the line item that catches people out when they rent a small private office elsewhere in
@@ -53,10 +53,10 @@ export default function HotDesk() {
       <Disclosure summary="When you should not take a hot desk" level="h2">
         <p>
           Two honest cases. If you use two monitors and a proper keyboard, carrying them in and out every
-          day gets old inside a fortnight — take a{" "}
-          <Link href="/dedicated-desk-lahore">dedicated desk</Link> instead and leave everything set up.
+          day gets old inside a fortnight — your team should take a{" "}
+          <Link href="/team-office-lahore">6-person office</Link> instead and leave everything set up.
           And if you take calls constantly, the open workspace will frustrate you and the people around
-          you; a <Link href="/private-office-lahore">private office</Link> pays for itself in goodwill.
+          you; a private office pays for itself in goodwill.
         </p>
       </Disclosure>
 
