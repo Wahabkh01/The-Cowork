@@ -14,8 +14,8 @@ export default function Faq() {
 
       <PageHero
         eyebrow="Straight answers"
-        h1="Frequently Asked"
-        highlight="Questions"
+        h1="Coworking Space"
+        highlight="FAQs"
         lead="Hours, prices, the night shift, meeting rooms, power, internet and parking."
       />
 

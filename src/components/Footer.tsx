@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 mb-14 sm:mb-20 lg:mb-24 relative z-10">
           <div className="space-y-8">
             <div className="flex items-center gap-3">
-              <img src="/Images/Logo.png" alt="The Cowork Logo" width={40} height={40} className="h-10 w-auto" />
+              <img src="/Images/Logo-112.png" alt="The Cowork Logo" width={40} height={40} className="h-10 w-auto" />
               <div className="text-2xl font-black tracking-tighter">
                 <span className="text-primary">THE</span>
                 <span className="text-white ml-2">COWORK</span>
@@ -109,7 +109,7 @@ export function Footer() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with The Cowork on WhatsApp"
-        className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 bg-green-500 text-white p-3.5 sm:p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50"
+        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 bg-green-500 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50"
       >
         <MessageCircle size={24} aria-hidden="true" />
       </a>

@@ -54,7 +54,8 @@ export function Seo({ path }: { path: string }) {
     upsertMeta("twitter:title", title);
     upsertMeta("twitter:description", meta.description);
     upsertMeta("twitter:image", image);
-    upsertLink("canonical", canonical);
+    if (meta.noIndex) document.head.querySelector('link[rel="canonical"]')?.remove();
+    else upsertLink("canonical", canonical);
 
     let ld = document.getElementById(JSON_LD_ID) as HTMLScriptElement | null;
     if (!ld) {

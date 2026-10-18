@@ -18,11 +18,11 @@ export default function Spaces() {
       <Section className="pb-10 pt-20">
         <div className="text-center max-w-3xl mx-auto">
           <motion.h1 
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={false}
             animate={{ opacity: 1, scale: 1 }}
             className="text-white mb-6"
           >
-            Choose Your <span className="text-gradient-gold">Workspace</span>
+            Coworking Plans <span className="text-gradient-gold">in Lahore</span>
           </motion.h1>
           <p className="text-white/60 text-xl font-light">
             Flexible membership plans designed for your growth.
@@ -159,8 +159,8 @@ export default function Spaces() {
           <p>
             Above fifteen people, a single office stops being the right shape. Tell us your
             headcount, how you want the room laid out, and when you need it, and we will quote the
-            footprint rather than quote you a range. Multi-room arrangements for teams up to fifty are
-            something we build regularly.
+            footprint rather than quote you a range. Multi-room arrangements for larger teams are
+            quoted on request.
           </p>
         </Disclosure>
       </DetailPanel>

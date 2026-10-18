@@ -29,7 +29,7 @@ export default function PrivateOffice() {
           <li><strong>A fully furnished private office for fifteen</strong> with a lockable door.</li>
           <li><strong>Sound-insulated walls</strong> — usable for client calls, interviews and anything confidential.</li>
           <li><strong>Custom branding</strong> on the door and inside the office.</li>
-          <li><strong>Inclusive meeting room access</strong>, with screens, conference audio and whiteboards.</li>
+          <li><strong>Inclusive meeting room access</strong>, with whiteboards, fibre and power backup.</li>
           <li><strong>Guest reception and visitor management</strong> during staffed hours.</li>
           <li><strong>Daily cleaning service.</strong></li>
           <li><strong>Fibre internet with failover and full generator plus UPS backup</strong>, included — no separate electricity or diesel bill.</li>

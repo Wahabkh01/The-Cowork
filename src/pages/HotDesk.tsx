@@ -13,8 +13,8 @@ export default function HotDesk() {
       <Disclosure summary="What a hot desk actually is" level="h2">
         <p>
           A hot desk is unreserved seating. You turn up, take any free desk in the open workspace, work,
-          and pack up at the end of the day. Nothing stays behind. In exchange you pay the lowest monthly
-          rate we offer, and you are never paying for a desk that sat empty while you were at a client's
+          and pack up at the end of the day. Nothing stays behind. In exchange you pay PKR 15,000 a month for
+          one seat, and you are never paying for a desk that sat empty while you were at a client's
           office.
         </p>
         <p>
@@ -52,9 +52,9 @@ export default function HotDesk() {
 
       <Disclosure summary="When you should not take a hot desk" level="h2">
         <p>
-          Two honest cases. If you use two monitors and a proper keyboard, carrying them in and out every
-          day gets old inside a fortnight — your team should take a{" "}
-          <Link href="/team-office-lahore">6-person office</Link> instead and leave everything set up.
+          Two honest cases. If you work as a team of three or more, sharing the open workspace gets old
+          quickly — a <Link href="/team-office-lahore">6-person office</Link> gives you a room where
+          everyone's setup stays put.
           And if you take calls constantly, the open workspace will frustrate you and the people around
           you; a private office pays for itself in goodwill.
         </p>

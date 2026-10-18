@@ -28,7 +28,7 @@ export default function TeamOffice() {
           <li><strong>A private furnished office for six</strong>, with desks, ergonomic chairs and a lockable door.</li>
           <li><strong>Sound-insulated walls</strong> for calls, interviews and anything confidential.</li>
           <li><strong>24/7 biometric access</strong> on whichever shift your team works.</li>
-          <li><strong>Inclusive meeting room access</strong>, with screens, conference audio and whiteboards.</li>
+          <li><strong>Inclusive meeting room access</strong>, with whiteboards, fibre and power backup.</li>
           <li><strong>Mail handling and reception service</strong>, 9:00 AM to 8:00 PM.</li>
           <li><strong>Daily cleaning service.</strong></li>
           <li><strong>Fibre internet with a backup line, and industrial power backup.</strong></li>

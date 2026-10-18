@@ -54,14 +54,14 @@ export default function Pcsir() {
             Dedicated fibre internet with an automatic failover line. Industrial generators plus UPS on
             every desk and network device, so load shedding is not an interruption. Biometric entry, CCTV
             and on-site security. Ergonomic chairs and desks. Sound-insulated{" "}
-            <Link href="/meeting-rooms-lahore">meeting rooms</Link> with screens, conference audio and
-            whiteboards. Printing and mail handling. Daily cleaning. Parking inside the property. A
-            complimentary café. Full list on the <Link href="/amenities">amenities page</Link>.
+            <Link href="/meeting-rooms-lahore">meeting rooms</Link> with whiteboards.
+            Printing and mail handling. Daily cleaning. Parking inside the property. Complimentary
+            tea and refreshments. Full list on the <Link href="/amenities">amenities page</Link>.
           </p>
           <p>
-            And it is open 24 hours a day, with a staffed{" "}
+            And it is open 24 hours a day, with a{" "}
             <Link href="/night-shift-coworking-lahore">night shift running 6 PM to 3 AM</Link> for
-            members working US and UK client hours.
+            members working US and UK client hours and security on site all night.
           </p>
         </Disclosure>
 
@@ -69,8 +69,7 @@ export default function Pcsir() {
           <ul>
             <li>
               <strong>Johar Town</strong> — we sit on its western edge, reachable without the boulevard
-              traffic. This is our main catchment and the phrase most of our members search before they
-              find us: coworking space Johar Town Lahore.
+              traffic. This is where most of our members come from.
             </li>
             <li><strong><Link href="/coworking-space-wapda-town">Wapda Town</Link></strong> — a straight run along College Road.</li>
             <li><strong>Canal Road and Thokar Niaz Baig</strong> — quick access without crossing the centre of Johar Town.</li>

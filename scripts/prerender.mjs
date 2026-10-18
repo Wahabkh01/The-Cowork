@@ -10,6 +10,7 @@
  * markup on mount. That means there is no hydration contract to honour and the
  * animation-hiding inline styles below can be safely stripped.
  */
+import { execFileSync } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -79,12 +80,28 @@ await fs.writeFile(path.join(distDir, "404.html"), notFoundHtml, "utf8");
 
 // Sitemap, generated from the same route list so it can never list a dead URL.
 const today = new Date().toISOString().slice(0, 10);
+
+/**
+ * Last real change to a page: the newest commit touching its component or the shared data
+ * every page reads. Falls back to the build date when git history is unavailable.
+ */
+function lastModified(source) {
+  try {
+    const out = execFileSync("git", ["log", "-1", "--format=%cs", "--", source, "src/data"], {
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+    return out || today;
+  } catch {
+    return today;
+  }
+}
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${ROUTES.map(
   (r) => `  <url>
     <loc>https://thecowork.pk${r.path === "/" ? "/" : r.path}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastModified(r.source)}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority.toFixed(1)}</priority>
   </url>`,

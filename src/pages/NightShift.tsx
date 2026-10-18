@@ -17,7 +17,7 @@ const NIGHT_FACTS = [
   { icon: <Wifi className="w-6 h-6 text-primary" />, title: "Fibre with a second line", desc: "Automatic failover, sized for simultaneous video calls and large uploads." },
   { icon: <ShieldCheck className="w-6 h-6 text-primary" />, title: "Security all night", desc: "Biometric entry, CCTV throughout, and personnel in the building." },
   { icon: <Car className="w-6 h-6 text-primary" />, title: "Parking inside", desc: "You are not walking to a car left on College Road at three in the morning." },
-  { icon: <Utensils className="w-6 h-6 text-primary" />, title: "The café stays stocked", desc: "Tea and filtered water through the night. The 2 AM slump is solvable." },
+  { icon: <Utensils className="w-6 h-6 text-primary" />, title: "Tea stays on", desc: "Tea and filtered water through the night. The 2 AM slump is solvable." },
 ];
 
 export default function NightShift() {
@@ -103,7 +103,7 @@ export default function NightShift() {
             A word of realism from watching members do this for a couple of years. The people who sustain
             night work treat it as a shift rather than an extension of their day: they sleep on a fixed
             schedule, eat a proper meal at the start of it, and leave at the end instead of drifting to
-            five in the morning. The space helps with two of those — the café stays stocked, and the
+            five in the morning. The space helps with two of those — tea and water are always on, and the
             lounge areas are separate from the desks so a break is an actual change of position.
           </p>
         </Disclosure>
@@ -111,8 +111,9 @@ export default function NightShift() {
         <Disclosure summary="Who else in Lahore actually does this" level="h2">
           <p>
             Very few, honestly. Most coworking spaces in the Johar Town radius advertise 24/7 access,
-            which usually means the door opens with a card and everything else — the staff, the café, the
-            support — has gone home. We run the night as a staffed operating shift. If you have been
+            which usually means the door opens with a card and everything else — the security, the power
+            backup, the support — has gone home. Here security stays on site all night and the power and
+            internet keep running. If you have been
             quoted "24/7" elsewhere, the useful question on the tour is who is actually in the building
             at midnight.
           </p>

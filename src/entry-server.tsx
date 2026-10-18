@@ -25,7 +25,8 @@ export function renderHead(path: string): string {
     `<title>${escapeAttr(title)}</title>`,
     `<meta name="description" content="${escapeAttr(meta.description)}" />`,
     `<meta name="robots" content="${meta.noIndex ? "noindex,nofollow" : "index,follow"}" />`,
-    `<link rel="canonical" href="${escapeAttr(canonical)}" />`,
+    // A noindex page (the 404) gets no canonical: the two would be mixed signals.
+    ...(meta.noIndex ? [] : [`<link rel="canonical" href="${escapeAttr(canonical)}" />`]),
     `<meta property="og:site_name" content="The Cowork" />`,
     `<meta property="og:locale" content="en_PK" />`,
     `<meta property="og:type" content="website" />`,

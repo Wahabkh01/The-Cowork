@@ -11,13 +11,13 @@ export default function About() {
       <Seo path="/about" />
       <Section className="py-20 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-white mb-8 leading-tight">
-            Elevating Work <br/>
-            <span className="text-gradient-gold">Culture in Lahore</span>
+            About The Cowork, <br/>
+            <span className="text-gradient-gold">Coworking in Lahore</span>
           </h1>
           <p className="text-xl text-white/60 max-w-3xl mx-auto font-light leading-relaxed">
             We built The Cowork because we believe your environment dictates your output. 
@@ -36,10 +36,10 @@ export default function About() {
           >
             <div className="aspect-[4/5] rounded-3xl sm:rounded-[2rem] lg:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
-                alt="The building housing The Cowork on College Road, Lahore"
-                width={2070}
-                height={2588}
+                src="/Images/PrivateOffice2.webp"
+                alt="A furnished private office at The Cowork on College Road, Lahore"
+                width={1200}
+                height={1600}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
@@ -60,8 +60,8 @@ export default function About() {
                 We created a sanctuary that feels like a 5-star hotel but functions like a high-tech headquarters.
               </p>
               <p>
-                Our mission is to provide the most premium, productive, and hassle-free workspace experience in Pakistan, 
-                enabling you to focus entirely on building your legacy.
+                Our aim is simple: a productive, hassle-free workspace with honest, published prices,
+                so you can focus entirely on your work.
               </p>
             </div>
             
@@ -100,8 +100,8 @@ export default function About() {
             The second decision was about hours. A large share of Lahore's freelance and outsourced work
             runs on American and British time, and those people were working through the night from their
             bedrooms because nothing was open. So we run a genuine{" "}
-            <Link href="/night-shift-coworking-lahore">night shift</Link>, 6 PM to 3 AM, staffed and
-            fully powered, with 24-hour access on top of it.
+            <Link href="/night-shift-coworking-lahore">night shift</Link>, 6 PM to 3 AM, with security on site and
+            full power backup, and 24-hour access on top of it.
           </p>
         </Disclosure>
 

@@ -138,9 +138,9 @@ export function InquiryForm({ defaultType = "general" }: { defaultType?: string 
               name="seats"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-white/80">Number of Seats / Cabin needed *</FormLabel>
+                  <FormLabel className="text-white/80">Number of seats or office size *</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g. 2 Seats, 1 Private Cabin" className="bg-white/5 border-white/10 text-white focus:border-primary/50" {...field} />
+                    <Input placeholder="e.g. 2 seats, or a 6-person office" className="bg-white/5 border-white/10 text-white focus:border-primary/50" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

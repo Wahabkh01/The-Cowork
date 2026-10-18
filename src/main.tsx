@@ -1,5 +1,9 @@
 import { createRoot } from "react-dom/client";
 import App from "./App";
+// Self-hosted fonts: same-origin and bundled with the CSS, so no third-party stylesheet
+// blocks first paint. Playfair is used for a single italic heading, so only that style ships.
+import "@fontsource-variable/dm-sans";
+import "@fontsource/playfair-display/latin-400-italic.css";
 import "./index.css";
 
 /**

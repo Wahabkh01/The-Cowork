@@ -46,12 +46,12 @@ export default function WapdaTown() {
             Not a compromise, which is the usual trade for being off the main road. The building runs
             dedicated fibre with an automatic backup line, industrial generators plus UPS on every desk,
             biometric entry, CCTV and on-site security, ergonomic furniture, sound-insulated{" "}
-            <Link href="/meeting-rooms-lahore">meeting rooms</Link> with screens and conference audio,
+            <Link href="/meeting-rooms-lahore">meeting rooms</Link> with whiteboards,
             printing, mail handling, daily cleaning, and complimentary tea and refreshments.
           </p>
           <p>
-            It is also open around the clock, with a staffed{" "}
-            <Link href="/night-shift-coworking-lahore">night shift from 6 PM to 3 AM</Link> — which
+            It is also open around the clock, with a{" "}
+            <Link href="/night-shift-coworking-lahore">night shift from 6 PM to 3 AM</Link> and security on site all night — which
             matters if you are one of the many people in this part of Lahore working American or British
             client hours from a spare bedroom.
           </p>

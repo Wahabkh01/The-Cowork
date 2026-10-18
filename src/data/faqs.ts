@@ -19,7 +19,7 @@ export const GENERAL_FAQS: Faq[] = [
   },
   {
     q: "Do you offer a night shift?",
-    a: "Yes. Our night shift runs 06:00 PM to 03:00 AM and is designed for freelancers and teams working US and UK client hours. The full facility stays open — internet, power backup, security, meeting rooms and the café are all available through the night. Very few coworking spaces in Lahore staff a genuine night shift.",
+    a: "Yes. Our night shift runs 06:00 PM to 03:00 AM and is designed for freelancers and teams working US and UK client hours. The full facility stays open — internet, power backup, meeting rooms, tea and water are all available through the night, and security is on site all night. Reception is staffed 9:00 AM to 8:00 PM.",
   },
   {
     q: "Can I visit before I commit?",
@@ -72,8 +72,8 @@ export const NIGHT_SHIFT_FAQS: Faq[] = [
     a: "The night shift runs 06:00 PM to 03:00 AM. If you need to be at your desk outside that window as well, take the 24/7 flexible option — the building never closes.",
   },
   {
-    q: "Is the space actually staffed at night, or just unlocked?",
-    a: "The facility is fully operational: security is on site, power backup is live, the internet is monitored, and the café is stocked. Reception is staffed until 8:00 PM, so anything you need arranged is best raised before then.",
+    q: "Is anyone on site at night, or is it just unlocked?",
+    a: "Security is on site all night, power backup is live, the internet is monitored, and tea and water are always available. Reception is staffed until 8:00 PM, so anything you need arranged is best raised before then.",
   },
   {
     q: "I work US hours. Does that fit?",
@@ -104,6 +104,6 @@ export const MEETING_ROOM_FAQS: Faq[] = [
   },
   {
     q: "What equipment is in the rooms?",
-    a: "Large-format screens for presentations and video calls, conference audio, whiteboards, and the same fibre internet and power backup as the rest of the building. Tea service for your guests is included.",
+    a: "Whiteboards, and the same fibre internet and power backup as the rest of the building. Tea service for your guests is included. Large-format screens and conference audio are being installed — ask reception for the date.",
   },
 ];

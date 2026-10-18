@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { MonitorPlay, Mic, PenTool, Zap, Users, Utensils } from "lucide-react";
+import { MonitorPlay, Wifi, PenTool, Zap, Users, Utensils } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
@@ -11,8 +11,8 @@ import { CtaBand } from "@/components/CtaBand";
 import { MEETING_ROOM_FAQS } from "@/data/faqs";
 
 const KIT = [
-  { icon: <MonitorPlay className="w-6 h-6 text-primary" />, title: "Large-format screens", desc: "For presentations and video calls, with the cable already on the table." },
-  { icon: <Mic className="w-6 h-6 text-primary" />, title: "Conference audio", desc: "Room microphones and speakers, so the far end hears everyone." },
+  { icon: <Wifi className="w-6 h-6 text-primary" />, title: "Fibre internet", desc: "The same backed-up fibre as the rest of the building, sized for video calls." },
+  { icon: <MonitorPlay className="w-6 h-6 text-primary" />, title: "Screens coming soon", desc: "Large-format screens and conference audio are being installed. Ask reception for the date." },
   { icon: <PenTool className="w-6 h-6 text-primary" />, title: "Whiteboards", desc: "With markers that work. Wiped between bookings." },
   { icon: <Zap className="w-6 h-6 text-primary" />, title: "Power backup", desc: "The room does not go dark mid-pitch." },
   { icon: <Users className="w-6 h-6 text-primary" />, title: "Guest reception", desc: "Your visitors are met at the door and shown in." },
@@ -29,7 +29,7 @@ export default function MeetingRooms() {
         eyebrow="Included with membership · bookable by the hour"
         h1="Meeting Rooms in"
         highlight="Lahore"
-        lead="Sound-insulated rooms with screens, conference audio and whiteboards, beside Johar Town."
+        lead="Sound-insulated rooms with whiteboards, fibre internet and power backup, beside Johar Town."
       />
 
       <Section>

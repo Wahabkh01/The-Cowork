@@ -110,9 +110,9 @@ export default function Pricing() {
             The Lahore coworking market runs roughly from PKR 11,000 at the budget end to PKR 35,000 a
             desk at the premium end. We sit in the middle, and what you get for it is the part worth
             checking line by line: genuine backup power rather than a shared generator, a second internet
-            line rather than a single connection, meeting room credits included rather than billed, and a
-            staffed <Link href="/night-shift-coworking-lahore">night shift</Link> that most of the market
-            does not run at all.
+            line rather than a single connection, meeting room credits included rather than billed, and a{" "}
+            <Link href="/night-shift-coworking-lahore">night shift</Link> with security on site all night,
+            which most of the market does not run at all.
           </p>
         </Disclosure>
 

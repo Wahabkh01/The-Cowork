@@ -14,10 +14,10 @@ export default function Contact() {
       <Section className="pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={false}
             animate={{ opacity: 1, x: 0 }}
           >
-            <h1 className="text-white mb-8">Get in <span className="text-gradient-gold">Touch</span></h1>
+            <h1 className="text-white mb-8">Contact & <span className="text-gradient-gold">Book a Tour</span></h1>
             <p className="text-white/60 mb-12 text-xl font-light leading-relaxed">
               Interested in a tour or have questions? Fill out the form or visit us directly.
             </p>
@@ -126,7 +126,7 @@ export default function Contact() {
           <p>
             So we can answer in one reply rather than four, tell us three things: which{" "}
             <strong>shift</strong> you want (day, night or 24/7 flexible), how many{" "}
-            <strong>seats or cabins</strong> you need, and roughly <strong>when</strong> you want to
+            <strong>seats or what size of office</strong> you need, and roughly <strong>when</strong> you want to
             start. The form asks for all three. With those we can confirm availability and a firm price
             straight away.
           </p>

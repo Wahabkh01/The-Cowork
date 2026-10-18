@@ -31,7 +31,7 @@ export default function Amenities() {
     {
       icon: <Sofa className="w-8 h-8" />,
       title: "Ergonomic Furniture",
-      desc: "Herman Miller chairs and height-adjustable desks in all premium suites."
+      desc: "Ergonomic chairs and proper desks in every workspace."
     },
     {
       icon: <Printer className="w-8 h-8" />,
@@ -40,8 +40,8 @@ export default function Amenities() {
     },
     {
       icon: <MonitorPlay className="w-8 h-8" />,
-      title: "Tech-Enabled Rooms (Coming Soon)",
-      desc: "Future endeavor: Meeting rooms equipped with 4K screens, Polycom conference systems, and whiteboards."
+      title: "Meeting Rooms",
+      desc: "Sound-insulated rooms with whiteboards and fibre. Screens and conference audio are being installed."
     },
     {
       icon: <Car className="w-8 h-8" />,
@@ -55,11 +55,11 @@ export default function Amenities() {
       <Seo path="/amenities" />
       <Section className="text-center pt-20">
         <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           className="text-white mb-6"
         >
-          World-Class <span className="text-gradient-gold">Amenities</span>
+          Coworking <span className="text-gradient-gold">Amenities</span>
         </motion.h1>
         <p className="text-white/60 max-w-2xl mx-auto text-xl font-light">
           Everything you need is already here.
@@ -164,7 +164,7 @@ export default function Amenities() {
           </p>
           <p>
             None of it switches off in the evening. The internet, the power backup, the security and the
-            café run through the <Link href="/night-shift-coworking-lahore">night shift</Link> exactly as
+            tea run through the <Link href="/night-shift-coworking-lahore">night shift</Link> exactly as
             they do at midday. Reception is the one thing with fixed hours: 9:00 AM to 8:00 PM daily.
           </p>
         </Disclosure>

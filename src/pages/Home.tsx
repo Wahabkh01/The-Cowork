@@ -37,7 +37,7 @@ export default function Home() {
         <div className="hero-shell relative z-20 flex flex-col flex-1 justify-center w-full pt-24 pb-8 xs:pt-28 sm:pt-32 sm:pb-14">
           <div className="container mx-auto px-4 text-center flex items-center justify-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               className="hero-copy w-full py-4 sm:py-8"
@@ -48,7 +48,7 @@ export default function Home() {
               </h1>
 
               <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-white/70 max-w-2xl mx-auto mb-6 xs:mb-8 sm:mb-10 font-light tracking-wide">
-                Where ambition meets luxury in the heart of Johar Town.
+                Beside Johar Town. Every seat PKR 15,000 a month, open 24/7.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center [&>a]:w-full sm:[&>a]:w-auto">
@@ -70,10 +70,10 @@ export default function Home() {
           <div className="hero-stats container mx-auto px-4 w-full max-w-5xl shrink-0 mt-10 sm:mt-12">
             <div className="glass-card rounded-2xl p-5 sm:p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
               {[
-                { label: "Members", value: "500+" },
-                { label: "Offices", value: "40" },
-                { label: "Events", value: "12+" },
-                { label: "Uptime", value: "99.9%" },
+                { label: "Member access", value: "24/7" },
+                { label: "Per seat / month", value: "PKR 15K" },
+                { label: "Night shift", value: "6PM–3AM" },
+                { label: "Power backup", value: "Gen + UPS" },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
                   <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gradient-gold mb-1">{stat.value}</div>

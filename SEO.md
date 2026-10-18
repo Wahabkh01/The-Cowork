@@ -36,7 +36,7 @@ scoring gap, and none of it can be done from the codebase.
    Virtual office rental · Meeting room rental. Primary stays *Coworking space*.
 3. **Add Products with prices**, matching the published rate card exactly:
    Hot Desk PKR 15,000/mo · Dedicated Desk PKR 25,000/mo · Private Office from PKR 60,000/mo.
-   Link each one to its page (`/hot-desk-lahore`, `/dedicated-desk-lahore`, `/private-office-lahore`).
+   Link each one to its page (`/hot-desk-lahore`, `/team-office-lahore`, `/private-office-lahore`).
 4. **Add Services:** night shift coworking, meeting room hire, virtual office / business address,
    private office rental, dedicated desks, hot desks.
 5. **Seed 10–15 Q&A entries yourself** — use the questions from `src/data/faqs.ts` verbatim.

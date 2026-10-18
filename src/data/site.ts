@@ -67,7 +67,7 @@ export const SHIFTS = [
     id: "night",
     label: "Night Shift",
     time: "06:00 PM – 03:00 AM",
-    blurb: "Built for freelancers and teams on US and UK client hours. Full facility, full staff support.",
+    blurb: "Built for freelancers and teams on US and UK client hours. Full facility, with security on site all night.",
   },
   {
     id: "flexible",
@@ -144,7 +144,7 @@ export const PLANS: Plan[] = [
       "Mail handling and reception service",
       "Daily cleaning service",
     ],
-    images: ["DedicatedOffice1", "DedicatedDesk1", "DedicatedDesk3"],
+    images: ["PrivateOffice2", "DedicatedDesk1", "DedicatedDesk3"],
     meetingRooms: "Inclusive",
   },
   {

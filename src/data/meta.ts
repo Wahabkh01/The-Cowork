@@ -28,7 +28,7 @@ export const organizationSchema = {
   },
   image: abs("/Images/LandingPageImage.webp"),
   email: NAP.email,
-  telephone: NAP.phone,
+  telephone: NAP.phoneE164,
   address: {
     "@type": "PostalAddress",
     streetAddress: NAP.streetAddress,
@@ -40,6 +40,35 @@ export const organizationSchema = {
   sameAs: SOCIAL_LINKS.map(([, url]) => url),
 };
 
+/** Monthly total for the whole plan, plus the per-seat rate it is built from. */
+const planPriceSpec = (plan: (typeof PLANS)[number]) => [
+  {
+    "@type": "UnitPriceSpecification",
+    name: "Monthly total",
+    price: monthlyTotal(plan),
+    priceCurrency: "PKR",
+    unitCode: "MON",
+    referenceQuantity: { "@type": "QuantitativeValue", value: plan.seats ?? 1, unitText: "seats" },
+  },
+  {
+    "@type": "UnitPriceSpecification",
+    name: "Per seat per month",
+    price: plan.price,
+    priceCurrency: "PKR",
+    unitCode: "MON",
+    referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitText: "seat" },
+  },
+];
+
+export const websiteSchema = {
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  url: SITE_URL,
+  name: BUSINESS_NAME,
+  publisher: { "@id": ORG_ID },
+  inLanguage: "en-PK",
+};
+
 export const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": BUSINESS_ID,
@@ -49,11 +78,11 @@ export const localBusinessSchema = {
   description:
     "Coworking space in Lahore beside Johar Town offering hot desks and 6- and 15-person private offices with 24/7 access, a dedicated night shift, fibre internet and full power backup.",
   url: SITE_URL,
-  telephone: NAP.phone,
+  telephone: NAP.phoneE164,
   email: NAP.email,
   image: [abs("/Images/LandingPageImage.webp"), abs("/Images/HotDesk1.webp"), abs("/Images/PrivateOffice1.webp")],
   logo: abs("/Images/Logo.png"),
-  priceRange: "PKR 15,000 – PKR 225,000 per month",
+  priceRange: "PKR 15,000 – PKR 225,000",
   currenciesAccepted: "PKR",
   address: {
     "@type": "PostalAddress",
@@ -82,7 +111,7 @@ export const localBusinessSchema = {
     {
       "@type": "ContactPoint",
       contactType: "reservations",
-      telephone: NAP.phone,
+      telephone: NAP.phoneE164,
       email: NAP.email,
       availableLanguage: ["English", "Urdu"],
       hoursAvailable: {
@@ -91,6 +120,20 @@ export const localBusinessSchema = {
         opens: HOURS.receptionOpens,
         closes: HOURS.receptionCloses,
       },
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      telephone: NAP.phone2E164,
+      availableLanguage: ["English", "Urdu"],
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      name: "WhatsApp",
+      telephone: `+${NAP.whatsapp}`,
+      url: `https://wa.me/${NAP.whatsapp}`,
+      availableLanguage: ["English", "Urdu"],
     },
   ],
   areaServed: [
@@ -115,16 +158,11 @@ export const localBusinessSchema = {
     name: `${plan.name} — coworking membership in Lahore`,
     description: plan.desc,
     url: abs(`/${plan.slug}`),
+    itemOffered: { "@type": "Service", name: plan.name, url: abs(`/${plan.slug}`) },
     price: monthlyTotal(plan),
     priceCurrency: "PKR",
     availability: "https://schema.org/InStock",
-    priceSpecification: {
-      "@type": "UnitPriceSpecification",
-      price: monthlyTotal(plan),
-      priceCurrency: "PKR",
-      unitCode: "MON",
-      referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
-    },
+    priceSpecification: planPriceSpec(plan),
   })),
   parentOrganization: { "@id": ORG_ID },
   sameAs: SOCIAL_LINKS.map(([, url]) => url),
@@ -153,9 +191,12 @@ const planSchema = (slug: string) => {
   const plan = PLANS.find((p) => p.slug === slug)!;
   return {
     "@type": "Product",
+    "@id": `${abs(`/${plan.slug}`)}#plan`,
     name: `${plan.name} — ${BUSINESS_NAME}, Lahore`,
     description: plan.desc,
-    image: abs(plan.images[0]),
+    url: abs(`/${plan.slug}`),
+    sku: plan.slug,
+    image: abs(`/Images/${plan.images[0]}.webp`),
     brand: { "@type": "Brand", name: BUSINESS_NAME },
     category: "Coworking membership",
     offers: {
@@ -165,12 +206,7 @@ const planSchema = (slug: string) => {
       priceCurrency: "PKR",
       availability: "https://schema.org/InStock",
       seller: { "@id": BUSINESS_ID },
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: monthlyTotal(plan),
-        priceCurrency: "PKR",
-        unitCode: "MON",
-      },
+      priceSpecification: planPriceSpec(plan),
     },
   };
 };
@@ -192,18 +228,18 @@ const PAGES: Record<string, PageMeta> = {
     title: "Coworking Space in Johar Town Lahore",
     description:
       "Coworking space beside Johar Town, Lahore. Hot desks and private office seats from PKR 15,000. 24/7 access, night shift, fibre and power backup.",
-    extraSchema: [localBusinessSchema, faqSchema(GENERAL_FAQS.slice(0, 6))],
+    extraSchema: [faqSchema(GENERAL_FAQS.slice(0, 6))],
   },
   "/spaces": {
     path: "/spaces",
-    title: "Coworking Plans, Hot Desks & Private Offices in Lahore",
+    title: "Coworking Plans & Private Offices in Lahore",
     description:
       "Compare every workspace at The Cowork Lahore: hot desks and 6- and 15-person offices, all at PKR 15,000 per seat. All with 24/7 access.",
     trail: [{ name: "Spaces & Plans", path: "/spaces" }],
   },
   "/pricing": {
     path: "/pricing",
-    title: "Coworking Space Price in Lahore — Published Rate Card",
+    title: "Coworking Space Prices in Lahore — Rate Card",
     description:
       "The Cowork Lahore rate card, published in the open: hot desk PKR 15,000 per seat; 6-person office PKR 90,000; 15-person office PKR 225,000 per month.",
     trail: [{ name: "Pricing", path: "/pricing" }],
@@ -226,7 +262,7 @@ const PAGES: Record<string, PageMeta> = {
     description:
       "A genuine night shift coworking space in Lahore, 6 PM to 3 AM, for freelancers on US and UK client hours. 24/7 access, backup power and fibre internet.",
     trail: [{ name: "Night Shift Coworking", path: "/night-shift-coworking-lahore" }],
-    extraSchema: [faqSchema(NIGHT_SHIFT_FAQS), localBusinessSchema],
+    extraSchema: [faqSchema(NIGHT_SHIFT_FAQS)],
   },
   "/hot-desk-lahore": {
     path: "/hot-desk-lahore",
@@ -241,7 +277,7 @@ const PAGES: Record<string, PageMeta> = {
   },
   "/team-office-lahore": {
     path: "/team-office-lahore",
-    title: "6-Person Private Office in Lahore — PKR 15,000 per Seat",
+    title: "6-Person Office in Lahore — PKR 15,000/Seat",
     description:
       "A furnished, lockable private office for six in Lahore at PKR 15,000 per seat (PKR 90,000 a month), with 24/7 access, meeting rooms, fibre and power backup.",
     trail: [
@@ -252,7 +288,7 @@ const PAGES: Record<string, PageMeta> = {
   },
   "/private-office-lahore": {
     path: "/private-office-lahore",
-    title: "15-Person Private Office for Rent in Lahore — PKR 15,000 per Seat",
+    title: "15-Person Office in Lahore — PKR 15,000/Seat",
     description:
       "A furnished, lockable private office for fifteen in Lahore at PKR 15,000 per seat (PKR 225,000 a month). Sound-insulated, custom branding, daily cleaning.",
     trail: [
@@ -265,7 +301,7 @@ const PAGES: Record<string, PageMeta> = {
     path: "/meeting-rooms-lahore",
     title: "Meeting Rooms in Lahore — Book by the Hour",
     description:
-      "Book a meeting room in Lahore beside Johar Town: large screens, conference audio, whiteboards, fibre and power backup. Bookable by the hour.",
+      "Book a meeting room in Lahore beside Johar Town: sound-insulated, with whiteboards, fibre internet, power backup and guest reception. Bookable by the hour.",
     trail: [{ name: "Meeting Rooms", path: "/meeting-rooms-lahore" }],
     extraSchema: [faqSchema(MEETING_ROOM_FAQS)],
   },
@@ -273,23 +309,21 @@ const PAGES: Record<string, PageMeta> = {
     path: "/coworking-space-wapda-town",
     title: "Coworking Space near Wapda Town, Lahore",
     description:
-      "The closest serious coworking space to Wapda Town, Lahore. Hot desks and office seats at PKR 15,000, 24/7 access and on-site parking.",
+      "A coworking space a short drive from Wapda Town, Lahore. Hot desks and office seats at PKR 15,000, 24/7 access and on-site parking.",
     trail: [{ name: "Wapda Town", path: "/coworking-space-wapda-town" }],
-    extraSchema: [localBusinessSchema],
   },
   "/coworking-space-pcsir": {
     path: "/coworking-space-pcsir",
-    title: "Coworking Space in PCSIR Society, College Road Lahore",
+    title: "Coworking Space in PCSIR, College Road Lahore",
     description:
       "A coworking space inside PCSIR Staff Colony, College Road, Lahore. Hot desks and 6- and 15-person private offices with 24/7 access and backup power.",
     trail: [{ name: "PCSIR & College Road", path: "/coworking-space-pcsir" }],
-    extraSchema: [localBusinessSchema],
   },
   "/amenities": {
     path: "/amenities",
-    title: "Amenities — Internet, Power Backup, Café & Meeting Rooms",
+    title: "Amenities — Internet, Power & Meeting Rooms",
     description:
-      "What is included at The Cowork, Lahore: fibre with a backup line, industrial power backup, biometric security, printing, café and meeting rooms.",
+      "What is included at The Cowork, Lahore: fibre with a backup line, industrial power backup, biometric security, printing, tea and meeting rooms.",
     trail: [{ name: "Amenities", path: "/amenities" }],
   },
   "/community": {
@@ -303,12 +337,12 @@ const PAGES: Record<string, PageMeta> = {
     path: "/about",
     title: "About The Cowork — Coworking in Lahore",
     description:
-      "Why The Cowork exists, who works here, and how a coworking space beside Johar Town became the highest-rated workspace on its stretch of Lahore.",
+      "Why The Cowork exists, who works here, and how a coworking space beside Johar Town runs on published prices and a real night shift.",
     trail: [{ name: "About", path: "/about" }],
   },
   "/faq": {
     path: "/faq",
-    title: "Coworking Space FAQs — Hours, Prices, Access & Parking",
+    title: "Coworking FAQs — Hours, Prices & Parking",
     description:
       "Straight answers on The Cowork Lahore: opening hours, the night shift, prices, meeting rooms, power backup, internet, parking and booking a tour.",
     trail: [{ name: "FAQs", path: "/faq" }],
@@ -316,11 +350,10 @@ const PAGES: Record<string, PageMeta> = {
   },
   "/contact": {
     path: "/contact",
-    title: "Contact & Book a Tour — Coworking Space in Lahore",
+    title: "Book a Tour — Coworking Space in Lahore",
     description:
       "Visit The Cowork at 95 College Road, PCSIR Staff Colony, Lahore. Reception 9 AM to 8 PM, members in 24/7. Call +92 333 4835258 or send an inquiry on WhatsApp.",
     trail: [{ name: "Contact", path: "/contact" }],
-    extraSchema: [localBusinessSchema],
   },
 };
 
@@ -336,9 +369,14 @@ export function getMeta(path: string): PageMeta {
   return PAGES[clean] ?? NOT_FOUND_META;
 }
 
-/** Full JSON-LD graph for a page: Organization + breadcrumbs + anything page-specific. */
+/**
+ * Full JSON-LD graph for a page: Organization, LocalBusiness and WebSite on every page (so any
+ * `@id` reference to them resolves), then breadcrumbs and anything page-specific.
+ */
 export function buildJsonLd(meta: PageMeta) {
-  const graph: Record<string, unknown>[] = [organizationSchema];
+  const graph: Record<string, unknown>[] = meta.noIndex
+    ? [organizationSchema]
+    : [organizationSchema, localBusinessSchema, websiteSchema];
 
   if (meta.trail?.length) {
     graph.push(

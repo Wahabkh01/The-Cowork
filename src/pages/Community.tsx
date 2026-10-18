@@ -13,13 +13,13 @@ export default function Community() {
       <Section className="py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={false}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-white mb-8 leading-tight">
-              More Than Just <br/>
-              <span className="text-gradient-gold">a Desk</span>
+              The Cowork <br/>
+              <span className="text-gradient-gold">Community</span>
             </h1>
             <p className="text-white/60 text-xl font-light leading-relaxed mb-12">
               Join a network of ambitious professionals and creative minds. 
@@ -65,7 +65,7 @@ export default function Community() {
           {[
             {
               title: "Founder Fridays",
-              desc: "Weekly fireside chats with successful entrepreneurs sharing their journey.",
+              desc: "Fireside chats with entrepreneurs sharing their journey.",
               icon: <Users className="w-6 h-6 text-primary" />
             },
             {
@@ -117,14 +117,14 @@ export default function Community() {
         <Disclosure summary="The two shifts have two different atmospheres" level="h2">
           <p>
             Walk in at eleven in the morning and it is a normal busy office: calls in the meeting rooms,
-            people moving between desks, the café working hard. Walk in at eleven at night and it is
+            people moving between desks, the kettle working hard. Walk in at eleven at night and it is
             noticeably quieter and more focused — a floor of people on client calls to America,
             headphones on. Both are good rooms to be in. They are not the same room.
           </p>
           <p>
             If what you want from coworking is people to talk to, the day shift gives you more of them.
             If what you want is uninterrupted hours, the night is hard to beat — and it is not a
-            compromise here, because the power, internet, security and café all run through it.
+            compromise here, because the power, internet, security and tea all run through it.
           </p>
         </Disclosure>
 
